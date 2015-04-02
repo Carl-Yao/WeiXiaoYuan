@@ -601,7 +601,6 @@ static METHOD_TYPE _methodType;
             break;
         }
     } else {
-        //textView.text = ;
         [self->delegate HttpFailCallBack:[NSString stringWithFormat:@"Unexpected error:%d",request.responseStatusCode]];
     }
     
