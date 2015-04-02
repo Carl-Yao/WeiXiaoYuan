@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript" src="../../js/excanvas.js"></script>
+        <script type="text/javascript" src="../../js/dragonchart.core.js"></script>
+        <script type="text/javascript" src="../../js/dragonchart.line.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+
+        <script>
+            initEasyJS();
+            parameters.url = encode(location.href);
+			var student_name = parameters.student_name;
+			var student_id = parameters.student_id;
+			//alert(JSON.stringify(parameters));
+			if (!student_name || !student_id) {
+			    var str = JsInterface.getChildren();
+                var arr = JSON.parse(str);
+                if(arr.length>0){
+                   student_name = arr[0].STUDENT_NAME;
+                   student_id = arr[0].STUDENT_ID;
+                }
+			}
+			//alert(search_date+"-"+group_name+"-"+group_id);
+			window.onload = function() {
+			    var w = BodyTemp.getWidth();
+			    var h = BodyTemp.getHeight();
+			    //var w = 600 , h=500;
+				document.getElementById("divCanvas").style.width = w - 20 + "px";
+				document.getElementById("divCanvas").style.height = h - document.getElementById("divCanvas").offsetTop - 20 + "px";
+
+				document.getElementById("student_name").innerHTML = student_name;
+				document.getElementById("student_id").value = student_id;
+				var s = BodyTemp.bodyTemperatureTrade(student_id);
+				//alert(s);
+				var obj = JSON.parse(s);
+				var site = [], temp = [], labels=[];
+				var arr = obj.body_tempperature_trade;
+				var alarm = parseFloat(obj.body_tempperature_alarm);
+				//alert(JSON.stringify(arr));
+				var i = 0;
+				for(var i = 0 ;i < arr.length ; i++){
+				    var trade = arr[i];
+				    if(!trade.BODY_TEMPRERATURE)continue;
+				    site.push(alarm);
+				    temp.push(parseFloat(trade.BODY_TEMPRERATURE));
+				    labels.push(trade.TEMPLATE_DATE);
+				    //if(++i>10)break;
+				}
+				
+				
+				var data = [
+    				    {text : student_name, value :  temp , color : '#07C700' ,linewidth:2,nodelength:8,nodetype:'c'}, 
+    				    {text : '正常值', value : site , color : '#ff0000',linewidth:1,nodelength:0.1}
+					];
+					
+				var options = {
+				    //title: { content: '体温趋势图' },
+                    valueType: 'n', 
+                    animationSteps: 30,
+                    node: { linecolor: "#f3cece", linewidth: 1 },
+                    valueAxis: { linewidth: 1, verticalcomputeP: true, heap: true },
+                    labelAxis: { labels: labels },
+                    scale: { linewidth: 1, backcolors: ['rgba(12,67,255,0.2)', 'rgba(0,191,255,0.2)'] },
+                    tip: { merge: true },
+                    //yAxisTitle: { content: '体温' },
+                    footer: { content: 'MIIT Statistics.', fontcolor: '#f8d8d8' },
+                    //legend: { elementtype: "l" },
+                };
+                
+				window.dchart = new DChart.Line('divCanvas', 'CN');
+				dchart.SetSkin('BlackAndWhite');
+				dchart.SetOptions(options);
+				dchart.Draw(data);
+				//alert();
+			};
+
+
+			function selectStudent() {
+				location.href = "../selectChildren.html?"  + serializableParameters(parameters);
+			}
+        </script>
+    </head>
+    <body>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectStudent();">
+                <div style="float:left;"><img src="../../images/home.png" class="img_c"/>
+                </div>
+                <div id="student_name" style="float:left;">学生</div><b></b>
+                <input id="student_id" type="hidden"/>
+            </div>
+        </div>
+        <div id="divCanvas"></div>
+    </body>
+</html>

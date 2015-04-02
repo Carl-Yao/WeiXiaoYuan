@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=3,minimum-scale=1,user-scalable=yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript" src="../../js/excanvas.js"></script>
+        <script type="text/javascript" src="../../js/dragonchart.core.js"></script>
+        <script type="text/javascript" src="../../js/dragonchart.histogram.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectCalss();">
+                <div style="float:left;"><img src="../../images/icon1.png" class="img_c"/></div>
+                <div id="group_name"style="float:left;">班级</div><b></b>
+            </div>
+            <div id="divCanvas"></div>
+        </div>
+        
+        <script type="text/javascript">
+            initEasyJS();
+            //alert("location.href:"+location.href);
+            //alert(JSON.stringify(parameters));
+            parameters.url = encode(location.href);
+            var group_id=parameters.group_id;
+            var group_type=parameters.group_type;
+            var group_name=parameters.group_name;
+            
+            
+            if(!group_id||!group_type||!group_name){
+                   var s = JsInterface.getFirstGroupOfUser();
+                   var obj = JSON.parse(s);
+                   group_id = obj.GROUP_ID;
+                   group_type = obj.GROUP_TYPE;
+                   group_name = obj.GROUP_NAME;
+                   
+                   parameters.group_id=group_id;
+                   parameters.group_type=group_type;
+                   parameters.group_name=group_name;
+            }
+            window.onload = function(){
+                document.getElementById("divCanvas").style.width = CheckAttendan.getWidth()-20+"px";
+                document.getElementById("divCanvas").style.height = CheckAttendan.getHeight()-document.getElementById("divCanvas").offsetTop - 20 +"px";
+                //alert(group_id+"/"+group_type);
+                var allstudent_num=0,allin_num=0,later_num=0,absent_num=0,leave_early_num=0,allout_num=0,allat_num=0;
+                try{
+                    var str = CheckAttendan.todayAttendance(group_id,group_type);
+                    var json = JSON.parse(str); 
+                    group_name = json.GROUP_NAME;
+                    allstudent_num=parseInt(json.ALLSTUDENT_NUM);
+                    allin_num=parseInt(json.ALLIN_NUM );
+                    later_num=parseInt(json.LATER_NUM);
+                    absent_num=parseInt(json.ABSENT_NUM);
+                    leave_early_num=parseInt(json.LEAVE_EARLY_NUM);
+                    allout_num=parseInt(json.ALLOUT_NUM);
+                    allat_num=parseInt(json.ALLAT_NUM);
+                }catch(e){}
+                var data = [
+                    { text: '总数', value: allstudent_num ,type:'',color:'#07C700'},
+                    { text: '已到', value: allin_num,type:'in',color:'green'},
+                    { text: '迟到', value: later_num,type:'later',color:'#C75F00'},
+                    { text: '缺勤', value: absent_num,type:'absent',color:'red'},
+                    { text: '早退', value: leave_early_num,type:'leave_early',color:'#00B7C7'},
+                    { text: '离校', value: allout_num,type:'out',color:'#D1C902'},
+                    { text: '在校', value: allat_num ,type:'at',color:'#7A00C7'}
+                ];
+                var options = {
+                    valueType: 'n', animationSteps: 30,
+                    bar: { useSameColor: true },
+                    histogram: { useSameColor: true },
+                    //title: { content: className },
+                    valueAxis: { linewidth: 1 },
+                    //subTitle: { content: '考勤' },
+                    scale: { linewidth: 1, backcolors: ['rgba(175,199,238,0.2)', 'rgba(245,222,179,0.2)'] },
+                    cross: { linewidth: 3, linecolor: '#ffffff' },
+                    caption: { content: '(人)' },
+                    //footer: { content: '统计结果', fontcolor: '#f8d8d8', fontsize: 14 },
+                    //shadow: { show: true, color: 'rgba(10,10,10,1)', blur: 3, offsetX: -3, offsetY: 3 },
+                    click:function(e){
+                        if(!e.type)return;
+                        itemClick(e);
+                        //alert(JSON.stringify(e));
+                        //location.href = "attendanceDailyInfo.html";
+                        //CheckAttendan.showInfo(e.id);
+                    }
+                };
+                
+                
+                window.dchart = new DChart.Histogram('divCanvas', 'CN');
+                dchart.SetSkin('BlackAndWhite');
+                dchart.SetOptions(options);
+                dchart.Draw(data);
+                document.getElementById("group_name").innerHTML = group_name;
+            };
+            //alert( document.getElementById("divCanvas").offsetWidth+";"+document.body.clientWidth+";"+CheckAttendan.getWidth());
+        function selectCalss(){
+            //parameters.url = encode("CheckAttendan/attendanceDaily.html");
+            //alert(serializableParameters(parameters));
+            location.href = "../selectGroup.html?"+serializableParameters(parameters);
+        }
+        
+        function itemClick(data){
+            //CheckAttendan.setAttendanceType(data.type);
+            parameters.attendanceType = data.type;
+            location.href = "attendanceDailyInfo.html?"+serializableParameters(parameters);
+        }
+        
+    </script>
+    </body>
+</html>

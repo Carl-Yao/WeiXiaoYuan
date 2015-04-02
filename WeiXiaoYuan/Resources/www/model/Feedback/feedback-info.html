@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>考勤查询</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/parameter.js"></script>
+  <script type="text/javascript">
+      initEasyJS();
+        var img = "../../images/girl.png";
+        var feedback_id = parameters.FEEDBACK_ID;
+        window.onload = function() {
+            var str = Feedback.feedbackinfo(feedback_id);
+            var userId = JsInterface.getUserId();
+            
+            var arr = JSON.parse(str);
+            for(var i = 0;i < arr.length; i++){
+                var o = arr[i];
+                var str;
+                if(userId == o.USER_ID){
+                    str = "<div class='chat_text2'>";
+                }else{
+                    str = "<div class='chat_text'>";
+                }
+                str += "<img src='"+img+"'/ class='chat_img'>";
+                str += "<div class='chat_contain'>";
+                str += "<span><em>◆</em><i>◆</i></span>";
+                str += o.FEEDBACK_INFO;
+                str += "</div>";
+                str += "</div>";
+                document.getElementById("chat").innerHTML += str;
+            } 
+      };
+      
+      function sendMsg(){
+            var content = document.getElementById("content").value;
+            var str = "<div class='chat_text2'>";
+            str += "<img src='../../images/girl.png' class='chat_img'/>";
+            str += "<div class='chat_contain'>";
+            str += "<span><em>◆</em><i>◆</i></span>";
+            str += content;
+            str += "</div>";
+            //str += "<img src='../../images/sx.png' class='sx r'/>";
+            str += "</div>";
+            
+            document.getElementById("chat").innerHTML += str;
+            document.getElementById("content").value = "";
+            var bl = Feedback.feedbackreply(feedback_id,content);
+        }
+  </script>
+</head>
+<body>
+    <div class="chats" id="chat" style="padding-bottom:60px;">
+      
+    </div>
+    <div class="chat_input">
+        <textarea type="text" id="content"></textarea><input type="button" onClick="sendMsg();" value="发送"/>
+        <b></b>
+    </div>
+</body>
+</html>

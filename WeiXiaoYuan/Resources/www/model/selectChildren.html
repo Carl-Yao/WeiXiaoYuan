@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/util.js"></script>
+        <script type="text/javascript" src="../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+            function selectStudent(div) {
+                var student_id = $(div).attr("student_id");
+                var student_name = $(div).attr("student_name");
+                parameters.student_id = student_id;
+                parameters.student_name = student_name;
+                location.href = decode(parameters.url) + "?" + serializableParameters(parameters);
+            }
+
+
+            window.onload = function() {
+                var str = JsInterface.getChildren();
+                //alert(str);
+                var arr = JSON.parse(str);
+                for (var i in arr) {
+                    var obj = arr[i];
+                    var classDiv = "<div student_id='" + obj.STUDENT_ID + "' student_name='" + obj.STUDENT_NAME + "' class='sea3_g' onclick='selectStudent(this);'><img src='../images/people2.png' class='img_c' />" + obj.STUDENT_NAME + "</div>";
+                    $("#divs").append($(classDiv));
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <div class="grade_class" id="divs">
+
+        </div>
+    </body>
+</html>

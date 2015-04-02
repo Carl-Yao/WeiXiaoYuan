@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+            parameters.url = encode(location.href);
+            var group_id=parameters.group_id;
+            var group_type=parameters.group_type;
+            var group_name=parameters.group_name;
+            var lesson_id=parameters.lesson_id;
+            var lesson_name=parameters.lesson_name;
+            var beginDate=parameters.beginDate;
+            var endDate=parameters.endDate;
+            if(!group_id||!group_type||!group_name){
+                   var s = JsInterface.getFirstClassOfUser();
+                   var obj = JSON.parse(s);
+                   group_id = obj.GROUP_ID;
+                   group_type = obj.GROUP_TYPE;
+                   group_name = obj.GROUP_NAME;
+                   
+                   parameters.group_id=group_id;
+                   parameters.group_type=group_type;
+                   parameters.group_name=group_name;
+            }
+            if(!lesson_name||!lesson_id){
+                /*
+                var str = HomeWork.lessonlist(parameters.group_id);
+                //alert(str);
+                var arr = JSON.parse(str);
+                var obj;
+                if(arr.length>0)obj=arr[0];
+                if(obj){
+                    lesson_name = obj.LESSON_NAME;
+                    lesson_id = obj.LESSON_ID;
+                    parameters.lesson_name=lesson_name;
+                    parameters.lesson_id=lesson_id;
+                }
+                */
+                lesson_name = "全部";
+                lesson_id="";
+                parameters.lesson_name=lesson_name;
+                parameters.lesson_id=lesson_id;
+                
+            }
+            if(!beginDate){
+                var date = new Date();
+                date.setDate(date.getDate()-7);
+                beginDate = getStringDate(date);
+                parameters.beginDate=beginDate;
+            }
+            if(!endDate){
+                var date = new Date();
+                date.setDate(date.getDate());
+                endDate = getStringDate(date);
+                parameters.endDate=endDate;
+            }
+            
+            $(document).ready(function(){
+                $("#beginDate").html(beginDate);
+                $("#endDate").html(endDate);
+                $("#group_name").html(group_name);
+                $("#lesson_name").html(lesson_name);
+            });
+            function selectCalss(){
+                location.href = "../selectClass.html?"+serializableParameters(parameters);
+            }
+            function selectLesson(){
+                location.href = "../selectLesson.html?"+serializableParameters(parameters);
+            }
+            function search(){
+                parameters.beginDate = $("#beginDate").html();
+                parameters.endDate = $("#endDate").html();
+                location.href = "homeworkQuery-data.html?"+serializableParameters(parameters);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectCalss();">
+                <div style="float:left;"><img src="../../images/icon1.png" class="img_c"/>
+                </div>
+                <div id="group_name"style="float:left;">班级</div><b></b>
+            </div>
+        </div>
+        <div class="search3">
+            <div class="sea3_g"  onclick="selectLesson();">
+                <div style="float: left;">
+                    <img src="../../images/calendar.png" class="img_c" />
+                </div>
+                <div style="float: left;" id="lesson_name">课程</div><b></b>
+            </div>
+        </div>
+        <div class="search3">
+            <div class="sea3_g" onclick="showDatePickerDialog('beginDate', $('#beginDate').html());">
+                <div style="float: left;"><img src="../../images/icon3.png" class="img_c" />
+                </div>
+                <div style="float: left;" id="beginDate">开始日期</div><b></b>
+            </div>
+        </div>
+        <div class="search3">
+            <div class="sea3_g" onclick="showDatePickerDialog('endDate', $('#endDate').html());">
+                <div style="float: left;"><img src="../../images/icon3.png" class="img_c" />
+                </div>
+                <div style="float: left;" id="endDate">结束日期</div><b></b>
+            </div>
+        </div>
+        <div class="search3_btn" onclick="search();">查询</div>
+    </body>
+</html>

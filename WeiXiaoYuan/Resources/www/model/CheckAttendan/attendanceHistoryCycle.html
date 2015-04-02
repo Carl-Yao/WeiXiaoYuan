@@ -1,0 +1,35 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <title>考勤查询</title>
+  <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+  <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>  
+  <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+  <script type="text/javascript">
+      initEasyJS();
+    function selectCycle(cycle_code,cycle_name) {
+        parameters.cycle_code = cycle_code;
+        parameters.cycle = cycle_name;
+        var url = decode(parameters.url);
+        var u = url +"?"+  serializableParameters(parameters);
+        parameters.url = null;
+        location.href = u;
+    }
+  </script>
+</head>
+<body>
+  <div class="grade_class">
+    <div class="sea3_g" onclick="selectCycle('week','当周');">
+      <img src="../../images/week.png" class="img_c" />当周 </div>
+  </div>
+  <div class="grade_class">
+    <div class="sea3_g" onclick="selectCycle('mondy','当月');">
+      <img src="../../images/date3.png" class="img_c" />当月 </div>
+  </div>
+</body>
+</html>

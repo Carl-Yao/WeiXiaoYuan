@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script type="text/javascript" src="../../js/util.js"></script>
+    <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+    <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>    
+    <script type="text/javascript" src="../../js/parameter.js"></script>
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <script>
+      initEasyJS();
+    var student_id = parameters.student_id;
+    var w = GrowthTree.getWidth()-20;
+    var h = GrowthTree.getHeight()-10;
+    $(document).ready(function() {
+          var treeDate = getNowDate();
+          $("#treeDate").html(treeDate);
+    });
+
+   function takePhoto(){
+        GrowthTree.setImage();
+    }
+    
+    function setPhoto(flag,imgPath){
+        if(flag=="true"){
+            var str = "<img name='imgPath' id='imgPath' border='0' src='"+imgPath+"' width='"+w+"' height='160' onclick=\"viewPhoto('"+imgPath+"');\"/>";
+            //var bigstr = "<a href='' onclick='return false' ><img name='big' src='"+img+"' onclick=\"MM_showHideLayers('layer2','','hide');return false;\" border='0' width='"+w+"' height='"+h+"' onclick='javascript:window.open(this.src);'/></a>";
+            document.getElementById("img").innerHTML = str;
+            //document.getElementById("layer2").innerHTML = str;
+        }else if(flag==false){
+            alert(imgPath);
+        }
+    }
+    
+    function publish(){
+        var img = document.getElementById("imgPath");
+        var imgPath;
+        if(img){
+            imgPath = img.src;
+        }else{
+            alert("请上传图片！");
+            return;
+        }
+        
+        var treeDate = $("#treeDate").html();
+        var address = $("#address").val();
+        var title = $("#title").val();
+        var content = $("#content").val();
+        if(address==""){
+            alert("请输入所在位置！");
+            return;
+        }
+        if(title==""){
+            alert("请输入标题！");
+            return;
+        }
+        if(content==""){
+            alert("请输入内容！");
+            return;
+        }
+        JsInterface.showProgressDialog("","正在处理，请稍等...");
+        var r = GrowthTree.addgrowtree(student_id,title,content,treeDate,address,imgPath);
+        JsInterface.closeProgressDialog();
+        if(r=="true"){
+            alert("成功添加成长树！");
+            location.href = "growthTree.html";
+        }else{
+            alert("添加成长树失败！");
+        }
+    }
+  </script>
+</head>
+<body>
+      <div class="tree_add" onclick="showDatePickerDialog('treeDate', $('#treeDate').html());">
+        <div style="float: left;" >
+          <img src="../../images/icon3.png" class="img_c" /></div>
+        <div style="float: left;" id="treeDate">选择时间</div>
+        <b></b>
+     </div>
+     
+    <div class="tree_add">
+        <div style="float: left;">
+          <img src="../../images/dw.png" class="img_c" /></div>
+        <div style="float: left; width:70%;"><input type="text" class="add_input" placeholder="请输入位置" value="" id="address"/></div>
+     </div>
+     
+     <div class="tree_add">
+        <div style="float: left;">
+          <img src="../../images/year.png" class="img_c" /></div>
+        <div style="float: left; width:70%;"><input type="text" class="add_input" placeholder="请输入标题" value="" id="title"/></div>
+     </div>
+     
+  <div class="tree_content">
+    <div class="your_mind">
+		<textarea placeholder="请输入这一刻的想法……" id="content"></textarea>
+	</div>
+  </div>
+	
+	 <div id="img" style="padding-top: 10px;margin:0 auto;"></div>
+    <div class="tree3_btn"  onclick="takePhoto();">拍 照</div>
+    <div class="tree3_btn" onclick="publish();">发 布</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>    
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+
+        <script>
+            initEasyJS();
+            parameters.url = encode(location.href);
+            var group_id = parameters.group_id;
+            var group_type = parameters.group_type;
+            var group_name = parameters.group_name;
+            var xq_id = parameters.xq_id;
+            var xq_name = parameters.xq_name;
+            //alert(JSON.stringify(parameters));
+            
+            if(!group_id||!group_type||!group_name){
+                   var s = JsInterface.getFirstClassOfUser();
+                   var obj = JSON.parse(s);
+                   group_id = obj.GROUP_ID;
+                   group_type = obj.GROUP_TYPE;
+                   group_name = obj.GROUP_NAME;
+            }
+            if(!xq_id||!xq_name){
+                var xq = Teach.getSemesterList(group_id);
+                var xqObj = JSON.parse(xq);
+                if(xqObj.length>0){
+                       var myArr = xqObj[0];
+                       xq_id = myArr.XQ_ID;
+                       xq_name = myArr.XQ_NAME;
+               }
+                
+            }
+            //alert(search_date+"-"+group_name+"-"+group_id);
+            $(document).ready(function() {
+                $("#group_name").html(group_name);
+                $("#xq_name").html(xq_name);
+                var str = Teach.getSchedule(group_id,xq_id);
+                var arr = JSON.parse(str);
+                for(var i in arr){
+                    var obj = arr[i];
+                    var stu = "<tr>";
+                    //var stu = "<tr> <td></td>";
+                    stu += "<td>"+obj.WEEKLY+"</td>";
+                    stu += "<td>"+obj.TIMES+"</td>";
+                    stu += "<td>"+obj.LESSONTIME+"</td>";
+                    stu += "<td>"+obj.SUBJECT+"</td>";
+                    stu += "</tr>";
+                    $("#tbody").append(stu);
+                }
+                
+                $(".sug_mbox_bg_row tr").mouseover(function() {
+                    $(this).addClass("over");
+                  }).mouseout(function() { 
+                    $(this).removeClass("over");
+                  });
+                  $(".sug_mbox_bg_row tr:even").addClass("even");
+            });
+            
+             function selectClass(){
+                location.href = "../selectClass.html?"+serializableParameters(parameters);
+            }
+            
+            function selectXQ(){
+                location.href = "../selectSemester.html?"+serializableParameters(parameters);
+            }
+            
+            function showDetail(str) {
+                location.href = "teacherDetailInfo.html?"+str;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectClass();">
+                <div style="float:left;"><img src="../../images/icon1.png" class="img_c"/></div>
+                <div id="group_name"style="float:left;">班级</div><b></b>
+            </div>
+        </div>
+         <div class="search3">
+            <div class="sea3_g" onclick="selectXQ();">
+                <div style="float:left;"><img src="../../images/calendar.png" class="img_c"/></div>
+                <div id="xq_name"style="float:left;">学期</div><b></b>
+            </div>
+        </div>
+        
+        <div class="sug_mbox_bg_row">
+            <table width="100%" border="0" class="test_table_row">
+              <thead>
+                <tr class="sug_tr">
+                    <th>工作日</th>
+                    <th>时间</th>
+                    <th>课程</th>
+                    <th>科目</th>
+                </tr>
+               </thead>
+               <tbody id="tbody">
+                
+                
+               </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>考勤查询</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+  <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>  
+  <script type="text/javascript" src="../../js/util.js"></script>
+  <script type="text/javascript" src="../../js/parameter.js"></script>
+  <script type="text/javascript">
+      //$(document).ready(function() {
+     //   for (var i in parameters) {
+      //      $("#" + i).html(parameters[i]);
+      //  }
+        //var info = parameters['STUDENT_NAME'] + "体检记录" + "(" + parameters['EXAMINATE_DATE'] + ")";
+        //$("#info").html(info);
+     // });
+     initEasyJS();
+        var w = HomeWork.getWidth()-10;
+        var h = HomeWork.getHeight()-10;
+      
+            var homework_id = parameters.HOMEWORK_ID;
+            $(document).ready(function() {
+                var str = HomeWork.homeworkinfo(homework_id);
+                var json = JSON.parse(str);
+                for(var key in json){
+                    if(key!="PICTURE_URL"){
+                        $("#" + key).html(json[key]);
+                    }else{
+                        var picUrl = json[key];
+                        if(picUrl&&picUrl!=""){
+                            var imgurl = HomeWork.judgeUrlFromCache(picUrl);
+                            //var str = "<img name='small' border='0' src='"+picUrl+"' width='160' height='160' onClick=\"MM_showHideLayers('layer2','','show');MM_showHideLayers('layer','','hide');MM_showHideLayers('layer1','','hide');\" onclick=\"javascript:window.open(this.src);\"/>";
+                            var str = "<img name='small' border='0' src='"+imgurl+"' width='160' height='160' onClick=\"MM_showHideLayers('layer2','','show');MM_showHideLayers('layer','','hide');MM_showHideLayers('layer1','','hide');\" onclick=\"javascript:window.open(this.src);\"/>";
+                            str += "<div id='layer2' style='position: absolute; left: 5px; top: 5px;  z-index: 1; visibility: hidden;>";
+                            //str += "<a href='' onclick='return false' ><img name='big' src='"+picUrl+"' onclick=\"MM_showHideLayers('layer2','','hide');MM_showHideLayers('layer','','show');MM_showHideLayers('layer1','','show');return false;\" border='0' width='"+w+"' height='"+h+"' onclick='javascript:window.open(this.src);'/></a>"; 
+                            str += "<a href='' onclick='return false' ><img name='big' src='"+imgurl+"' onclick=\"MM_showHideLayers('layer2','','hide');MM_showHideLayers('layer','','show');MM_showHideLayers('layer1','','show');return false;\" border='0' width='"+w+"' height='"+h+"' onclick='javascript:window.open(this.src);'/></a>"; 
+                            str += "</div>"; 
+                            $("#" + key).html(str);
+                            var tr = "<tr><td width=100 nowrap></td><td id='PICTURE_URL'>"+str+"</td></tr>";
+                            //$("#tbody").append(tr);
+                        }
+                    }
+                }
+            });
+      
+      
+  </script>
+</head>
+<body>
+        <div class="homeword_show" style="padding:5px;">
+            <table border="0" cellpadding="0" cellspacing="0" class="h_s_b">
+                <tr>
+                    <td width=80 nowrap>班级：</td><td nowrap id="GROUP_NAME"></td>
+                </tr>
+                <tr>
+                    <td width=80 nowrap>课程：</td><td nowrap id="LESSON_NAME"></td>
+                </tr>
+                <tr>
+                    <td width=80 nowrap>时间：</td><td nowrap id="EDIT_DATE"></td>
+                </tr>
+                <tr>
+                    <td width=80 valign="middle">内容：</td><td id="HOMEWORK_CONTENT"></td>
+                </tr>
+                <tr>
+                   <td width=80 nowrap>图片：</td><td id="PICTURE_URL"></td>
+                </tr>
+            </table>
+            <div class="clear"></div>
+        </div>
+</body>
+</html>

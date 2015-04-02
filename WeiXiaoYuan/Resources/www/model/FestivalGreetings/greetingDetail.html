@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/util.js"></script>
+  <script type="text/javascript" src="../../js/parameter.js"></script>
+  <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+  <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+  <script type="text/javascript">
+      initEasyJS();
+    $(document).ready(function() {
+        var jrzf_id = parameters.jrzf_id;
+        var str = FestivalGreeting.jrzfinfo(jrzf_id);
+        var obj = JSON.parse(str);
+        var divContent = "<div class='bless_contain'>";
+        divContent += obj.CH;
+        divContent += "<p>"+obj.ZF+"</p>";
+        divContent += "<div class='nursery_name'>"+obj.LK+"<br/><span>"+obj.ADD_DATE+"</span></div>";
+        divContent += "</div>";
+        var imgurl = FestivalGreeting.judgeUrlFromCache(obj.HK_URL);
+        //divContent += "<img src='"+obj.HK_URL+"'  class='bless_img' />";
+        divContent += "<img src='"+imgurl+"'  class='bless_img' />";
+        document.getElementById("content").innerHTML = divContent;
+    });
+  </script>
+</head>
+<body>
+<div class="bless" id="content">
+	
+		
+		
+	
+	
+	
+</div>
+</body>
+</html>

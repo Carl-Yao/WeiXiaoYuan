@@ -1,0 +1,110 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <title>发布祝福</title>
+  <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/util.js"></script>
+  <script type="text/javascript" src="../../js/parameter.js"></script>
+<script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+<script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+  <script type="text/javascript">
+      initEasyJS();
+        parameters.url = encode(location.href);
+        var inscribe = parameters.inscribe;
+        var rangeName = parameters.rangeName;
+        var rangeValue = parameters.rangeValue;
+        var greetingCard = parameters.greetingCard;
+        var object = parameters.object;
+        var content = parameters.content;
+        
+        if(!inscribe){
+            var str = FestivalGreeting.getUserSchoolAndName();
+            var obj = JSON.parse(str);
+            inscribe = obj.GROUP_NAME+" "+obj.NAME;
+            parameters.inscribe = inscribe;
+        }
+        if(!rangeName||!rangeValue){
+            rangeName = "全部";
+            rangeValue = "all";
+            parameters.rangeName = rangeName;
+            parameters.rangeValue = rangeValue;
+        }
+        if(!greetingCard){
+            var str = FestivalGreeting.hkList();
+            var arr = JSON.parse(str);
+            if(arr.length>0){
+               var card = arr[0];
+               greetingCard = card.HK_NAME;
+               parameters.greetingCard = greetingCard;
+            }
+        }
+        if(!object){
+            object = "尊敬的各位家长,同学,各位老师:";
+            //parameters.object = object;
+        }
+        if(!content){
+            content = "祝您节日快乐!";
+            //parameters.content = content;
+        }
+        
+        
+        $(document).ready(function(){
+            $("#object").val(object);
+            $("#content").val(content);
+            $("#inscribe").val(inscribe);
+            $("#greetingCard").html(greetingCard);
+            $("#range").html(rangeName);
+            $("#rangeValue").val(rangeValue);
+        });
+        
+        function publish(){
+            var object = $("#object").val();
+            var content = $("#content").val();
+            var inscribe = $("#inscribe").val();
+            var greetingCard = $("#greetingCard").html();
+            //var rangeValue = $("#rangeValue").val();
+            JsInterface.showProgressDialog("","正在处理，请稍等...");
+            var flag = FestivalGreeting.jrzfadd(object,content,inscribe,rangeValue,greetingCard);
+            JsInterface.closeProgressDialog();
+            if(flag=="true"){
+                alert("成功发送祝福！");
+                FestivalGreeting.closePage();
+            }else{
+                alert("发送祝福失败！");
+            }
+        }
+        
+        function selectRange(){
+            location.href = "../selectRange.html?"+serializableParameters(parameters);
+        }
+        
+        function selectCard(){
+            location.href = "../selectCard.html?"+serializableParameters(parameters);
+        }
+  </script>
+</head>
+<body>
+<div class="bless">
+    <div class="bless_people">
+        <input type="text" id="object" value="">
+    </div>
+    <div class="blesses">
+        <textarea class="bless_area" id="content"></textarea>
+    </div>
+    <div class="school_name_bless">
+        <img src="../../images/icon1.png" /><input type="text" id="inscribe" value="学校名称"/>
+    </div>
+    <div class="add_card" onclick="selectCard();"><span class="a_c_img"><img src="../../images/card.png" /></span><div class="sel1" id="greetingCard">选择贺卡</div>
+        <b></b>
+    </div>
+    <div class="sel_area" onclick="selectRange();"><span class="a_c_img"><img src="../../images/range.png" /></span><div class="sel1" id="range">选择范围</div><b></b></div>
+    <div class="enter_bless">
+        <button class="bless_btn" onclick="publish();">发布</button>
+    </div>
+    <input type="hidden" id="rangeValue" value=""/>
+</div>
+</body>
+</html>

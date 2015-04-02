@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Dojo Toolkit Mobile Charting</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- <link rel="stylesheet" type="text/css" href="demo.css"> -->
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/util.js"></script>
+  <script>
+      //initEasyJS();
+        var w = Msg.getWidth()-10;
+        var h = Msg.getHeight()-10;
+        var msgTitle = Msg.getMsgTitle();
+        var msgContent = Msg.getMsgContent();
+        var sender = Msg.getSender();
+        var picUrl = Msg.getPicUrl();
+        //if(picUrl=="[]"){
+         //   picUrl = "../../images/girl.png";
+        //}
+        var msgTime = Msg.getMsgTime();
+        window.onload = function() {
+        	 //document.getElementById("big").width = w;
+             //document.getElementById("big").height = h;   
+            var str = "<div class='in_sh_one'>";
+            if(picUrl!="[]"&&picUrl!=""){
+                str += "<div class='shows_img'>";
+                str += "<img name='small' border='0' src='"+picUrl+"' width='160' height='160' onClick=\"setUrl();MM_showHideLayers('layer2','','show');MM_showHideLayers('layer','','hide');MM_showHideLayers('layer1','','hide');\" onclick=\"javascript:window.open(this.src);\"/>";
+                str += "</div>";
+                str += "<div id='layer2' style='position: absolute; left: 5px; top: 5px;  z-index: 1; visibility: hidden;>";
+                str += "<a href='' onclick='return false' ><img id='big' name='big' src='"+picUrl+"' onclick=\"MM_showHideLayers('layer2','','hide');MM_showHideLayers('layer','','show');MM_showHideLayers('layer1','','show');return false;\" border='0' width='400' height='300' onclick='javascript:window.open(this.src);'/></a>"; 
+                str += "</div>";
+                
+            }               
+            str += "<h3>"+msgTitle+"</h3>";
+            str += "<div class='in_time'>";
+            str += "<span>"+sender+"</span>";
+            str += msgTime;
+            str += "</div>";
+            str += "<div class='in_center'>";
+            str += "<p>"+"&nbsp;&nbsp;&nbsp;&nbsp;"+msgContent+"</p>";
+            str += "</div>";
+            str += "</div>";
+           
+            document.getElementById("msg").innerHTML = str;
+        };
+        
+        function setUrl(){
+            document.getElementById("big").width = w;
+            document.getElementById("big").height = h;                
+        }
+</script>
+</head>
+<body>
+<div class="information_shows"  id="msg">
+   
+    
+</div>
+</body>
+</html>

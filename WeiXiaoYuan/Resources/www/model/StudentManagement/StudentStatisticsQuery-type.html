@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/row.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+			function selectType(type, type_name) {
+				parameters.type = type;
+				parameters.type_name = type_name;
+				//alert(serializableParameters(parameters));
+				location.href = "StudentStatisticsQuery.html?" + serializableParameters(parameters);
+			}
+        </script>
+    </head>
+    <body>
+       
+        <div class="grade_class">
+            <div class="sea3_g"   onclick="selectType('class','按班级');">
+                <img src="../../images/collaboration.png" class="img_c" />按班级<b></b>
+            </div>
+        </div>
+        <div class="grade_class" >
+            <div class="sea3_g" onclick="selectType('sex','按性别');">
+                <img src="../../images/collaboration.png" class="img_c" />按性别<b></b>
+            </div>
+        </div>
+        <div class="grade_class" >
+            <div class="sea3_g" onclick="selectType('source_type','按生源类别');">
+                <img src="../../images/collaboration.png" class="img_c" />按生源类别<b></b>
+            </div>
+        </div>
+        <div class="grade_class" >
+            <div class="sea3_g" onclick="selectType('residence_type','按户口类型');">
+                <img src="../../images/collaboration.png" class="img_c" />按户口类型<b></b>
+            </div>
+        </div>
+        <div class="grade_class" >
+            <div class="sea3_g" onclick="selectType('residence_properties','按户口性质');">
+                <img src="../../images/collaboration.png" class="img_c" />按户口性质<b></b>
+            </div>
+        </div>
+    </body>
+</html>

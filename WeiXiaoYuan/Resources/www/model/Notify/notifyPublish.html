@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <script type="text/javascript">
+        initEasyJS();
+            var w = Notify.getWidth()-20;
+            var h = Notify.getHeight()-10;
+            parameters.url = encode(location.href);
+            var group_id=parameters.group_id;
+            var group_type=parameters.group_type;
+            var group_name=parameters.group_name;
+            var title=parameters.title;
+            var notice_info=parameters.notice_info;
+            var rangeName = parameters.rangeName;
+            var rangeValue = parameters.rangeValue;
+            if(!group_id||!group_type||!group_name){
+                   var s = JsInterface.getFirstGroupOfUser();
+                   var obj = JSON.parse(s);
+                   group_id = obj.GROUP_ID;
+                   group_type = obj.GROUP_TYPE;
+                   group_name = obj.GROUP_NAME;
+                   
+                   parameters.group_id=group_id;
+                   parameters.group_type=group_type;
+                   parameters.group_name=group_name;
+            }
+            if(!rangeName||!rangeValue){
+                rangeName = "全部";
+                rangeValue = "all";
+                parameters.rangeName = rangeName;
+                parameters.rangeValue = rangeValue;
+            }
+            
+            $(document).ready(function(){
+                $("#group_name").html(group_name);
+                $("#groupId").val(group_id);
+                $("#title").val(title);
+                $("#notice_info").val(notice_info);
+                //$("input:radio[value="+type+"]").attr('checked','true');
+                $("#range").html(rangeName);
+            });
+            function selectCalss(){
+                parameters.title = $("#title").val();
+                parameters.notice_info = $("#notice_info").val();
+                location.href = "../selectClass.html?"+serializableParameters(parameters);
+            }
+            function publish(){
+                //var type = $("input[name='type']:checked").val();
+                parameters.title =  $("#title").val();
+                if(parameters.title==""){
+                    alert("请输入标题！");
+                    return;
+                }
+                parameters.notice_info =  $("#notice_info").val();
+                var img = document.getElementById("imgPath");
+                var imgPath;
+                if(img){
+                    imgPath = img.src;
+                }
+                if(parameters.notice_info==""&&!imgPath){
+                    alert("请输入通知内容或者上图图片！");
+                }else{
+                    if(!imgPath){
+                        imgPath = "";
+                    }
+                    JsInterface.showProgressDialog("","正在处理，请稍等...");
+                     var r = Notify.noticeadd(parameters.group_id,parameters.rangeValue,parameters.title,parameters.notice_info,imgPath);
+                    JsInterface.closeProgressDialog();
+                    
+                    if(r=="true"){
+                        alert("成功添加通知公告！");
+                        Notify.closePage();
+                    }else{
+                        alert("添加通知公告失败！");
+                    }
+                }
+            }
+            
+            function takePhoto(){
+                Notify.setImage();
+            }
+            
+            function setPhoto(flag,imgPath) {
+                if(flag=="true"){
+                    var str = "<img name='imgPath' id='imgPath' border='0' src='"+imgPath+"' width='"+w+"' height='160' onclick=\"viewPhoto('"+imgPath+"');\"/>";
+                    //var bigstr = "<a href='' onclick='return false' ><img name='big' src='"+img+"' onclick=\"MM_showHideLayers('layer2','','hide');return false;\" border='0' width='"+w+"' height='"+h+"' onclick='javascript:window.open(this.src);'/></a>";
+                    document.getElementById("img").innerHTML = str;
+                    //document.getElementById("layer2").innerHTML = str;
+                }else if(flag==false){
+                    alert(imgPath);
+                }
+            }
+            
+            function viewPhoto(imgPath){
+                Notify.viewPhoto(imgPath);
+            }
+            
+            function change_rad(fla){
+                alert(fla);
+                if(fla=="all"){
+                    $("all").color="red";
+                    $("teacher").color="black";
+                    $("parent").color="black";
+                }else if(fla=="teacher"){
+                    $("all").color="black";
+                    $("teacher").color="red";
+                    $("parent").color="black";
+                }else if(fla=="parent"){
+                    $("all").color="black";
+                    $("teacher").color="black";
+                    $("parent").color="red";
+                }
+                var type = $("input[name='type']:checked").val();
+                alert(type);
+            }
+            function selectRange(){
+                parameters.title = $("#title").val();
+                parameters.notice_info = $("#notice_info").val();
+                location.href = "../selectRange.html?"+serializableParameters(parameters);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectCalss();">
+                <div style="float:left;"><img src="../../images/icon1.png" class="img_c"/>
+                </div>
+                <div id="group_name"style="float:left;">班级</div><b></b>
+            </div>
+        </div>
+        <!--
+         <div class="search3">
+            <div class="sea3_g" >
+                <input name="type" type="radio" class="radio1" value="all" checked="checked" onchange="change_rad('all')"><font id="all" color="red">全 部</font> <input name="type" type="radio" class="radio1" value="teacher" onchange="change_rad('teacher')"><font id="teacher">老 师</font><input type="radio" name="type" class="radio1" value="parent" onchange="change_rad('parent')"><font id="parent">家 长</font>
+            </div>
+        </div>
+        -->
+        <div class="search3">
+            <div class="sea3_g" onclick="selectRange();">
+                <div style="float:left;"><img src="../../images/range.png" class="img_c"/>
+                </div>
+                <div id="range"style="float:left;">选择范围</div><b></b>
+            </div>
+        </div>
+        <div class="search3_num"><label>标题：</label>
+            <div  class="student_nums2">
+                <input type="text" id="title"/>
+            </div>
+        </div>
+        <div class="area2"><textarea id="notice_info"></textarea></div>
+        <div id="img" style="padding-top: 10px;margin:0 auto;"></div>
+        <div class="search3_btn" onclick="takePhoto();">拍照</div>
+        <div class="search3_btn" onclick="publish();">发布通知</div>
+    </body>
+</html>

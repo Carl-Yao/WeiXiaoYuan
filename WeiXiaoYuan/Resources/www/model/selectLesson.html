@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/util.js"></script>
+        <script type="text/javascript" src="../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+            function selectLesson(div){
+                var lesson_id = $(div).attr("lesson_id");
+                var lesson_name = $(div).attr("lesson_name");
+                parameters.lesson_name = lesson_name;
+                parameters.lesson_id = lesson_id;
+                location.href = decode(parameters.url) + "?"  + serializableParameters(parameters);
+            }
+            window.onload = function() {
+                var str = "";
+                if(parameters.student_id){
+                    str = HomeWork.lessonlistForParent(parameters.student_id);                    
+                }else if(parameters.group_id){
+                    str = HomeWork.lessonlist(parameters.group_id);
+                }
+                var all = "<div lesson_id='' lesson_name='全部' class='sea3_g' onclick='selectLesson(this);'><img src='../images/kc.png' class='img_c' />全部</div>";
+                $("#divs").append($(all));
+                //alert(str);
+                var arr = JSON.parse(str);
+                for (var i in arr) {
+                    var obj = arr[i];
+                    var classDiv = "<div lesson_id='" + obj.LESSON_ID + "' lesson_name='" + obj.LESSON_NAME + "' class='sea3_g' onclick='selectLesson(this);'><img src='../images/kc.png' class='img_c' />" + obj.LESSON_NAME + "</div>";
+                    $("#divs").append($(classDiv));
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <div class="grade_class" id="divs">
+
+        </div>
+    </body>
+</html>

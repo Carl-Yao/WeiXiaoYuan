@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=3,minimum-scale=1,user-scalable=yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript" src="../../js/excanvas.js"></script>
+        <script type="text/javascript" src="../../js/dragonchart.core.js"></script>
+        <script type="text/javascript" src="../../js/dragonchart.histogram.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+            initEasyJS();
+            parameters.url = encode(location.href);
+			var group_id = parameters.group_id;
+			var group_type = parameters.group_type;
+			var group_name = parameters.group_name;
+			var type = parameters.type;
+			var type_name = parameters.type_name;
+			var num = parameters.num;
+			if (!group_id || !group_type || !group_name) {
+				var s = JsInterface.getFirstGroupOfUser();
+				var obj = JSON.parse(s);
+				group_id = obj.GROUP_ID;
+				group_type = obj.GROUP_TYPE;
+				group_name = obj.GROUP_NAME;
+
+				parameters.group_id = group_id;
+				parameters.group_type = group_type;
+				parameters.group_name = group_name;
+			}
+			if (!type || !type_name) {
+				type = "sex";
+				type_name = "按性别";
+			}
+
+			function selectCalss() {
+				location.href = "../selectGroup.html?" + serializableParameters(parameters);
+			}
+			function selectType() {
+				location.href = "StudentStatisticsQuery-type.html?" + serializableParameters(parameters);
+			}
+
+            window.onload = function(){
+                var colors = ['#07C700','#C75F00','#00B7C7','green','red'];
+                document.getElementById("type").value = type;
+                document.getElementById("type_name").innerHTML = type_name;
+                document.getElementById("group_name").innerHTML = group_name;
+                document.getElementById("groupId").value = groupId;
+                
+                document.getElementById("divCanvas").style.width = StudentManagement.getWidth()-20+"px";
+                document.getElementById("divCanvas").style.height = StudentManagement.getHeight()-document.getElementById("divCanvas").offsetTop - 20 +"px";
+                //alert(group_id+"/"+type);
+                var data = [];
+                var str = StudentManagement.studenttj(group_id,type);
+                
+                var arr = JSON.parse(str);
+                for(var i = 0; i<arr.length; i++){
+                    var obj = new Object();
+                    obj.text = arr[i].TYPE_NAME;
+                    obj.value =parseInt(arr[i].NUM) ;
+                    obj.color = colors[i%5];
+                    data.push(obj);
+                }
+                
+                //alert(JSON.stringify(data));
+                var options = {
+                    valueType: 'n', animationSteps: 30,
+                    bar: { useSameColor: true },
+                    histogram: { useSameColor: true },
+                    //title: { content: className },
+                    valueAxis: { linewidth: 1 },
+                    //subTitle: { content: '考勤' },
+                    scale: { linewidth: 1, backcolors: ['rgba(175,199,238,0.2)', 'rgba(245,222,179,0.2)'] },
+                    cross: { linewidth: 3, linecolor: '#ffffff' },
+                    caption: { content: '(人)' },
+                    //footer: { content: '统计结果', fontcolor: '#f8d8d8', fontsize: 14 },
+                    //shadow: { show: true, color: 'rgba(10,10,10,1)', blur: 3, offsetX: -3, offsetY: 3 },
+                    click:function(e){
+                        if(!e.type)return;
+                        //itemClick(e);
+                        //alert(JSON.stringify(e));
+                        //location.href = "attendanceDailyInfo.html";
+                        //StudentManagement.showInfo(e.id);
+                    }
+                };
+                
+                
+                window.dchart = new DChart.Histogram('divCanvas', 'CN');
+                dchart.SetSkin('BlackAndWhite');
+                dchart.SetOptions(options);
+                dchart.Draw(data);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectCalss();">
+                <div style="float:left;"><img src="../../images/icon1.png" class="img_c"/>
+                </div>
+                <div id="group_name"style="float:left;">班级</div><b></b>
+            </div>
+        </div>
+        <div class="search3">
+            <div class="sea3_g"  onclick="selectType();">
+                <div style="float: left;">
+                    <img src="../../images/calendar.png" class="img_c" />
+                </div>
+                <div style="float: left;" id="type_name">按班级</div>
+                <b></b>
+            </div>
+        </div>
+        <div id="divCanvas"></div>
+        <input id="type" value="" type="hidden"/>
+        <input id="groupId" value="" type="hidden"/>
+    </body>
+</html>

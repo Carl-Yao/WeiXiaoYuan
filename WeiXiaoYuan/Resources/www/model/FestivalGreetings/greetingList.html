@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+          <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+          <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+          <script type="text/javascript" src="../../js/util.js"></script>
+          <script type="text/javascript" src="../../js/parameter.js"></script>
+          <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+          <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+          <script type="text/javascript">
+              initEasyJS();
+			$(document).ready(function() {
+			    var str = FestivalGreeting.jrzflist();
+                var arr = JSON.parse(str);
+                for(var i in arr){
+                    var obj = arr[i];
+                    var stu = "<tr onclick='showGreetingDetail(\""+obj.JRZF_ID+"\");'>";
+                    stu += "<td>"+obj.HK_NAME+"</td>";
+                    stu += "<td>"+obj.NAME+"</td>";
+                    stu += "<td>"+obj.ADD_DATE+"</td>";
+                    stu += "<td><span class='dn'><img src='../../images/arrow.png'/></span></td>";
+                    stu += "</tr>";
+                    $("#tbody").append(stu);
+                }
+                
+                $(".sug_mbox_bg_row tr").mouseover(function() {
+                    $(this).addClass("over");
+                  }).mouseout(function() { 
+                    $(this).removeClass("over");
+                  });
+                  $(".sug_mbox_bg_row tr:even").addClass("even");
+			});
+
+			function showGreetingDetail(jrzf_id) {
+                parameters.jrzf_id = jrzf_id;
+                location.href = "greetingDetail.html?"+serializableParameters(parameters);
+			}
+        </script>
+    </head>
+    <body>
+        <div class="sug_mbox_bg_row">
+            <table width="100%" border="0" class="bri_remidn">
+              <thead>
+                <tr class="sug_tr">
+                    <th>贺卡名称</th>
+                    <th>发送人</th>
+                    <th>发送日期</th>
+					<th></th>
+                </tr>
+               </thead>
+               <tbody id="tbody">
+
+               </tbody>
+            </table>
+        </div>
+    </body>
+</html>

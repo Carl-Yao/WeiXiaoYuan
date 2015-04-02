@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title></title>
+  <meta http-eq/Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Classes/SecondBaseViewController.huiv="Content-Type" content="text/html;" charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="../css/common.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../jquery/js/jquery.js"></script>
+    <script type="text/javascript" src="../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+    <script type="text/javascript" src="c/js/util.js"></script>
+    <script type="text/javascript" src="../js/parameter.js"></script>
+  <script type="text/javascript">
+      initEasyJS();
+    function selectCard(name){
+        parameters.greetingCard = name;
+        location.href = decode(parameters.url) + "?"  + serializableParameters(parameters);
+    }
+    
+     $(document).ready(function(){
+            var str = FestivalGreeting.hkList();
+            var arr = JSON.parse(str);
+            var tr = "<tr>";
+            var count = 1;
+            for (var i in arr) {
+                var obj = arr[i];
+                var imgurl = FestivalGreeting.judgeUrlFromCache(obj.HK_URL);
+                //tr += "<td><img src='"+obj.HK_URL+"'/><button class='sel_card2' onclick=selectCard('"+obj.HK_NAME+"')>"+obj.HK_NAME+"</button></td>";
+                tr += "<td><img src='"+imgurl+"'/><button class='sel_card2' onclick=selectCard('"+obj.HK_NAME+"')>"+obj.HK_NAME+"</button></td>";
+                if(count%2==0){
+                    tr += "</tr>";
+                    $("#tbody").append(tr);
+                    tr = "<tr>";
+                }
+                count++;
+            }
+            if(count%2==0){
+                tr += "<td></td>";
+                tr += "</tr>";
+                $("#tbody").append(tr);
+            }
+        });
+  </script>
+</head>
+<body>
+<div class="sel_card">
+	<table border="0" cellpadding="0" cellspacing="0">
+	    <tbody id="tbody">
+    		
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

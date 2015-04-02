@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+       <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../../css/common.css" rel="stylesheet"  type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>    
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+
+        <script>
+            initEasyJS();
+           $(document).ready(function(){
+                var beginDate = parameters.beginDate;
+                var endDate = parameters.endDate;
+                var groupId = parameters.group_id;
+                var attendanceType = parameters.attendanceType;
+                var studentName = parameters.studentName;
+                var studentNumber = parameters.studentNumber;
+                var xjh = parameters.xjh;
+
+                var str = CheckAttendan.searchAttendanceforstudents(groupId,studentNumber,studentName,attendanceType,xjh,beginDate,endDate);
+                //alert(str);
+                var arr = JSON.parse(str);
+                for(var i in arr){
+                    var obj = arr[i];
+                    var stu = "<tr onclick='studentDetealInfo(\""+obj.STUDENT_ID+"\");'>"
+                    +"<td class='test_table2_txt2'>"+obj.STUDENT_NAME+"</td>"
+                    +"<td class='test_table2_txt2'>"+obj.GROUP_NAME+"</td>"
+                    +"<td class='test_table2_txt2'>"+obj.RECORD_TIME+"</td>"
+                    +"<td class='test_table2_txt2'>"+obj.ATTENDACE_TYPE_NAME+"</td>"
+                    +"<td class='test_table2_txt2'><span class='dn'><img src='../../images/arrow.png'/></span></td>"
+                    +"</tr>";
+                    $("#tbody").append(stu);
+                    
+                }             
+                $(".sug_mbox_bg_row tr").mouseover(function() {
+                    $(this).addClass("over");
+                  }).mouseout(function() { 
+                    $(this).removeClass("over");
+                  });
+                  $(".sug_mbox_bg_row tr:even").addClass("even");
+            });
+
+            function studentDetealInfo(student_id) {
+                parameters.student_id = student_id;
+                location.href = "studentDetailInfo.html?"+serializableParameters(parameters);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="sug_mbox_bg_row">
+            <table width="100%" border="0" class="test_table_row">
+              <thead>
+                <tr class="sug_tr">
+                    <th>姓名</th>
+                    <th>班级</th>
+                    <th>时间</th>
+                    <th>类别</th>
+                    <th></th>
+                </tr>
+               </thead>
+               <tbody id="tbody">
+                
+               </tbody>
+            </table>
+        </div>
+    </body>
+</html>

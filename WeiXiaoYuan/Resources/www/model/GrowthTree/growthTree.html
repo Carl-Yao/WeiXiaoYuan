@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script type="text/javascript" src="../../js/util.js"></script>
+    <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+    <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>    
+    <script type="text/javascript" src="../../js/parameter.js"></script>
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+      <script>
+          initEasyJS();
+        $(document).ready(function() {
+            var str = JsInterface.getChildren();
+            var arr = JSON.parse(str);
+            var student_id;
+            if(arr.length>0){
+               var myChild = arr[0];
+               student_id = myChild.STUDENT_ID;
+               parameters.student_id=student_id;
+               
+              var growthTreeStr = GrowthTree.getgrowtreepic(student_id);
+              var growthTreeArr = JSON.parse(growthTreeStr);
+              
+              for(var i in growthTreeArr){
+                var divStr;
+                var obj = growthTreeArr[i];
+                if(i%2==0){
+                    divStr = "<div class='tree_list'>";
+                }else{
+                    divStr = "<div class='tree_list2'>";
+                }
+                divStr += "<div class='tree_time'>"+obj.USERDATE+"<br />"+obj.ADDRESS+"<br/>";
+                divStr += obj.TITLE;
+                divStr += "</div>";
+                divStr += " <img src='"+obj.PIC_URL+"' class='tree_img' height='150' onclick=\"viewPic('"+obj.GROWTREE_ID+"','"+obj.STUDENT_ID+"')\"/>";
+                divStr += "<div class='tree_title'>"+obj.IDEA+" </div>";
+                divStr += "</div>";
+                document.getElementById("tree").innerHTML += divStr;
+            }
+        }
+    });
+    
+        function addTree(){
+            location.href = "growthTreeAdd.html?"+serializableParameters(parameters);
+        }
+        
+        function viewPic(treeId,studentId){
+            parameters.treeId = treeId;
+            parameters.studentId = studentId;
+            location.href = "growthTreeView.html?"+serializableParameters(parameters);
+        }
+      </script>
+</head>
+<body style="background: url(../../images/tree.png) repeat-y center 0;">
+    <div class="add_trees" onclick="addTree();">
+      <img src="../../images/add.png" class="tree_img" />
+    </div>
+      
+  <div class="trees" id="tree">
+      
+  </div>
+</body>
+</html>

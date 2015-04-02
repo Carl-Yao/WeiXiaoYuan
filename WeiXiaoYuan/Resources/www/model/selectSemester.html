@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/util.js"></script>
+        <script type="text/javascript" src="../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+            function selectStudent(div) {
+                var xq_id = $(div).attr("xq_id");
+                var xq_name = $(div).attr("xq_name");
+                parameters.xq_id = xq_id;
+                parameters.xq_name = xq_name;
+                location.href = decode(parameters.url) + "?" + serializableParameters(parameters);
+            }
+
+
+            window.onload = function() {
+                var group_id = parameters.group_id;
+                var str = Teach.getSemesterList(group_id);
+                //alert(str);
+                var arr = JSON.parse(str);
+                for (var i in arr) {
+                    var obj = arr[i];
+                    var classDiv = "<div xq_id='" + obj.XQ_ID + "' xq_name='" + obj.XQ_NAME + "' class='sea3_g' onclick='selectStudent(this);'><img src='../images/flag" + ((i + 1) % 6) + ".png' class='img_c' />" + obj.XQ_NAME + "</div>";
+                    $("#divs").append($(classDiv));
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="grade_class" id="divs">
+
+        </div>
+    </body>
+</html>

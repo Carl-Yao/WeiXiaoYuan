@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" type="text/css" href="demo.css">
+        <link href="../../css/common.css" rel="stylesheet"  type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+
+        <script>
+            initEasyJS();
+			$(document).ready(function() {
+                var str = BirthdayBlessing.srzflist();
+                var arr = JSON.parse(str);
+                for(var i in arr){
+                    var obj = arr[i];
+                    var stu = "<tr>";
+                    stu += "<td>"+obj.GROUP_NAME+"</td>";
+                    stu += "<td>"+obj.STUDENT_NAME+"</td>";
+                    stu += "<td>"+obj.BIRTHDAY+"</td>";
+                    stu += "<td>"+obj.IS_SEND+"</td>";
+                    stu += "</tr>";
+                    $("#tbody").append(stu);
+                }
+                
+                $(".sug_mbox_bg_row tr").mouseover(function() {
+                    $(this).addClass("over");
+                  }).mouseout(function() { 
+                    $(this).removeClass("over");
+                  });
+                  $(".sug_mbox_bg_row tr:even").addClass("even");
+            });
+
+			function sendBlessing(student_id,student_name,birthday) {
+			    JsInterface.showProgressDialog("","正在处理，请稍等...");
+                var flag = BirthdayBlessing.srzfadd(student_id,student_name,birthday);
+                JsInterface.closeProgressDialog();
+                if(flag=="true"){
+                    alert("成功发送祝福！");
+                    window.location = location.href;
+                }else{
+                    alert("发送祝福失败！");
+                }
+			}
+        </script>
+    </head>
+    <body>
+        <div class="sug_mbox_bg_row">
+            <table width="100%" border="0" class="bri_remidn">
+              <thead>
+                <tr class="sug_tr">
+                    <th>班级</th>
+                    <th>姓名</th>
+                    <th>生日</th>
+                    <th>发送标志</th>
+                </tr>
+               </thead>
+               <tbody id="tbody">
+
+               </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/row.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>       
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+			function selectType(attendanceType, attendanceName) {
+				parameters.attendanceType = attendanceType;
+				parameters.attendanceName = attendanceName;
+				//alert(serializableParameters(parameters));
+				//location.href = "attendanceQuery.html?" + serializableParameters(parameters);
+				location.href = decode(parameters.url) + "?" + serializableParameters(parameters);
+			}
+        </script>
+    </head>
+    <body>
+        <div class="grade_class">
+            <div class="sea3_g"   onclick="selectType('','全部');">
+                <img src="../../images/collaboration.png" class="img_c" />全部<b></b>
+            </div>
+        </div>
+        <div class="grade_class">
+            <div class="sea3_g"   onclick="selectType('in','正常到校');">
+                <img src="../../images/collaboration.png" class="img_c" />正常到校<b></b>
+            </div>
+        </div>
+        <div class="grade_class" >
+            <div class="sea3_g" onclick="selectType('out','正常离校');">
+                <img src="../../images/collaboration.png" class="img_c" />正常离校<b></b>
+            </div>
+        </div>
+        <div class="grade_class" >
+            <div class="sea3_g" onclick="selectType('later','迟到');">
+                <img src="../../images/collaboration.png" class="img_c" />迟到<b></b>
+            </div>
+        </div>
+        <div class="grade_class" >
+            <div class="sea3_g" onclick="selectType('absent','缺勤');">
+                <img src="../../images/collaboration.png" class="img_c" />缺勤<b></b>
+            </div>
+        </div>
+        <div class="grade_class" >
+            <div class="sea3_g" onclick="selectType('leave_early','早退');">
+                <img src="../../images/collaboration.png" class="img_c" />早退<b></b>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+            parameters.url = encode(location.href);
+            var student_id=parameters.student_id;
+            var student_name=parameters.student_name;
+            var record_name=parameters.record_name;
+            if(!student_id||!student_name){
+                   var str = JsInterface.getChildren();
+                   var arr = JSON.parse(str);
+                   if(arr.length>0){
+                       var myChild = arr[0];
+                       student_id = myChild.STUDENT_ID;
+                       student_name = myChild.STUDENT_NAME;
+                       group_id = myChild.GROUP_ID;
+                       parameters.student_id = student_id;
+                       parameters.student_name = student_name;
+                   }
+            }
+            if(!record_name){
+                var str = Score.ksList(parameters.student_id);
+                //alert(str);
+                var arr = JSON.parse(str);
+                var obj;
+                if(arr.length>0)obj=arr[0];
+                if(obj){
+                    record_name = obj.RECORD_NAME;
+                }
+            }
+            
+            $(document).ready(function(){
+                $("#student_name").html(student_name);
+                $("#record_name").html(record_name);
+                
+                var str = Score.scoreInquiry(student_id,record_name);
+                var arr = JSON.parse(str);
+                for(var i in arr){
+                    var obj = arr[i];
+                    var stu = "<tr>";
+                    //var stu = "<tr> <td></td>";
+                    stu += "<td>"+obj.lesson+"</td>";
+                    stu += "<td>"+obj.record_point+"</td>";
+                    stu += "<td>"+obj.max_point+"</td>";
+                    stu += "<td>"+obj.min_point+"</td>";
+                    stu += "<td>"+obj.avg_point+"</td>";
+                    stu += "</tr>";
+                    $("#tbody").append(stu);
+                }
+                
+                $(".sug_mbox_bg_row tr").mouseover(function() {
+                    $(this).addClass("over");
+                  }).mouseout(function() { 
+                    $(this).removeClass("over");
+                  });
+                  $(".sug_mbox_bg_row tr:even").addClass("even");
+            });
+            function selectChild(){
+                location.href = "../selectChildren.html?"+serializableParameters(parameters);
+            }
+            function selectExamination(){
+                location.href = "../selectExamination.html?"+serializableParameters(parameters);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectChild();">
+                <div style="float:left;"><img src="../../images/home.png" class="img_c"/>
+                </div>
+                <div id="student_name"style="float:left;">学生姓名</div><b></b>
+            </div>
+        </div>
+        <div class="search3">
+            <div class="sea3_g"  onclick="selectExamination();">
+                <div style="float: left;">
+                    <img src="../../images/calendar.png" class="img_c" />
+                </div>
+                <div style="float: left;" id="record_name">考试名称</div><b></b>
+            </div>
+        </div>
+        <div class="sug_mbox_bg_row">
+            <table width="100%" border="0" class="test_table_row">
+              <thead>
+                <tr class="sug_tr">
+                    <th>科目</th>
+                    <th>成绩</th>
+                    <th>最高</th>
+                    <th>最低</th>
+                    <th>平均</th>
+                    
+                </tr>
+               </thead>
+               <tbody id="tbody">
+                
+                
+               </tbody>
+            </table>
+        </div>
+    </body>
+</html>

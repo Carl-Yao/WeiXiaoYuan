@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+            var ID=parameters.ID;
+            $(document).ready(function(){
+                var str = SchoolSummary.dynamicinfo(ID);
+                var obj = JSON.parse(str);
+                var group_name = obj.group_name;
+                var info = obj.info;
+                var title = obj.title;
+                var info = obj.info;
+                var publish_date = obj.publish_date;
+                var pics = obj.picture;
+                
+                var detail = "<h3 align='center'>"+title+"</h3>";
+                detail += "<span>"+publish_date+"</span>";
+                for(var i in pics){
+                    //var img = "<img src='"+pics[i].picture_info+"' width='100%'/>";
+                    var url = SchoolSummary.judgeUrlFromCache(pics[i].picture_info);
+                    var img = "<img src='"+url+"' width='100%'/>";
+                    detail += img;
+                }
+                detail += "<p>"+info+"</p>";;
+                $("#detail").html(detail);
+            });
+
+        </script>
+    </head>
+    <body>        
+        <div class="school_int" id="detail">
+        </div>
+    </body>
+</html>

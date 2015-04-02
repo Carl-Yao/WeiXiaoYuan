@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>请假</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <script>
+            initEasyJS();
+            parameters.url = encode(location.href);
+            var student_id = parameters.student_id;
+            var student_name = parameters.student_name;
+            var start_date = parameters.start_date;
+            var end_date = parameters.end_date;
+            var start_time = parameters.start_time;
+            var end_time = parameters.end_time;
+            //alert(JSON.stringify(parameters));
+            
+           if(!student_id||!student_name){
+                   var str = JsInterface.getChildren();
+                   var arr = JSON.parse(str);
+                   if(arr.length>0){
+                       var myChild = arr[0];
+                       student_id = myChild.STUDENT_ID;
+                       student_name = myChild.STUDENT_NAME;
+                       parameters.student_id = student_id;
+                       parameters.student_name = student_name;                   
+                   }
+            }
+            if(!start_date){
+                start_date = getNowDate();
+                parameters.start_date = start_date;
+            }
+            if(!end_date){
+                end_date = getNowDate();
+                parameters.end_date = end_date;
+            }
+            //alert(search_date+"-"+group_name+"-"+group_id);
+            $(document).ready(function() {
+                $("#start_date").html(start_date);
+                $("#end_date").html(end_date);
+                $("#student_name").html(student_name);
+
+            });
+            
+
+
+            function selectChild(){
+                parameters.search_date = $('#search_date').html();
+                location.href = "../selectChildren.html?"+serializableParameters(parameters);
+            }
+
+            
+            function changetime1(){
+                $("#start_time_afternoon").removeClass("ask_leave_sel");
+                $("#start_time_morning").addClass("ask_leave_sel");
+                $("#start_time").val("1");
+            }
+            
+            function changetime2(){
+                $("#start_time_afternoon").addClass("ask_leave_sel");
+                $("#start_time_morning").removeClass("ask_leave_sel");
+                $("#start_time").val("2");
+            }
+            
+            function changetime3(){
+                $("#end_time_afternoon").removeClass("ask_leave_sel");
+                $("#end_time_morning").addClass("ask_leave_sel");
+                $("#end_time").val("1");
+            }
+            
+            function changetime4(){
+                $("#end_time_afternoon").addClass("ask_leave_sel");
+                $("#end_time_morning").removeClass("ask_leave_sel");
+                $("#end_time").val("2");
+            }
+            
+            function tijiao(){
+                parameters.start_date =  $("#start_date").html();
+                if(parameters.start_date==""){
+                    alert("请输入开始日期！");
+                    return;
+                }
+                parameters.end_date =  $("#end_date").html();
+                if(parameters.end_date==""){
+                    alert("请输入结束日期！");
+                    return;
+                }
+                parameters.start_time =  $("#start_time").val();
+                parameters.end_time =  $("#end_time").val();
+                parameters.reason =  $("#reason").val();
+                
+
+                    JsInterface.showProgressDialog("","正在处理，请稍等...");
+                    var r= CheckAttendan.vacationadd(parameters.student_id,parameters.start_date,parameters.start_time,parameters.end_date,parameters.end_time,parameters.reason);
+                   
+                    JsInterface.closeProgressDialog();
+                    if(r=="true"){
+                        alert("成功提交请假申请！");
+                        CheckAttendan.closePage();
+                    }else{
+                        alert("提交请假申请失败！");
+                    }
+
+            }
+        </script>
+</head>
+<body style="background: #dbf7d9; height: 100%; min-height: 750px; ">
+<div class="search3">
+    <div class="sea3_g">
+      <div style="float: left;">
+        <img src="../../images/people2.png" class="img_c" /></div>
+      <div style="float: left;" id="student_name">选择姓名</div>
+      <b></b></div>
+  </div>
+  <div class="ask_leave">
+  	<div class="ask_leave_time1" onclick="showDatePickerDialog('start_date', $('#start_date').html());">
+		<div style="float: left;">
+        <img class="img_c" src="../../images/icon3.png"></div>
+		<div style="float: left;" id="start_date">开始时间</div><b></b>
+	</div>
+	<div id="start_time_morning" class="ask_leave_input ask_leave_sel" onclick="changetime1()">上午</div>
+	<div id="start_time_afternoon" class="ask_leave_input" onclick="changetime2()">下午</div>
+	<input type="hidden" id="start_time" name="start_time" value="1">
+  </div>
+  <div class="ask_leave">
+  	<div class="ask_leave_time1" onclick="showDatePickerDialog('end_date', $('#end_date').html());">
+		<div style="float: left;">
+        <img class="img_c" src="../../images/icon3.png"></div>
+        <div style="float: left;" id="end_date">结束时间</div><b></b>
+        </div>
+	<div id="end_time_morning" class="ask_leave_input ask_leave_sel" onclick="changetime3()">上午</div>
+	<div id="end_time_afternoon" class="ask_leave_input" onclick="changetime4()">下午</div>
+	<input type="hidden" id="end_time" name="end_time" value="1">
+  </div>
+  <div class="clear"></div>
+	<div class="blesses">
+		<textarea id="reason" class="bless_area">请输入请假事由</textarea>
+	</div>
+    <div class="search3_btn" onclick="tijiao();">提交 </div>
+</body>
+</html>

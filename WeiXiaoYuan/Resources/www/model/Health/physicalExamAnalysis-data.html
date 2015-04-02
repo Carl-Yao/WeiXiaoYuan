@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Dojo Toolkit Mobile Charting</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=3,minimum-scale=1,user-scalable=yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+       <script type="text/javascript" src="../../js/excanvas.js"></script>
+        <script type="text/javascript" src="../../js/dragonchart.core.js"></script>
+        <script type="text/javascript" src="../../js/dragonchart.line.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        
+        <script type="text/javascript">
+            initEasyJS();
+            var student_id = parameters.student_id;
+            var examination_type = parameters.examination_type;
+			$(document).ready(function() {
+			    var w = Health.getWidth();
+                var h = Health.getHeight();
+                //var w = 600 , h=500;
+                document.getElementById("divCanvas").style.width = w - 20 + "px";
+                document.getElementById("divCanvas").style.height = h - document.getElementById("divCanvas").offsetTop - 20 + "px";
+                
+                var s = Health.getExaminationTrade(student_id,examination_type);
+                //alert(s);
+                var obj = JSON.parse(s);
+                var ziji = [],high = [],low = [],avg = [],labels = [];
+                var arr = obj.body_examination_trade;
+                //alert(JSON.stringify(arr));
+               
+                 for(var i = 0;i < arr.length;i++){
+                    var trade = arr[i];
+                    ziji.push(parseFloat(trade.examination_value));
+                    high.push(parseFloat(trade.high_value));
+                    low.push(parseFloat(trade.low_value));
+                    avg.push(parseFloat(trade.avg_value));
+                    labels.push(trade.tj_year);
+                }
+                
+                var data = [
+                        {text : parameters.student_name, value :  ziji , color : '#07C700' ,linewidth:2,nodelength:8,nodetype:'c'},
+                        {text : '最高', value :  high , color : '#C75F00' ,linewidth:2,nodelength:8,nodetype:'c'},
+                        {text : '最低', value :  low , color : 'red' ,linewidth:2,nodelength:8,nodetype:'c'},
+                        {text : '平均', value :  avg , color : '#00B7C7' ,linewidth:2,nodelength:8,nodetype:'c'}
+                    ];
+                    
+                var options = {
+                    title: { content: parameters.examination_type_name+'体检趋势图' },
+                    valueType: 'n', 
+                    animationSteps: 30,
+                    node: { linecolor: "#f3cece", linewidth: 1 },
+                    valueAxis: { linewidth: 1, verticalcomputeP: true, heap: true },
+                    labelAxis: { labels: labels },
+                    scale: { linewidth: 1, backcolors: ['rgba(12,67,255,0.2)', 'rgba(0,191,255,0.2)'] },
+                    tip: { merge: true },
+                    //yAxisTitle: { content: '体温' },
+                    footer: { content: 'MIIT Statistics.', fontcolor: '#f8d8d8' },
+                    //legend: { elementtype: "l" },
+                };
+                
+                window.dchart = new DChart.Line('divCanvas', 'CN');
+                dchart.SetSkin('BlackAndWhite');
+                dchart.SetOptions(options);
+                dchart.Draw(data);
+		    });
+        </script>
+
+    </head>
+    <body>
+        <div id="divCanvas"></div>
+    </body>
+</html>

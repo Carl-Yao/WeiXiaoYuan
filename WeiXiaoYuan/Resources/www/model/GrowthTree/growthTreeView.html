@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />  
+    <script type="text/javascript" src="../../js/parameter.js"></script>
+    <script type="text/javascript" src="../../js/util.js"></script>
+    <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <script>
+      initEasyJS();
+    var w = GrowthTree.getWidth()-10;
+    var h = GrowthTree.getHeight()-10;
+    var studentId = parameters.studentId;
+    var treeId = parameters.treeId;
+    window.onload = function() {
+      var str = GrowthTree.getgrowtreeidallpic(studentId,treeId);
+      var arr = JSON.parse(str);
+      var picObj = arr.PICTURE;
+      if(picObj.length>0){
+           var str="";
+           for(var i in picObj){
+               var obj = picObj[i];
+               str += "<img name='small' border='0' src='"+obj.PIC_URL+"' width='45%' height='30%' onClick=\"setUrl('"+obj.PIC_URL+"');MM_showHideLayers('layer2','','show');MM_showHideLayers('layer','','hide');MM_showHideLayers('layer1','','hide');\" onclick=\"javascript:window.open(this.src);\"/>";
+           }
+           document.getElementById("tree").innerHTML = str;
+      }
+      
+    };
+
+    function setUrl(url){
+        document.getElementById("bigImg").src = url;
+        document.getElementById("bigImg").width = w;
+        document.getElementById("bigImg").height = h;                
+    }
+    
+     function takePhoto(){
+        GrowthTree.setImage();
+    }
+    
+    function setPhoto(flag,imgPath){
+        if(flag=="true"){
+            JsInterface.showProgressDialog("","正在处理，请稍等...");
+            var r = GrowthTree.addgrowtreepic(studentId,treeId,imgPath);
+            JsInterface.closeProgressDialog();
+            if(r=="true"){
+                alert("成功添加图片！");
+                var str = "<img name='small' border='0' src='"+imgPath+"'  width='45%' height='30%'  onClick=\"setUrl('"+imgPath+"');MM_showHideLayers('layer2','','show');MM_showHideLayers('layer','','hide');MM_showHideLayers('layer1','','hide');\" onclick=\"javascript:window.open(this.src);\"/>";
+                document.getElementById("tree").innerHTML += str;
+            }else{
+                alert("添加图片失败失败！");
+            }
+        }else if(flag==false){
+            alert(imgPath);
+        }
+    }
+            
+  </script>
+</head>
+<body>
+<div class="tree_edit">
+	
+    <div class="tree4_btn" onclick="takePhoto();"><img src="../../images/add_card2.png"/> 添加图片 </div>
+	<div class="tree_imgs" id="tree">
+		
+	</div>
+	<div id='layer2' style='position: absolute; left: 5px; top: 5px;  z-index: 1; visibility: hidden;'>
+            <a href='' onclick='return false' ><img id='bigImg' name='bigImg' src='' onclick=MM_showHideLayers('layer2','','hide');MM_showHideLayers('layer','','show');MM_showHideLayers('layer1','','show');return false; border='0' width='100' height='100' onclick='javascript:window.open(this.src);'/></a>
+        </div>
+</div>
+</body>
+</html>

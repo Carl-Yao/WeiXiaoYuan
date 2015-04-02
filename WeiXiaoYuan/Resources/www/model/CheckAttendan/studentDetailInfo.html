@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="stylesheet" type="text/css" href="demo.css">
+        <link href="../../css/common.css" rel="stylesheet"  type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <script>
+            initEasyJS();
+			$(document).ready(function() {
+				var student_id = parameters.student_id;
+				var str = JsInterface.studentinfo(student_id);
+				var json = JSON.parse(str);
+				var info = json.info;
+				for (var i in info) {
+					$("#" + i).html(info[i]);
+				}
+				$("#picture").attr("src", info.picture);
+				var a = '<a href="javascript:TelInterface.call(\''+info.HOME_PHONE+'\')">'+info.HOME_PHONE+'</a>';
+				$("#HOME_PHONE").html(a);
+				var family = json.family;
+				for (var i = 0;i<family.length;i++) {
+                    var parent = family[i];
+                    var img = "<b><img src='"+parent.PIC_URL+"' width='100px' height='100px'/></b>";
+                    var parentHtml = '<div class="father">' 
+                    + img 
+                    + '<table border="0" cellpadding="0" cellspacing="0" class="study_in_t">' 
+                    + '<tr>' 
+                    + '<td>姓名：</td>' 
+                    + '<td>'+parent.NAME+'</td>' 
+                    + '</tr>' 
+                    + '<tr>' 
+                    + '<td>关系：</td>' 
+                    + '<td>'+parent.RELATIONSHIP+'</td>' 
+                    + '</tr>' 
+                    + '<tr>' 
+                    + '<td>电话：</td>' 
+                    + '<td><a href="javascript:TelInterface.call(\''+parent.MOBILE+'\')">'+parent.MOBILE+'</a></td>' 
+                    + '</tr>' 
+                    + '</table>' 
+                    + '</div>';
+                    $("#parents").append(parentHtml);
+                }
+				var history = json.history;
+				for (var i = 0;i<history.length;i++) {
+                    var his = history[i];
+                    var hisHtml = '<div class="father">' 
+                    + '<table border="0" cellpadding="0" cellspacing="0">' 
+                    + '<tr>' 
+                    + '<td width=60 nowrap>日期：</td>' 
+                    + '<td>'+his.CHANGE_DATE+'</td>' 
+                    + '</tr>' 
+                    + '<tr>' 
+                    + '<td width=60 nowrap>升调：</td>' 
+                    + '<td>'+his.CHANGE_TYPE+'</td>' 
+                    + '</tr>' 
+                    + '<tr>' 
+                    + '<td width=60 nowrap>班级：</td>' 
+                    + '<td>'+his.CHANGE_IFNO+'</td>' 
+                    + '</tr>' 
+                    + '</table>' 
+                    + '</div>';
+                    $("#history").append(hisHtml);
+                }
+
+			});
+
+        </script>
+    </head>
+    <body>
+        <h3 class="study_title"> 学生详细信息 </h3>
+        <div class="study_in" style="padding:5px;">
+            <b><img id="picture" src="../../images/girl.png" alt="" width="100px" height="100px"/></b>
+            <table border="0" cellpadding="0" cellspacing="0" class="study_in_t">
+              <tr>
+                <td width=60 nowrap>姓名：</td><td id="STUDENT_NAME"></td>
+              </tr>
+              <tr>
+                <td width=60 nowrap>性别：</td><td id="SEX_VALUE">女</td>
+              </tr>
+              <tr>
+                <td width=60 nowrap>户口：</td><td id="RESIDENCE_PROPERTIES_VALUE"></td>
+              </tr>
+              <tr>
+                <td width=60 nowrap>户别：</td><td id="RESIDENCE_TYPE_VALUE"></td>
+              </tr>
+            </table>
+            
+            <table border="0" cellpadding="0" cellspacing="0" class="study_in_b">
+                <tr>
+                    <td width=60 nowrap>生源：</td><td id="SOURCE_TYPE_VALUE"></td>
+                    <td width=60 nowrap>民族：</td><td id="NATION"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">学号：</td><td colspan="2"  id="STUDENT_NO"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">学籍号：</td><td colspan="2"  id="XJH"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">班级：</td><td colspan="2" id="GROUP_NAME"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">入学日期：</td>
+                    <td colspan="2" id="ENTRANCE_DATE"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">家庭电话：</td>
+                    <td colspan="2" id="HOME_PHONE"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">出生日期：</td>
+                    <td colspan="2" id="BIRTHDAY"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">身体状况：</td><td  colspan="2" id="HEALTH_STATE_VALUE"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">家庭住址：</td>
+                    <td colspan="2" id="ADDRESS"></td>
+                </tr>
+            </table>
+            <div class="clear"></div>
+        </div>
+        <div class="parents">
+            <h3>家长信息</h3>
+            <div id='parents'></div>
+            <div class="clear"></div>
+        </div>
+        <div class="parents">
+            <h3>历史信息</h3>
+            <div id='history' style="padding:5px;"></div>
+            <div class="clear"></div>
+        </div>
+    </body>
+</html>

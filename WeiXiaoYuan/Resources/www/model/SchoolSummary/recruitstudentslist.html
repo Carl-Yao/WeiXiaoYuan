@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+            $(document).ready(function(){
+                var s = JsInterface.getSchoolsOfUser();
+                var arr = JSON.parse(s);
+                if(arr.length>0){
+                    var group_id = arr[0].GROUP_ID;
+                    var str = SchoolSummary.recruitstudentslist(group_id);
+                    var arr = JSON.parse(str);
+                    for(var i in arr){
+                        var obj = arr[i];
+                        var stu = "<tr onclick='showDetail(\""+serializableParameters(obj)+"\");'>";
+                        stu += "<td class='test_table2_txt2' style='text-align:left;line-height:2em;'>"+obj.TITLE+"</td>";
+                        stu += "<td class='test_table2_txt2'>"+obj.PUBLISH_DATE+"</td>";
+                        stu += "<td class='test_table2_txt2'><span class='dn'><img src='../../images/arrow.png'/></span></td>";
+                        stu += "</tr>";
+                        $("#tbody").append(stu);
+                    }
+                }
+            });
+            function showDetail(str){
+                location.href = "recruitstudents-detail.html?" + str;
+            }
+        </script>
+    </head>
+    <body>
+        
+        <div class="sug_mbox_bg_row">
+            <table width="100%" border="0" class="test_table_row">
+              <thead>
+                <tr class="sug_tr">
+                    <th>标题</th>
+                    <th>时间</th>
+                    <th></th>
+                </tr>
+               </thead>
+               <tbody id="tbody">
+                
+               </tbody>
+            </table>
+        </div>
+    </body>
+</html>

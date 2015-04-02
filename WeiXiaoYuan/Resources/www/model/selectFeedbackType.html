@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/util.js"></script>
+        <script type="text/javascript" src="../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+            function selectType(div){
+                var type = $(div).attr("type");
+                var type_name = $(div).attr("type_name");
+                parameters.type = type;
+                parameters.type_name = type_name;
+                location.href = decode(parameters.url) + "?"  + serializableParameters(parameters);
+            }
+
+
+            window.onload = function() {
+          
+            }
+        </script>
+    </head>
+    <body>
+        <div class="grade_class" id="divs">
+            <div type_name='学校' type='school' class='sea3_g' onclick='selectType(this);'><img src='../images/flag1.png' class='img_c' />学校</div>
+            <div type_name='班级' type='class' class='sea3_g' onclick='selectType(this);'><img src='../images/flag1.png' class='img_c' />班级</div>
+        </div>
+    </body>
+</html>

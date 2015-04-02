@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+            parameters.url = encode(location.href);
+            var type=parameters.type;
+            var type_name=parameters.type_name;
+            var student_name=parameters.student_name;
+            var student_id=parameters.student_id;
+ 
+            if(!student_id||!student_name){
+                var str = JsInterface.getChildren();
+                var arr = JSON.parse(str);
+                //alert(JSON.Stringify(arr[0]));
+                if(arr.length>0){
+                    student_id = arr[0].STUDENT_ID;
+                    student_name = arr[0].STUDENT_NAME;
+                    parameters.student_name=student_name;
+                    parameters.student_id=student_id;
+                    //alert(arr[0].STUDENT_NAME);
+                }
+            }
+            if(!type||!type_name){
+                type = "class";
+                type_name = "班级";
+                parameters.type=type;
+                parameters.type_name=type_name;
+            }
+            
+            $(document).ready(function(){
+                $("#type_name").html(type_name);
+                $("#student_name").html(student_name);
+            });
+      
+            function selectFeedbackType(){
+                location.href = "../selectFeedbackType.html?"+serializableParameters(parameters);
+            }
+            function publish(){
+                parameters.feedback_info =  $("#feedback_info").val();
+                JsInterface.showProgressDialog("","正在处理，请稍等...");
+                var r = Feedback.feedbackadd(parameters.student_id,parameters.type,parameters.feedback_info);
+                JsInterface.closeProgressDialog();
+                if(r=="true"){
+                    alert("成功添加意见反馈!");
+                    Feedback.closePage();
+                }else{
+                    alert("添加意见反馈失败!");
+                }
+            }
+            function selectChildren(){
+                parameters.student_id = student_id;
+                parameters.student_name = student_name;
+                location.href = "../selectChildren.html?"+serializableParameters(parameters);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectChildren();">
+                <div style="float:left;"><img src="../../images/home.png" class="img_c"/></div>
+                <div id="student_name"style="float:left;">学生姓名</div><b></b>
+            </div>
+        </div>
+        <div class="search3">
+            <div class="sea3_g"  onclick="selectFeedbackType();">
+                <div style="float: left;">
+                    <img src="../../images/calendar.png" class="img_c" />
+                </div>
+                <div style="float: left;" id="type_name">类别</div><b></b>
+            </div>
+        </div>
+        
+        <div class="area2"><textarea id="feedback_info"></textarea></div>
+        <div class="search3_btn" onclick="publish();">发布意见</div>
+    </body>
+</html>

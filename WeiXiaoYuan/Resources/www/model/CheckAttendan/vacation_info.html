@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>请假</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../../css/common.css" rel="stylesheet"  type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>  
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+
+        <script>
+            initEasyJS();
+            var vacation_id = parameters.VACATION_ID;
+            if(vacation_id==null||vacation_id.length<=0){
+              vacation_id=CheckAttendan.getVacation_id();
+            }
+			$(document).ready(function() {
+				var str = CheckAttendan.vacationinfo(vacation_id);
+                var json = JSON.parse(str);
+                 for(var key in json){
+                  
+                    $("#" + key).html(json[key]);
+                    
+                }
+			});
+
+			
+        </script>
+    </head>
+    <body>
+	<div class="search3">
+    <div class="sea3_g">
+      <div style="float: left;">
+        <img src="../../images/people2.png" class="img_c" /></div>
+      <div style="float: left;" id="STUDENT_NAME"></div>
+      </div>
+  </div><div class="search3">
+    <div class="sea3_g">
+      <div style="float: left;">
+        <img src="../../images/icon1.png" class="img_c" /></div>
+      <div style="float: left;" id="GROUP_NAME"></div>
+      </div>
+  </div>
+  <div class="ask_leave">
+  	<div class="ask_leave_time1">
+		<div style="float: left;">
+        <img class="img_c" src="../../images/icon3.png"></div>从<span id="START_DATE"></span></div>
+  	<div class="ask_leave_time2" id="SSTART_TIME"></div>
+  </div>
+  <div class="ask_leave">
+  	<div class="ask_leave_time1">
+		<div style="float: left;">
+        <img class="img_c" src="../../images/icon3.png"></div>至<span id="END_DATE"></span></div>
+  	<div class="ask_leave_time2" id="SEND_TIME"></div>
+  </div>
+  <div class="clear"></div>
+        <div class="ask_leave_main">
+			<h3>请假事由</h3>
+			<p id="REASON"></p>
+		</div>
+
+	<div class="search3" style="margin-top:8px">
+    <div class="sea3_g">
+      <div style="float: left;">
+        <img src="../../images/icon1.png" class="img_c" /></div>
+      <div style="float: left;" id="SFLAG"></div>
+      </div>
+  </div>
+    </body>
+</html>

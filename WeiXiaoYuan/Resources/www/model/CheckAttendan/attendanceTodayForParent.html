@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+       <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../../css/common.css" rel="stylesheet"  type="text/css" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>    
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+
+        <script>
+            initEasyJS();
+            var w = CheckAttendan.getWidth()-10;
+            var h = CheckAttendan.getHeight()-10;
+           $(document).ready(function(){
+                
+                var str = CheckAttendan.todayChildrenAttendance();
+                //alert(str);
+                var arr = JSON.parse(str);
+                var temp;
+                for(var i in arr){
+                    var obj = arr[i];
+                    temp = obj.TEMPLATE_VAL;
+                    if(temp=="0"){
+                        temp = "未测量";
+                    }
+                    //alert(obj.PICTURE_URL);
+                    //alert(obj.PICTURE_URL);
+                    var imgurl = CheckAttendan.judgeUrlFromCache(obj.PICTURE_URL);
+                    var str = "<div class='study_in' style='padding:5px;'>";
+                        str += "<b><img name='small' border='0' src='"+obj.PICTURE_URL+"' width='100' height='100' onClick=\"setUrl('"+obj.PICTURE_URL+"');MM_showHideLayers('layer2','','show');MM_showHideLayers('layer','','hide');MM_showHideLayers('layer1','','hide');\" onclick=\"javascript:window.open(this.src);\"/></b>";
+                        str += "<table border='0' cellpadding='0' cellspacing='0' class='study_in_t'>";
+                        str += "<tr><td width=50 >姓名：</td><td>"+obj.STUDENT_NAME+"</td></tr>";
+                        str += "<tr><td width=50 >时间：</td><td>"+obj.RECORD_TIME+"</td></tr>";
+                        str += "<tr><td width=50 >体温：</td><td>"+temp+"</td></tr>";
+                        str += "</table>";
+                        str += "<div class='clear'></div>";
+                        str += "</div>";
+                        document.getElementById("content").innerHTML += str;
+                }
+            });
+
+            function studentDetealInfo(student_id) {
+                parameters.student_id = student_id;
+                location.href = "studentDetailInfo.html?"+serializableParameters(parameters);
+            }
+            
+            function setUrl(url){
+                document.getElementById("bigImg").src = url;
+                document.getElementById("bigImg").width = w;
+                document.getElementById("bigImg").height = h;                
+            }
+        </script>
+    </head>
+    <body>
+        <div id="content">
+            
+        </div>
+        <div id='layer2' style='position: absolute; left: 5px; top: 5px;  z-index: 1; visibility: hidden;'>
+            <a href='' onclick='return false' ><img id='bigImg' name='bigImg' src='' onclick=MM_showHideLayers('layer2','','hide');MM_showHideLayers('layer','','show');MM_showHideLayers('layer1','','show');return false; border='0' width='100' height='100' onclick='javascript:window.open(this.src);'/></a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>    
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+
+        <script>
+            initEasyJS();
+            parameters.url = encode(location.href);
+            var group_id = parameters.group_id;
+            var group_type = parameters.group_type;
+            var group_name = parameters.group_name;
+            //alert(JSON.stringify(parameters));
+            
+            if(!group_id||!group_type||!group_name){
+                   var s = JsInterface.getFirstClassOfUser();
+                   var obj = JSON.parse(s);
+                   group_id = obj.GROUP_ID;
+                   group_type = obj.GROUP_TYPE;
+                   group_name = obj.GROUP_NAME;
+            }
+            //alert(search_date+"-"+group_name+"-"+group_id);
+            $(document).ready(function() {
+                $("#group_name").html(group_name);
+                var str = StudentManagement.getStudents(group_id);
+                var arr = JSON.parse(str);
+                for(var i in arr){
+                    var obj = arr[i];
+                    var stu = "<tr onclick='studentDetealInfo(\""+obj.STUDENT_ID+"\");'>";
+                    //var stu = "<tr> <td></td>";
+                    stu += "<td>"+obj.STUDENT_NAME+"</td>";
+                    stu += "<td>"+obj.STUDENT_NO+"</td>";
+                    stu += "<td>"+obj.SEX_VALUE+"</td>";
+                    stu += "<td>"+obj.BIRTHDAY+"</td>";
+                    stu += "<td><span class='dn'><img src='../../images/arrow.png'/></span></td>";
+                    stu += "</tr>";
+                    $("#tbody").append(stu);
+                }
+                
+                $(".sug_mbox_bg_row tr").mouseover(function() {
+                    $(this).addClass("over");
+                  }).mouseout(function() { 
+                    $(this).removeClass("over");
+                  });
+                  $(".sug_mbox_bg_row tr:even").addClass("even");
+            });
+            
+             function selectClass(){
+                location.href = "../selectClass.html?"+serializableParameters(parameters);
+            }
+            
+            function studentDetealInfo(student_id) {
+                parameters.student_id = student_id;
+                location.href = "../CheckAttendan/studentDetailInfo.html?"+serializableParameters(parameters);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectClass();">
+                <div style="float:left;"><img src="../../images/icon1.png" class="img_c"/></div>
+                <div id="group_name"style="float:left;">班级</div><b></b>
+            </div>
+        </div>
+        
+        <div class="sug_mbox_bg_row">
+            <table width="100%" border="0" class="test_table_row">
+              <thead>
+                <tr class="sug_tr">
+                    <th>姓名</th>
+                    <th>学号</th>
+                    <th>性别</th>
+                    <th>出生日期</th>
+                    <th></th>
+                </tr>
+               </thead>
+               <tbody id="tbody">
+                
+                
+               </tbody>
+            </table>
+        </div>
+    </body>
+</html>

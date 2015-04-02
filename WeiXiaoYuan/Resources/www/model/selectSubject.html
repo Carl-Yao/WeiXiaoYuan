@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/util.js"></script>
+        <script type="text/javascript" src="../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+            function selectStudent(div) {
+                var lesson = $(div).attr("lesson");
+                parameters.lesson = lesson;
+                location.href = decode(parameters.url) + "?" + serializableParameters(parameters);
+            }
+
+
+            window.onload = function() {
+                var group_id = parameters.group_id;
+                var str = Score.ksLessonListforGroup(group_id);
+                //alert(str);
+                var arr = JSON.parse(str);
+                if(arr.length>0){
+                    var classDiv = "<div lesson='' class='sea3_g' onclick='selectStudent(this);'><img src='../images/flag2.png' class='img_c' /> 总分 </div>";
+                    $("#divs").append($(classDiv));
+                }
+                for (var i in arr) {
+                    var obj = arr[i];
+                    var classDiv = "<div lesson='" + obj.LESSON + "' class='sea3_g' onclick='selectStudent(this);'><img src='../images/flag" + ((i + 1) % 6) + ".png' class='img_c' />" + obj.LESSON + "</div>";
+                    $("#divs").append($(classDiv));
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <div class="grade_class" id="divs">
+
+        </div>
+    </body>
+</html>

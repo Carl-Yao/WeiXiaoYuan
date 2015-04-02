@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+            initEasyJS();
+            parameters.url = encode(location.href);
+            var group_id=parameters.group_id;
+            var group_type=parameters.group_type;
+            var group_name=parameters.group_name;
+            var attendanceName=parameters.attendanceName;
+            var attendanceType=parameters.attendanceType;
+            var beginDate=parameters.beginDate;
+            var endDate=parameters.endDate;
+            var xjh=parameters.xjh;
+            var studentNumber=parameters.studentNumber;
+            var studentName=parameters.studentName;
+            //alert(JSON.stringify(parameters));
+            if(!group_id||!group_type||!group_name){
+                   var s = JsInterface.getFirstClassOfUser();
+                   var obj = JSON.parse(s);
+                   group_id = obj.GROUP_ID;
+                   group_type = obj.GROUP_TYPE;
+                   group_name = obj.GROUP_NAME;
+                   
+                   parameters.group_id=group_id;
+                   parameters.group_type=group_type;
+                   parameters.group_name=group_name;
+            }
+            if(!attendanceName||!attendanceType){
+                attendanceName = "全部";
+                attendanceType = "";
+                parameters.attendanceName=attendanceName;
+                parameters.attendanceType=attendanceType;
+            }
+            if(!beginDate){
+                var date = new Date();
+                date.setDate(date.getDate()-7);
+                beginDate = getStringDate(date);
+                parameters.beginDate=beginDate;
+            }
+            
+            if(!endDate){
+                endDate = getNowDate();
+                parameters.endDate=endDate;
+            }
+            if(!xjh){
+                parameters.xjh="";
+            }
+            if(!studentNumber){
+                parameters.studentNumber="";
+            }
+            if(!studentName){
+                parameters.studentName="";
+            }
+            
+            
+             $(document).ready(function(){
+                $("#beginDate").html(beginDate);
+                $("#endDate").html(endDate);
+                $("#group_name").html(group_name);
+                $("#attendanceName").html(attendanceName);
+                $("#attendanceType").val(attendanceType);
+                $("#groupId").val(group_id);
+                $("#xjh").val(xjh);
+                $("#studentNumber").val(studentNumber);
+                $("#studentName").val(studentName);
+            });
+            function selectCalss(){
+                parameters.beginDate = $('#beginDate').html();
+                parameters.endDate = $('#endDate').html();
+                location.href = "../selectGroup.html?"+serializableParameters(parameters);
+            }
+            function selectAttendanceType(){
+                parameters.beginDate = $('#beginDate').html();
+                parameters.endDate = $('#endDate').html();
+                location.href = "attendanceQueery-type.html?"+serializableParameters(parameters);
+            }
+            function search(){
+                parameters.beginDate = $('#beginDate').html();
+                parameters.endDate = $('#endDate').html();
+                parameters.studentName=$("#studentName").val();
+                parameters.studentNumber=$("#studentNumber").val();
+                parameters.xjh=$("#xjh").val();
+                location.href = "attendanceQuery-data.html?"+serializableParameters(parameters);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div class="search3">
+            <div class="sea3_g" onclick="showDatePickerDialog('beginDate', $('#beginDate').html());">
+                  <div style="float: left;"><img src="../../images/icon3.png" class="img_c" /></div>
+                  <div style="float: left;" id="beginDate">开始日期</div>
+                  <b></b>
+             </div>
+        </div>
+        
+        <div class="search3">
+            <div class="sea3_g" onclick="showDatePickerDialog('endDate', $('#endDate').html());">
+              <div style="float: left;"><img src="../../images/icon3.png" class="img_c" /></div>
+                <div style="float: left;" id="endDate">结束日期</div>
+              <b></b>
+            </div>
+        </div>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectCalss();">
+                <div style="float:left;"><img src="../../images/icon1.png" class="img_c"/></div>
+                <div id="group_name"style="float:left;">班级</div><b></b>
+            </div>
+        </div>
+        <div class="search3">
+            <div class="sea3_g"  onclick="selectAttendanceType();">
+              <div style="float: left;">
+                <img src="../../images/calendar.png" class="img_c" /></div>
+              <div style="float: left;" id="attendanceName">全部</div>
+              <b></b>
+              </div>
+        </div>
+            <div class="search3_name"><label>学生姓名：</label>
+                    <div  class="student_names0">
+                        <input type="text" id="studentName"/>
+                    </div>
+            </div>           
+            
+            <div class="search3_num"><label>学&nbsp;号：</label>
+                  <div  class="student_names0">
+                      <input type="text" id="studentNumber"/>
+                  </div>
+            </div>
+            <div class="search3_num"><label>学籍号：</label>
+                <div  class="student_names0">
+                  <input type="text" id="xjh"/>
+                </div>
+            </div>
+            <div class="search3_btn" onclick="search();">查 询 </div>
+    </body>
+</html>

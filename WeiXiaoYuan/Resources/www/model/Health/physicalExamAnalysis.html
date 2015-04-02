@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+        <script>
+            initEasyJS();
+           parameters.url = encode(location.href);
+            var group_id = parameters.group_id;
+            var group_type = parameters.group_type;
+            var group_name = parameters.group_name;
+            var student_name = parameters.student_name;
+            var student_id = parameters.student_id;
+            var examination_type = parameters.examination_type;
+            var examination_type_name = parameters.examination_type_name;
+            //alert(JSON.stringify(parameters));
+
+            if (!group_id || !group_type || !group_name) {
+                var s = JsInterface.getFirstClassOfUser();
+                var obj = JSON.parse(s);
+                group_id = obj.GROUP_ID;
+                group_type = obj.GROUP_TYPE;
+                group_name = obj.GROUP_NAME;
+                
+                parameters.group_id = group_id;
+                parameters.group_type = group_type;
+                parameters.group_name = group_name;
+            }
+            if (!student_name || !student_id) {
+                student_name = "请选择学生";
+                student_id = "";
+            }
+            if (!examination_type || !examination_type_name) {
+                examination_type_name = "请选择体检项目";
+                examination_type = "";
+            }
+            //alert(search_date+"-"+group_name+"-"+group_id);
+            $(document).ready(function() {
+                 $("#student_name").html(student_name);
+                 $("#group_name").html(group_name);
+                 $("#examination_type_name").html(examination_type_name);
+                
+            });
+
+            function selectCalss() {
+                location.href = "../selectClass.html?" + serializableParameters(parameters);
+            }
+
+            function selectStudent() {
+                location.href = "../selectStudent.html?"  + serializableParameters(parameters);
+            }
+            
+            function selectExaminationType(){
+                location.href = "../selectExamationType.html?"  + serializableParameters(parameters);
+            }
+            
+            function search(){
+                location.href = "physicalExamAnalysis-data.html?" + serializableParameters(parameters);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectCalss();">
+                <div style="float:left;"><img src="../../images/icon1.png" class="img_c"/>
+                </div>
+                <div id="group_name"style="float:left;">班级</div><b></b>
+            </div>
+        </div>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectStudent();">
+                <div style="float:left;"><img src="../../images/home.png" class="img_c"/>
+                </div>
+                <div id="student_name"style="float:left;">学生</div><b></b>
+            </div>
+        </div>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectExaminationType();">
+                <div style="float:left;"><img src="../../images/doc.png" class="img_c"/>
+                </div>
+                <div id="examination_type_name"style="float:left;">体检项目</div><b></b>
+            </div>
+        </div>
+        <div class="search3_btn" onclick="search();">查 询 </div>
+    </body>
+</html>

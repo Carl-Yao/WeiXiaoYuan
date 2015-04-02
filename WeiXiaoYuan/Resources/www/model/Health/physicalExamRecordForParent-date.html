@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>考勤查询</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+  <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>  
+  <script type="text/javascript" src="../../js/util.js"></script>
+  <script type="text/javascript" src="../../js/parameter.js"></script>
+  <script type="text/javascript">
+      initEasyJS();
+    var student_id = parameters.student_id;
+    var student_name = parameters.student_name;
+    var search_date = parameters.search_date;
+    if(!search_date){
+        search_date = getNowDate();
+    }
+        
+    function selectDate(div){
+        parameters.student_id = student_id;
+        parameters.student_name = student_name;
+        parameters.search_date = $(div).attr("SEARCH_DATE");
+        location.href = "physicalExamRecordForParent.html?"+serializableParameters(parameters);
+    }
+    
+      window.onload = function(){
+          var str = Health.getExaminationDatesForParent(student_id);
+          //alert(str);
+          var arr = JSON.parse(str);
+          for(var i in arr){
+              var obj = arr[i];
+              var classDiv = "<div SEARCH_DATE='"+obj.EXAMINATE_DATE+"' class='sea3_g' onclick='selectDate(this);'><img src='../../images/flag"+((i+1)%6)+".png' class='img_c' />"+obj.EXAMINATE_DATE+"</div>";
+              $("#divs").append($(classDiv));
+          }
+      }
+  </script>
+</head>
+<body>
+  <div class="grade_class" id="divs">
+    
+  </div>
+</body>
+</html>

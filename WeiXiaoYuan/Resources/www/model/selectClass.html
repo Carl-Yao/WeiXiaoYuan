@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤查询</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link href="../css/common.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../js/util.js"></script>
+        <script type="text/javascript" src="../js/parameter.js"></script>
+        <script type="text/javascript">
+            initEasyJS();
+			//alert(JSON.stringify(parameters));
+			function selectClass(div) {
+				var group_id = $(div).attr("GROUP_ID");
+				var group_name = $(div).attr("GROUP_NAME");
+				var group_type = $(div).attr("GROUP_TYPE");
+
+				parameters.group_id = group_id;
+				parameters.group_type = group_type;
+				parameters.group_name = group_name;
+				//alert("url:"+parameters.url);
+				//alert("decode:"+decode(parameters.url));
+				//alert("parameters:"+serializableParameters(parameters));
+				var url = decode(parameters.url);
+				var u = url +"?"+  serializableParameters(parameters);
+				parameters.url = null;
+				//alert("selectClass-href:" + u);
+				location.href = u;
+				//alert("location.href"+location.href);
+			}
+
+
+			window.onload = function() {
+				var str = JsInterface.getClassesOfUser();
+				//alert(str);
+				var arr = JSON.parse(str);
+				for (var i in arr) {
+					var obj = arr[i];
+					var classDiv = "<div GROUP_ID='" + obj.GROUP_ID + "' GROUP_NAME='" + obj.GROUP_NAME + "' GROUP_TYPE='" + obj.GROUP_TYPE + "' class='sea3_g' onclick='selectClass(this);'><img src='../images/flag" + ((i + 1) % 6) + ".png' class='img_c' />" + obj.GROUP_NAME + "</div>";
+					$("#divs").append($(classDiv));
+				}
+			};
+        </script>
+    </head>
+    <body>
+        <div class="grade_class" id="divs">
+
+        </div>
+    </body>
+</html>

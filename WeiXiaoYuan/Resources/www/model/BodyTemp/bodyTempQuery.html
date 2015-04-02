@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+
+        <script>
+            initEasyJS();
+            parameters.url = encode(location.href);
+            var group_id = parameters.group_id;
+            var group_type = parameters.group_type;
+            var group_name = parameters.group_name;
+            var search_date = parameters.search_date;
+            //alert(JSON.stringify(parameters));
+            
+            if(!group_id||!group_type||!group_name){
+                   var s = JsInterface.getFirstClassOfUser();
+                   var obj = JSON.parse(s);
+                   group_id = obj.GROUP_ID;
+                   group_type = obj.GROUP_TYPE;
+                   group_name = obj.GROUP_NAME;
+                   
+                   parameters.group_id = group_id;
+                   parameters.group_type = group_type;
+                   parameters.group_name = group_name;
+            }
+            if(!search_date){
+                search_date = getNowDate();
+                parameters.search_date = search_date;
+            }
+            //alert(search_date+"-"+group_name+"-"+group_id);
+            $(document).ready(function() {
+                $("#search_date").html(search_date);
+                $("#group_name").html(group_name);
+                loadData(group_id,search_date);
+            });
+            
+            function loadData(group_id,search_date){
+                var str = BodyTemp.getBodyTemperatures(group_id,search_date);
+                var arr = JSON.parse(str);
+                $("#tbody").empty();
+                var temperature="";
+                for(var i in arr){
+                    var obj = arr[i];
+                    if(obj.BODY_TEMPRERATURE==""||obj.BODY_TEMPRERATURE=="0"){
+                        temperature = "未测量";
+                    }else{
+                        temperature = obj.BODY_TEMPRERATURE;
+                    }
+                    var stu = "<tr onclick='studentDetealInfo(\""+obj.STUDENT_ID+"\");'>";
+                    //var stu = "<tr> <td></td>";
+                    stu += "<td>"+obj.STUDENT_NAME+"</td>";
+                    stu += "<td>"+temperature+"</td>";
+                    if(obj.IS_HIGH=="N"){
+                        stu += "<td><img src='../../images/blue_arrow.png' /></td>";
+                    }else if(obj.IS_HIGH=="Y"){
+                        stu += "<td><img src='../../images/red_arrow.png' /></td>";
+                    }
+                    stu += "<td><span class='dn'><img src='../../images/arrow.png'/></span></td>";
+                    stu += "</tr>";
+                    $("#tbody").append(stu);
+                }
+                
+                $(".sug_mbox_bg_row tr").mouseover(function() {
+                    $(this).addClass("over");
+                  }).mouseout(function() { 
+                    $(this).removeClass("over");
+                  });
+                  $(".sug_mbox_bg_row tr:even").addClass("even");
+            }
+
+            function selectCalss(){
+                location.href = "../selectClass.html?"+serializableParameters(parameters);
+            }
+            function studentDetealInfo(student_id) {
+                parameters.student_id = student_id;
+                location.href = "../CheckAttendan/studentDetailInfo.html?"+serializableParameters(parameters);
+            }
+            function setDateInputValue(dateInputId, str) {
+                //document.getElementById(dateInputId).InnerHTML = str;
+                //dateInputId.value = str;
+                parameters.search_date = str;
+                $("#" + dateInputId).html(str);
+                loadData(group_id,str);
+            }
+        </script>
+    </head>
+    <body>
+        
+        <div class="search3">
+            <div class="sea3_g" onclick="showDatePickerDialog('search_date', $('#search_date').html());">
+              <div style="float: left;"><img src="../../images/icon3.png" class="img_c" /></div>
+                <div style="float: left;" id="search_date">日期</div>
+              <b></b>
+            </div>
+        </div>
+        <div class="search3">
+            <div class="sea3_g" onclick="selectCalss();">
+                <div style="float:left;"><img src="../../images/icon1.png" class="img_c"/></div>
+                <div id="group_name"style="float:left;">班级</div><b></b>
+            </div>
+        </div>
+        
+        <div class="sug_mbox_bg_row">
+            <table width="100%" border="0" class="test_table_row">
+              <thead>
+                <tr class="sug_tr">
+                    <th>姓名</th>
+                    <th>体温</th>
+                    <th>参考</th>
+                    <th></th>
+                </tr>
+               </thead>
+               <tbody id="tbody">
+                
+                
+               </tbody>
+            </table>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <title>显示祝福</title>
+  <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/util.js"></script>
+  <script type="text/javascript">
+      //initEasyJS();
+    var msgTitle = Greeting.getMsgTitle();
+    var msgContent = Greeting.getMsgContent();
+    var sender = Greeting.getSender();
+    var picUrl = Greeting.getPicUrl();
+    var msgTime = Greeting.getMsgTime();
+    window.onload = function(){
+        var str = "<div class='bless_contain'>";
+        str += msgContent;
+        str += "<div class='nursery_name'>"+sender+"<br/><span>"+msgTime+"</span></div>";
+        str += "</div>";
+        str += "<img src='"+picUrl+"'  class='bless_img' />";
+        document.getElementById("content").innerHTML = str;
+    };
+  </script>
+</head>
+<body>
+<div class="bless" id="content">
+    
+</div>
+</body>
+</html>

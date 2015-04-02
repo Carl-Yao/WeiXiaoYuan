@@ -1,0 +1,46 @@
+*,::after,::before{-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-o-text-size-adjust:none;-ms-text-size-adjust:none}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body,h1,h2,h3,h4,h5,h6,p,div,ul,ol,li,dl,dt,dd,h1{margin:0;padding:0;}
+html{font:12px/1.5 "microsoft yahei",arial,\5b8b\4f53}
+body{min-weight:320px;}
+input,textarea{-webkit-appearance:none;font-size:12px}
+li{list-style:none}
+
+img{border:0;margin:0;padding:0; vertical-align:middle;}
+a{text-decoration:none}
+
+
+/*历史考勤统计*/
+.search3 .sea3_g ,.student_names{position:relative;display:block; background: url(../../images/c_bg.png) repeat-x; width: 98%; height: 45px; margin:0 auto 8px; font-size: 16px; line-height: 45px; border: 1px solid #ddd; border-radius: 5px; behavior: url(images/ie-css3.htc); }
+.search3 .sea3_g:hover { background: url(../../images/c_bg2.png) repeat-x; }
+.search3 .sea3_g .img_c { margin: 0 15px; }
+.search3 .sea3_g b{display:block;width:17px;height:21px;position:absolute;top:12px;right:10px;background: url(../../images/arrow.png) no-repeat;}
+.search3_btn{behavior: url(images/ie-css3.htc);}
+.search3_btn {display:block;  text-shadow: 0 0 3px #333; background: url(../../images/c2_bg.png) repeat-x; width: 98%; height: 45px; margin: 8px auto 0; font-size: 16px; color: #fff; text-align: center; line-height: 45px; border: 1px solid #76ab05; border-radius: 5px; }
+.search3_btn:hover { background: url(../../images/c2_bg2.png) repeat-x; }
+.btn{display:block;  background: url(../../images/c2_bg.png) repeat-x; width: 98%; height: 45px; margin: 8px auto 0; font-size: 16px; color: #fff; text-align: center; line-height: 45px; border: 1px solid #76ab05; border-radius: 5px; }
+.btn:hover{background: url(../../images/c2_bg2.png) repeat-x;}
+.ui-loader{display:none;}
+
+
+/*班级列表*/
+.myTable { border-collapse: collapse; }
+.myTable td, th { border: 1px #555 solid; }
+.myTable .warn { color: red; }
+.grade_class{padding:10px 0 0;border-bottom:1px solid #ddd;}
+.grade_class .sea3_g {border-top:1px solid #ddd; position: relative; display: block; background: url(../../images/c_bg.png) repeat-x; width: 100%; height: 40px; font-size: 16px; line-height: 40px; }
+.grade_class .sea3_g:hover { background: url(../../images/c_bg2.png) repeat-x; }
+.grade_class .sea3_g .img_c { margin: 0 15px; }
+.grade_class .sea3_g b { display: block; width: 17px; height: 21px; position: absolute; top: 10px; right: 10px; background: url(../../images/arrow.png) no-repeat; }
+.ui-loader{display:none;}
+
+/*考勤查询*/
+.input_date{width:90%;border:0;margin:0 auto;background:#fff;border-radius:10px;opacity:0.8px;filter:alpha(opacity=80);height:25px;line-height:25px;text-indent:1em;}
+.test_table tr:nth-child(2n){background:#fbffe7;}
+
+/*学校介绍*/
+.school_int p{line-height:25px;text-indent:2em;font-size:16px;}
+
+
+/*考勤查询1*/
+.student_names{text-indent:1em;}

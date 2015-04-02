@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+
+        <script>
+            initEasyJS();
+            var w = Notify.getWidth()-10;
+            var h = Notify.getHeight()-10;
+            var notice_id = parameters.notice_id;
+            $(document).ready(function() {
+                var str = Notify.noticeinfo(notice_id);
+                var json = JSON.parse(str);
+                for(var key in json){
+                    if(key!="PICTURE_URL"){
+                        $("#" + key).html(json[key]);
+                    }else{
+                        var picUrl = json[key];
+                        if(picUrl&&picUrl!=""){
+                            var imgurl = Notify.judgeUrlFromCache(picUrl);
+                            //var str = "<img name='small' border='0' src='"+picUrl+"' height='100' width='100' onClick=\"setUrl('"+picUrl+"');MM_showHideLayers('layer2','','show');MM_showHideLayers('layer','','hide');MM_showHideLayers('layer1','','hide');\" onclick=\"javascript:window.open(this.src);\"/>";
+                            var str = "<img name='small' border='0' src='"+imgurl+"' height='100' width='100' onClick=\"setUrl('"+imgurl+"');MM_showHideLayers('layer2','','show');MM_showHideLayers('layer','','hide');MM_showHideLayers('layer1','','hide');\" onclick=\"javascript:window.open(this.src);\"/>";
+                            $("#" + key).html(str);
+                        }
+                    }
+                }
+            });
+            function setUrl(url){
+                document.getElementById("bigImg").src = url;
+                document.getElementById("bigImg").width = w;
+                document.getElementById("bigImg").height = h;                
+            }
+        </script>
+    </head>
+    <body>
+        <h3 class="study_title">通知详细信息 </h3>
+        <div class="study_in" style="padding:5px;">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <tbody id="data">
+                <tr>
+                    <td width=100 nowrap>学校/班级：</td><td id="GROUP_NAME"></td>
+                </tr>
+                <tr>
+                    <td width=100 nowrap>发布时间：</td><td id="ADD_DATE"></td>
+                </tr>
+                <tr>
+                    <td width=100 nowrap>通知标题：</td><td id="TITLE"></td>
+                </tr>
+                <tr>
+                    <td width=100 nowrap>通知内容：</td><td id="NOTICE_INFO"></td>
+                </tr>
+                <tr>
+                   <td width=100 nowrap>图片：</td><td id="PICTURE_URL"></td>
+                </tr>
+            </tbody>         
+        </table>
+        <div class="clear"></div>
+        </div>
+        <div id='layer2' style='position: absolute; left: 5px; top: 5px;  z-index: 1; visibility: hidden;'>
+            <a href='' onclick='return false' ><img id='bigImg' name='bigImg' src='' onclick=MM_showHideLayers('layer2','','hide');MM_showHideLayers('layer','','show');MM_showHideLayers('layer1','','show');return false; border='0' width='100' height='100' onclick='javascript:window.open(this.src);'/></a>
+        </div>
+    </body>
+</html>
