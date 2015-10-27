@@ -9,7 +9,7 @@
 #import "UserManager.h"
 static UserManager* _instance = nil;
 @implementation UserManager
-@synthesize UserType;
+@synthesize UserType,modelArr;
 + (UserManager*)shareController
 {
     @synchronized(self)

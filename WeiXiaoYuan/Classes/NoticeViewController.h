@@ -1,13 +1,13 @@
+////
+////  BirthdayViewController.h
+////  WeiXiaoYuan
+////
+////  Created by 姚振兴 on 14/12/18.
+////  Copyright (c) 2014年 Dukeland. All rights reserved.
+////
 //
-//  BirthdayViewController.h
-//  WeiXiaoYuan
+//#import "FunctionBaseViewController.h"
 //
-//  Created by 姚振兴 on 14/12/18.
-//  Copyright (c) 2014年 Dukeland. All rights reserved.
+//@interface NoticeViewController : FunctionBaseViewController
 //
-
-#import "FunctionBaseViewController.h"
-
-@interface NoticeViewController : FunctionBaseViewController
-
-@end
+//@end

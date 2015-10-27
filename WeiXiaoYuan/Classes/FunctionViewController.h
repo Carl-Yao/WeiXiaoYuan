@@ -14,6 +14,8 @@
 {
     NSMutableArray *m_arData;
     NSMutableArray *m_image;
+    NSDictionary* allModelsDic;
+    NSDictionary* allFunctionsDic;
 }
 @property (nonatomic, assign) id<MALTabBarChinldVIewControllerDelegate>delegate;
 

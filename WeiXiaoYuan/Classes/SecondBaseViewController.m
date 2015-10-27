@@ -12,7 +12,7 @@
 #define WIDTH  75
 #define HIGHT  100
 
-#define TAGH  10
+#define TAGH  16
 
 #define BTNWIDTH  WIDTH - TAGH
 #define BTNHIGHT  HIGHT - TAGH

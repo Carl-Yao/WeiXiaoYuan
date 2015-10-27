@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>考勤统计</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript" src="../../jquery/js/jquery.js"></script>
+        <script type="text/javascript" src="../../jquery/js/jquery.mobile-1.4.2.min.js"></script>
+        <script type="text/javascript" src="../../js/util.js"></script>
+        <script type="text/javascript" src="../../js/parameter.js"></script>
+        <link href="../../css/common.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript">
+      initEasyJS();
+    parameters.url = encode(location.href);
+    var group_id = parameters.group_id;
+    var group_type = parameters.group_type;
+    var group_name = parameters.group_name;
+    var cycle_code = parameters.cycle_code;
+    var cycle = parameters.cycle;
+    //alert(JSON.stringify(parameters));
+    
+    if(!group_id||!group_type||!group_name){
+           var s = JsInterface.getSchoolsOfUser();
+           var arrgroup = JSON.parse(s);
+                   if(arrgroup.length>0){
+                      group_id = arrgroup[0].GROUP_ID;
+                      group_type = arrgroup[0].GROUP_TYPE;
+                      group_name = arrgroup[0].GROUP_NAME;
+                      parameters.group_id=group_id;
+                      parameters.group_type=group_type;
+                      parameters.group_name=group_name;
+                   }
+    }
+    
+    if(!cycle||!cycle_code){
+        cycle_code = "week";
+        cycle = "当周";
+    }
+    
+    $(document).ready(function() {
+        $("#className").html(group_name);
+        $("#cycle").html(cycle);
+       
+        
+        $(".sug_mbox_bg_row tr").mouseover(function() {
+            $(this).addClass("over");
+          }).mouseout(function() { 
+            $(this).removeClass("over");
+          });
+          $(".sug_mbox_bg_row tr:even").addClass("even");
+    });
+            
+
+
+    function selectCycle() {
+      location.href = "attendanceHistoryCycle.html?"+serializableParameters(parameters);
+    }
+    
+</script>
+</head>
+<body>
+  <div class="search3">
+    <div class="sea3_g" >
+        <div style="float:left;"><img src="../../images/icon1.png" class="img_c"/></div>
+        <div id="className" style="float:left;">学校</div><b></b>
+    </div>
+    <div class="sea3_g" onclick="selectCycle();">
+        <div style="float:left;"><img src="../../images/icon2.png" class="img_c" /></div>
+        <div style="float:left;" id="cycle">当周</div><b></b>
+    </div>
+  </div>
+  
+  <div class="sug_mbox_bg_row">
+            <table width="100%" border="0" class="test_table_row">
+              <thead>
+                <tr class="sug_tr">
+                    <th>日期</th>
+                    <th>出勤</th>
+                    <th>迟到</th>
+                    <th>早退</th>
+                </tr>
+               </thead>
+               <tbody id="tbody">
+                
+                
+               </tbody>
+            </table>
+        </div>
+</body>
+</html>

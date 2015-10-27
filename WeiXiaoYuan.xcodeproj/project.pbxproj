@@ -87,6 +87,8 @@
 		5D9D0E8F1A4735F3003DDECD /* leave_manager_info.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9D0E8E1A4735F3003DDECD /* leave_manager_info.png */; };
 		5D9D0E931A47585A003DDECD /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D0E921A47585A003DDECD /* VPImageCropperViewController.m */; };
 		5DB8A6C91A374E460047A4D2 /* CheckAttendan.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8A6C81A374E460047A4D2 /* CheckAttendan.m */; };
+		5DC515BF1B773CF8007ABEC7 /* SecondBaseViewControllerEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC515BE1B773CF8007ABEC7 /* SecondBaseViewControllerEx.m */; };
+		5DC515C21B77410E007ABEC7 /* SecondFunctionBaseViewControllerEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC515C11B77410E007ABEC7 /* SecondFunctionBaseViewControllerEx.m */; };
 		5DCA49B31A388B7D00FA00BF /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCA49B21A388B7D00FA00BF /* UserManager.m */; };
 		5DCA4DC11A38C50900FA00BF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DCA49BE1A38C50600FA00BF /* Localizable.strings */; };
 		5DCA4DC31A38C50900FA00BF /* a_icon_11.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DCA49C21A38C50600FA00BF /* a_icon_11.png */; };
@@ -595,6 +597,10 @@
 		5D9D0E921A47585A003DDECD /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
 		5DB8A6C71A374E460047A4D2 /* CheckAttendan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckAttendan.h; sourceTree = "<group>"; };
 		5DB8A6C81A374E460047A4D2 /* CheckAttendan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckAttendan.m; sourceTree = "<group>"; };
+		5DC515BD1B773CF8007ABEC7 /* SecondBaseViewControllerEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondBaseViewControllerEx.h; sourceTree = "<group>"; };
+		5DC515BE1B773CF8007ABEC7 /* SecondBaseViewControllerEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondBaseViewControllerEx.m; sourceTree = "<group>"; };
+		5DC515C01B77410E007ABEC7 /* SecondFunctionBaseViewControllerEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondFunctionBaseViewControllerEx.h; sourceTree = "<group>"; };
+		5DC515C11B77410E007ABEC7 /* SecondFunctionBaseViewControllerEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondFunctionBaseViewControllerEx.m; sourceTree = "<group>"; };
 		5DCA49B11A388B7D00FA00BF /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
 		5DCA49B21A388B7D00FA00BF /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		5DCA49BF1A38C50600FA00BF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -1122,8 +1128,11 @@
 		5D624FCF1A285C1E00FF395F /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				5DC515C01B77410E007ABEC7 /* SecondFunctionBaseViewControllerEx.h */,
+				5DC515C11B77410E007ABEC7 /* SecondFunctionBaseViewControllerEx.m */,
+				5DC515BD1B773CF8007ABEC7 /* SecondBaseViewControllerEx.h */,
+				5DC515BE1B773CF8007ABEC7 /* SecondBaseViewControllerEx.m */,
 				5DD533551A62B5C800EDE003 /* SafetyManagement */,
-				5DCD298E1A3BECCC00E5FBAA /* StudentManagement */,
 				5DCA519D1A3B358400FA00BF /* InfoPublish */,
 				5D9D0E621A454C76003DDECD /* TeacherManagement */,
 				5D9D0E751A45CBB0003DDECD /* HealthManagement */,
@@ -1591,13 +1600,6 @@
 				5D21ACD01A447CD900AF55FD /* BirthdayBlessingViewController.m */,
 			);
 			name = InfoPublish;
-			sourceTree = "<group>";
-		};
-		5DCD298E1A3BECCC00E5FBAA /* StudentManagement */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = StudentManagement;
 			sourceTree = "<group>";
 		};
 		5DD198F31A7BC0E000EE1F3E /* MALTabBarController */ = {
@@ -2312,6 +2314,7 @@
 				5D7EC6651A4D82D10058EA41 /* XHFileAttribute.m in Sources */,
 				5DCD29911A3C3DB100E5FBAA /* FunctionBaseViewController.m in Sources */,
 				5DD590A51A2624AF004DFDAD /* AppDelegate.m in Sources */,
+				5DC515C21B77410E007ABEC7 /* SecondFunctionBaseViewControllerEx.m in Sources */,
 				5D9D0E7B1A45CC56003DDECD /* GrowthTreesViewController.m in Sources */,
 				5DD590AC1A2624AF004DFDAD /* LoadingViewController.m in Sources */,
 				5D9D0E931A47585A003DDECD /* VPImageCropperViewController.m in Sources */,
@@ -2415,6 +2418,7 @@
 				B56DD62016AAE7A300AD40F3 /* MyJSInterface.m in Sources */,
 				5DD591051A262AE4004DFDAD /* ASIHTTPRequest.m in Sources */,
 				5DCA51A01A3B36E700FA00BF /* NoticeForParentViewController.m in Sources */,
+				5DC515BF1B773CF8007ABEC7 /* SecondBaseViewControllerEx.m in Sources */,
 				5DD5910F1A262AE4004DFDAD /* JsInterface.m in Sources */,
 				5DCA51A31A3B399D00FA00BF /* Notify.m in Sources */,
 				5D7EC6641A4D82D10058EA41 /* XHCacheManager.m in Sources */,
@@ -2533,7 +2537,7 @@
 					"$(PROJECT_DIR)/WeiXiaoYuan/LibBPush",
 				);
 				PRODUCT_NAME = "微校园";
-				PROVISIONING_PROFILE = "6729f906-d3a1-4dc4-9d17-1c5290fedac0";
+				PROVISIONING_PROFILE = "23365f86-bf0a-48d4-921f-b65356ffc3bf";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2562,7 +2566,7 @@
 					"$(PROJECT_DIR)/WeiXiaoYuan/LibBPush",
 				);
 				PRODUCT_NAME = "微校园";
-				PROVISIONING_PROFILE = "6729f906-d3a1-4dc4-9d17-1c5290fedac0";
+				PROVISIONING_PROFILE = "23365f86-bf0a-48d4-921f-b65356ffc3bf";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

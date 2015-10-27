@@ -23,6 +23,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor lightGrayColor];
+        self.scrollView.backgroundColor = [UIColor whiteColor];
 		[self initEasyJS];
     }
     return self;

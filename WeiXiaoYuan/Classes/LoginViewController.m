@@ -127,7 +127,7 @@
     {
         [UserManager shareController].UserType = MANAGEMENT;
     }
-    
+    [UserManager shareController].modelArr = (NSMutableArray*)result[@"func"];
     // }
     //自定义tabbarviewcontroller
     // Override point for customization after application launch.

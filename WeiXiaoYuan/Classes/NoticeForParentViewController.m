@@ -13,7 +13,7 @@
 @implementation NoticeForParentViewController
 -(void)InitFunctionView
 {
-    super.functionTitle = @"通知公告";
+    super.functionTitle = @"家校互动";
     super.htmlDirectory = @"www/model/Notify";
     super.htmlName = @"notifyQuery.html";
     JsInterface* interface = [JsInterface new];

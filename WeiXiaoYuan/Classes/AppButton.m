@@ -16,7 +16,7 @@
 	btn.backgroundColor=[UIColor clearColor];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-    btn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
     [btn setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
     [btn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
     return btn;
@@ -43,12 +43,12 @@
 
 - (CGRect)titleRectForContentRect:(CGRect)contentRect
 {
-	return CGRectMake(contentRect.origin.x, contentRect.origin.y + contentRect.size.height/3*2, contentRect.size.width, contentRect.size.height/3*1);
+	return CGRectMake(contentRect.origin.x-14, contentRect.origin.y + contentRect.size.height/3*2, contentRect.size.width+28, contentRect.size.height/3*1);
 }
 
 - (CGRect)imageRectForContentRect:(CGRect)bounds
 {
-    return CGRectMake(bounds.origin.x, bounds.origin.y, bounds.size.width, bounds.size.height/3*2);
+    return CGRectMake(bounds.origin.x+4, bounds.origin.y, bounds.size.width-8, bounds.size.height/3*2);
 }
 
 @end

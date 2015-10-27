@@ -62,9 +62,9 @@
         }
         else
         {
-            NoticeViewController* view = [[NoticeViewController alloc] init];
-            //[self presentModalViewController:view animated:YES];
-            [self presentViewController:view animated:YES completion:nil];
+           // NoticeViewController* view = [[NoticeViewController alloc] init];
+//            //[self presentModalViewController:view animated:YES];
+//            [self presentViewController:view animated:YES completion:nil];
         }
         
     }else if ([self->m_arData[btn.tag] isEqualToString:@"节日祝福"])

@@ -62,7 +62,7 @@
         CGFloat heightLayout = 64;
         if ([userMessages.pushType isEqualToString:@"zf"]) {
             //to do
-            if (userMessages.pushType) {
+            if (userMessages.pushContent) {
                 UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(10, heightLayout+10, self.view.frame.size.width-20, 30)];
                 label.text = [NSString stringWithFormat:@"  %@:%@", userMessages.pushTitle, userMessages.pushContent];
                 label.textAlignment = NSTextAlignmentLeft;
@@ -156,11 +156,11 @@
                 UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(20, heightLayout+10, self.view.frame.size.width-40, self.view.frame.size.height - heightLayout - 10)];
                 label.text = userMessages.pushContent;
                 label.textAlignment = NSTextAlignmentLeft;
-                [self.view insertSubview:label atIndex:2];
+                label.font = [UIFont systemFontOfSize:16];
                 heightLayout = heightLayout + 10 + 30;
                 
                 CGSize labelSize = {0, 0};
-                labelSize = [labelStr sizeWithFont:[UIFont systemFontOfSize:14]
+                labelSize = [labelStr sizeWithFont:[UIFont systemFontOfSize:16]
                                  constrainedToSize:CGSizeMake(label.frame.size.width, 5000)
                                      lineBreakMode:UILineBreakModeWordWrap];
                 //14 为UILabel的字体大小
@@ -168,6 +168,7 @@
                 label.numberOfLines = 0;//表示label可以多行显示
                 label.lineBreakMode = UILineBreakModeCharacterWrap;//换行模式，与上面的计算保持一致。
                 label.frame = CGRectMake(label.frame.origin.x, label.frame.origin.y, label.frame.size.width, labelSize.height);//保持原来Label的位置和宽度，只是改变高度。
+                 [self.view insertSubview:label atIndex:2];
             }
         }
         if (imageViewNormal) {

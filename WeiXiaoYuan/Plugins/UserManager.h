@@ -18,6 +18,7 @@ typedef enum
 } UserTypeEnum;
 @interface UserManager : NSObject
 @property UserTypeEnum UserType;
+@property (nonatomic,strong)NSMutableArray* modelArr;
 
 + (UserManager*)shareController;
 @end

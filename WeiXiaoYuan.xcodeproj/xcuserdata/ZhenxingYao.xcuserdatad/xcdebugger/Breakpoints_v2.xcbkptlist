@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebView.m"
-            timestampString = "443169929.985113"
+            timestampString = "460802102.289658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "-initEasyJS"
             landmarkType = "5">
          </BreakpointContent>
@@ -488,6 +488,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "439749987.2863"
                   startingColumnNumber = "9223372036854775807"
@@ -502,6 +503,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "439749987.286431"
                   startingColumnNumber = "9223372036854775807"
@@ -632,11 +634,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebView.m"
-            timestampString = "443169929.985113"
+            timestampString = "460802102.289658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "-setDelegate:"
             landmarkType = "5">
          </BreakpointContent>
@@ -648,11 +650,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebView.m"
-            timestampString = "443169929.985113"
+            timestampString = "460802102.289658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-dealloc"
             landmarkType = "5">
          </BreakpointContent>
@@ -1025,6 +1027,8 @@
             continueAfterRunningActions = "No"
             symbolName = ""
             moduleName = "">
+            <Locations>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1035,6 +1039,8 @@
             continueAfterRunningActions = "No"
             symbolName = ""
             moduleName = "">
+            <Locations>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1051,6 +1057,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "___forwarding___"
                   moduleName = "CoreFoundation"
+                  usesParentBreakpointCondition = "Yes"
                   offsetFromSymbolStart = "920">
                </Location>
             </Locations>
@@ -1605,7 +1612,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/LoginViewController.m"
@@ -1687,6 +1694,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "440877381.799763"
                   startingColumnNumber = "9223372036854775807"
@@ -1701,6 +1709,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "440877381.799944"
                   startingColumnNumber = "9223372036854775807"
@@ -1733,6 +1742,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "441993685.039132"
                   startingColumnNumber = "9223372036854775807"
@@ -1747,6 +1757,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "441993685.039366"
                   startingColumnNumber = "9223372036854775807"
@@ -1875,6 +1886,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__82-[FunctionBaseViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Classes/FunctionBaseViewController.m"
                   timestampString = "441980862.785132"
                   startingColumnNumber = "9223372036854775807"
@@ -1889,6 +1901,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__82-[FunctionBaseViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Classes/FunctionBaseViewController.m"
                   timestampString = "441980862.785278"
                   startingColumnNumber = "9223372036854775807"
@@ -1921,6 +1934,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "441373578.218309"
                   startingColumnNumber = "9223372036854775807"
@@ -1935,6 +1949,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "441373578.218429"
                   startingColumnNumber = "9223372036854775807"
@@ -1969,11 +1984,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebView.m"
-            timestampString = "443200300.19245"
+            timestampString = "460802102.289658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "-imageHandle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1999,6 +2014,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "441373578.220023"
                   startingColumnNumber = "9223372036854775807"
@@ -2013,6 +2029,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "441373578.220158"
                   startingColumnNumber = "9223372036854775807"
@@ -2207,11 +2224,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebView.m"
-            timestampString = "443200300.19245"
+            timestampString = "460802102.289658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "-imageHandle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2317,6 +2334,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[PersonViewController loadPortrait]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Classes/PersonViewController.m"
                   timestampString = "441552681.432568"
                   startingColumnNumber = "9223372036854775807"
@@ -2331,6 +2349,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__36-[PersonViewController loadPortrait]_block_invoke"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Classes/PersonViewController.m"
                   timestampString = "441552681.432721"
                   startingColumnNumber = "9223372036854775807"
@@ -2523,13 +2542,14 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[NotifyBaseViewController imagePickerController:didFinishPickingMediaWithInfo:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuanTab/WeiXiaoYuan/Classes/NotifyBaseViewController.m"
-                  timestampString = "449666317.341601"
+                  timestampString = "467403269.35803"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
                   endingLineNumber = "147"
-                  offsetFromSymbolStart = "112">
+                  offsetFromSymbolStart = "95">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2537,13 +2557,14 @@
                   continueAfterRunningActions = "No"
                   symbolName = "__80-[NotifyBaseViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuanTab/WeiXiaoYuan/Classes/NotifyBaseViewController.m"
-                  timestampString = "449666317.341778"
+                  timestampString = "467403269.35833"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
                   endingLineNumber = "147"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "22">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -3099,11 +3120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "446694097.720742"
+            timestampString = "450440342.692818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "-btnClicked:event:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3115,11 +3136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "446694097.720742"
+            timestampString = "450440342.692818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -3163,11 +3184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebView.m"
-            timestampString = "443200300.19245"
+            timestampString = "460802102.289658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "-imageHandle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3259,12 +3280,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "467403268.062497"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+            landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3447,7 +3468,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
@@ -3815,7 +3836,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/MALTabBarController/MALTabBarViewController.m"
@@ -4039,6 +4060,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[InTimeViewController recordlist]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Classes/InTimeViewController.m"
                   timestampString = "445283522.564482"
                   startingColumnNumber = "9223372036854775807"
@@ -4053,6 +4075,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[InTimeViewController recordlist]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Classes/InTimeViewController.m"
                   timestampString = "445283522.564656"
                   startingColumnNumber = "9223372036854775807"
@@ -4435,7 +4458,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
@@ -4455,7 +4478,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "446694097.720742"
+            timestampString = "450440342.692818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "170"
@@ -4677,6 +4700,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "445541265.226233"
                   startingColumnNumber = "9223372036854775807"
@@ -4691,6 +4715,7 @@
                   continueAfterRunningActions = "No"
                   symbolName = "-[EasyJSWebViewProxyDelegate webView:shouldStartLoadWithRequest:navigationType:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
+                  usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/JZ/WeiXiaoYuan/WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
                   timestampString = "445541265.22647"
                   startingColumnNumber = "9223372036854775807"
@@ -4773,11 +4798,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "446694097.720742"
+            timestampString = "450440342.692818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "-imageHandle"
             landmarkType = "5">
          </BreakpointContent>
@@ -4961,7 +4986,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/WebServiceController.m"
@@ -4971,6 +4996,54 @@
             startingLineNumber = "608"
             endingLineNumber = "608"
             landmarkName = "-requestFinished:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiXiaoYuan/Classes/FunctionViewController.m"
+            timestampString = "467403268.062497"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "367"
+            endingLineNumber = "367"
+            landmarkName = "-btnClicked:event:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiXiaoYuan/Classes/FunctionViewController.m"
+            timestampString = "467403268.062497"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
+            landmarkName = "-btnClicked:event:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiXiaoYuan/Classes/FunctionViewController.m"
+            timestampString = "467403268.062497"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "382"
+            endingLineNumber = "382"
+            landmarkName = "-btnClicked:event:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
