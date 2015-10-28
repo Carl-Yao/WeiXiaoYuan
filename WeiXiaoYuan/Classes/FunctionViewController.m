@@ -386,21 +386,29 @@
         secondFunVC.htmlName = weadSelf.htmlNames[index];
         secondFunVC.htmlDirectory = weadSelf.htmlDirectorys[index];
         secondFunVC.functionTitle = weadSelf.m_arData[index];
+        
         JsInterface* interface = [JsInterface new];
         [secondFunVC.viewcontroller addJavascriptInterfaces:interface WithName:@"JsInterface"];
         [secondFunVC.viewcontroller addJavascriptInterfaces:interface WithName:@"TelInterface"];
+        
         SchoolSummary* schoolSummary = [SchoolSummary new];
         [secondFunVC.viewcontroller addJavascriptInterfaces:schoolSummary WithName:@"SchoolSummary"];
+        
         CheckAttendan* checkAttendan = [CheckAttendan new];
         [secondFunVC.viewcontroller addJavascriptInterfaces:checkAttendan WithName:@"CheckAttendan"];
+        
         StudentManagement* studentManagement = [StudentManagement new];
         [secondFunVC.viewcontroller addJavascriptInterfaces:studentManagement WithName:@"StudentManagement"];
+        
         Feedback* feedback = [Feedback new];
         [secondFunVC.viewcontroller addJavascriptInterfaces:feedback WithName:@"Feedback"];
+        
         BodyTemp* bodyTemp = [BodyTemp new];
         [secondFunVC.viewcontroller addJavascriptInterfaces:bodyTemp WithName:@"BodyTemp"];
+        
         Notify* notify = [Notify new];
         [secondFunVC.viewcontroller addJavascriptInterfaces:notify WithName:@"Notify"];
+        
         BirthdayBlessing* birthdayBlessing = [BirthdayBlessing new];
         [secondFunVC.viewcontroller addJavascriptInterfaces:birthdayBlessing WithName:@"BirthdayBlessing"];
         
@@ -425,6 +433,7 @@
         [secondFunVC InitFunctionView];
         [weadSelf presentModalViewController:secondFunVC animated:YES];
     };
+    
     [secondVC InitWithData];
     
     [self presentModalViewController:secondVC animated:YES];

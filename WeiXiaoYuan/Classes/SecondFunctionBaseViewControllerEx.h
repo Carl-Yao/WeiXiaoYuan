@@ -4,7 +4,7 @@
 //
 //  Created by 姚振兴 on 14/12/18.
 //  Copyright (c) 2014年 Dukeland. All rights reserved.
-//
+//  详情页
 
 #import <UIKit/UIKit.h>
 #import "EasyJSWebView.h"
