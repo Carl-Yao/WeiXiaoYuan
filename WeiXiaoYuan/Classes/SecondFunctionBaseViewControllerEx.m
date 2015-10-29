@@ -58,6 +58,7 @@
         [self.view insertSubview:imageView2 atIndex:0];
         
         viewcontroller = [[EasyJSWebView alloc]initWithFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y+48+20, self.view.frame.size.width, self.view.frame.size.height - 48-20)];
+        [self.view addSubview:viewcontroller];
     }
     return self;
 }
@@ -69,7 +70,8 @@
     [returnButton setTitle:functionTitle forState:UIControlStateNormal];
     
     [self.viewcontroller loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:htmlName ofType:nil inDirectory:htmlDirectory]]]];
-    [self.view addSubview:viewcontroller];
+    //self.viewcontroller.isRequestedForEasy = YES;
+    //[self.view addSubview:viewcontroller];
 }
 - (void)btnClicked:(id)sender event:(id)event
 {
