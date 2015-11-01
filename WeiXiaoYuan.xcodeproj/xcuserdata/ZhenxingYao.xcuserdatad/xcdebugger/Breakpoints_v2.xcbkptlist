@@ -920,22 +920,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/BodyTemp.m"
-            timestampString = "440001456.069953"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "-getBodyTemperaturesForParent::"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiXiaoYuan/Plugins/BodyTemp.m"
             timestampString = "440003579.466855"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -990,22 +974,6 @@
             startingLineNumber = "50"
             endingLineNumber = "50"
             landmarkName = "-getFirstClassOfUser"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiXiaoYuan/Plugins/CheckAttendan.m"
-            timestampString = "440007813.577833"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "-historyAttendance::"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2544,12 +2512,12 @@
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/WeiXiaoYuan/WeiXiaoYuan/Classes/NotifyBaseViewController.m"
-                  timestampString = "467837676.344376"
+                  timestampString = "468078125.395447"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
                   endingLineNumber = "147"
-                  offsetFromSymbolStart = "95">
+                  offsetFromSymbolStart = "108">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2559,12 +2527,12 @@
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ZhenxingYao/Desktop/WeiXiaoYuan/WeiXiaoYuan/Classes/NotifyBaseViewController.m"
-                  timestampString = "467837676.34474"
+                  timestampString = "468078125.396006"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
                   endingLineNumber = "147"
-                  offsetFromSymbolStart = "22">
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -3270,22 +3238,6 @@
             startingLineNumber = "181"
             endingLineNumber = "181"
             landmarkName = "-onMethod:response:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiXiaoYuan/Classes/FunctionViewController.m"
-            timestampString = "467403268.062497"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
-            landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -4970,22 +4922,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiXiaoYuan/Plugins/WebServiceController.m"
-            timestampString = "448733514.88337"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
-            landmarkName = "-srzftx"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -4996,22 +4932,6 @@
             startingLineNumber = "608"
             endingLineNumber = "608"
             landmarkName = "-requestFinished:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiXiaoYuan/Classes/SecondFunctionBaseViewControllerEx.m"
-            timestampString = "467834892.015738"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "-InitFunctionView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

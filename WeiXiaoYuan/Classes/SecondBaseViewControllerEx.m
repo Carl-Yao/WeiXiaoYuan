@@ -64,7 +64,7 @@
         
         laber.text = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).schoolName;
         laber.textColor = [UIColor whiteColor];
-        laber.font = [UIFont boldSystemFontOfSize:24];
+        laber.font = [UIFont systemFontOfSize:20];
         laber.lineBreakMode = UILineBreakModeCharacterWrap;
         laber.textAlignment = UITextAlignmentLeft;
         [self.view insertSubview:laber atIndex:2];

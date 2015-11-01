@@ -45,6 +45,71 @@
 		5D624FD51A297BF000FF395F /* BodyTemperatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D624FD41A297BF000FF395F /* BodyTemperatureViewController.m */; };
 		5D624FD81A297C9A00FF395F /* HomeWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D624FD71A297C9A00FF395F /* HomeWorkViewController.m */; };
 		5D624FDB1A298D3300FF395F /* InfoPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D624FDA1A298D3300FF395F /* InfoPublishViewController.m */; };
+		5D6A56D71BE61C1A001E2EB1 /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56981BE61C1A001E2EB1 /* 03.png */; };
+		5D6A56D81BE61C1A001E2EB1 /* 04.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56991BE61C1A001E2EB1 /* 04.png */; };
+		5D6A56D91BE61C1A001E2EB1 /* 08.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A569A1BE61C1A001E2EB1 /* 08.png */; };
+		5D6A56DA1BE61C1A001E2EB1 /* 09.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A569B1BE61C1A001E2EB1 /* 09.png */; };
+		5D6A56DB1BE61C1A001E2EB1 /* 14.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A569C1BE61C1A001E2EB1 /* 14.png */; };
+		5D6A56DC1BE61C1A001E2EB1 /* 15.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A569D1BE61C1A001E2EB1 /* 15.png */; };
+		5D6A56DD1BE61C1A001E2EB1 /* 任课老师.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A569E1BE61C1A001E2EB1 /* 任课老师.png */; };
+		5D6A56DE1BE61C1A001E2EB1 /* 体检记录.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A569F1BE61C1A001E2EB1 /* 体检记录.png */; };
+		5D6A56DF1BE61C1A001E2EB1 /* 体温告警.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56A01BE61C1A001E2EB1 /* 体温告警.png */; };
+		5D6A56E01BE61C1A001E2EB1 /* 体温管理.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56A11BE61C1A001E2EB1 /* 体温管理.png */; };
+		5D6A56E11BE61C1A001E2EB1 /* 体温记录.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56A21BE61C1A001E2EB1 /* 体温记录.png */; };
+		5D6A56E21BE61C1A001E2EB1 /* 体温趋势.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56A31BE61C1A001E2EB1 /* 体温趋势.png */; };
+		5D6A56E31BE61C1A001E2EB1 /* 作业发布.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56A41BE61C1A001E2EB1 /* 作业发布.png */; };
+		5D6A56E41BE61C1A001E2EB1 /* 作业查询.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56A51BE61C1A001E2EB1 /* 作业查询.png */; };
+		5D6A56E51BE61C1A001E2EB1 /* 信息发布.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56A61BE61C1A001E2EB1 /* 信息发布.png */; };
+		5D6A56E61BE61C1A001E2EB1 /* 健康管理.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56A71BE61C1A001E2EB1 /* 健康管理.png */; };
+		5D6A56E71BE61C1A001E2EB1 /* 儿童手机.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56A81BE61C1A001E2EB1 /* 儿童手机.png */; };
+		5D6A56E81BE61C1A001E2EB1 /* 历史轨迹.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56A91BE61C1A001E2EB1 /* 历史轨迹.png */; };
+		5D6A56E91BE61C1A001E2EB1 /* 反馈列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56AA1BE61C1A001E2EB1 /* 反馈列表.png */; };
+		5D6A56EA1BE61C1A001E2EB1 /* 节日祝福发布.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56AB1BE61C1A001E2EB1 /* 节日祝福发布.png */; };
+		5D6A56EB1BE61C1A001E2EB1 /* 发布通知.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56AC1BE61C1A001E2EB1 /* 发布通知.png */; };
+		5D6A56EC1BE61C1A001E2EB1 /* 在籍学生.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56AD1BE61C1A001E2EB1 /* 在籍学生.png */; };
+		5D6A56ED1BE61C1A001E2EB1 /* 学校动态.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56AE1BE61C1A001E2EB1 /* 学校动态.png */; };
+		5D6A56EE1BE61C1A001E2EB1 /* 学校简介.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56AF1BE61C1A001E2EB1 /* 学校简介.png */; };
+		5D6A56EF1BE61C1A001E2EB1 /* 学校荣誉.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56B01BE61C1A001E2EB1 /* 学校荣誉.png */; };
+		5D6A56F01BE61C1A001E2EB1 /* 学籍查询.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56B11BE61C1A001E2EB1 /* 学籍查询.png */; };
+		5D6A56F11BE61C1A001E2EB1 /* 学籍管理.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56B21BE61C1A001E2EB1 /* 学籍管理.png */; };
+		5D6A56F21BE61C1A001E2EB1 /* 学籍统计.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56B31BE61C1A001E2EB1 /* 学籍统计.png */; };
+		5D6A56F31BE61C1A001E2EB1 /* 实时视频.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56B41BE61C1A001E2EB1 /* 实时视频.png */; };
+		5D6A56F41BE61C1A001E2EB1 /* 家庭作业.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56B51BE61C1A001E2EB1 /* 家庭作业.png */; };
+		5D6A56F51BE61C1A001E2EB1 /* 师资力量.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56B61BE61C1A001E2EB1 /* 师资力量.png */; };
+		5D6A56F61BE61C1A001E2EB1 /* 当日作业.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56B71BE61C1A001E2EB1 /* 当日作业.png */; };
+		5D6A56F71BE61C1A001E2EB1 /* 当日考勤.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56B81BE61C1A001E2EB1 /* 当日考勤.png */; };
+		5D6A56F81BE61C1A001E2EB1 /* 意见反馈.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56B91BE61C1A001E2EB1 /* 意见反馈.png */; };
+		5D6A56F91BE61C1A001E2EB1 /* 成绩分析.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56BA1BE61C1A001E2EB1 /* 成绩分析.png */; };
+		5D6A56FA1BE61C1A001E2EB1 /* 成绩查询.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56BB1BE61C1A001E2EB1 /* 成绩查询.png */; };
+		5D6A56FB1BE61C1A001E2EB1 /* 成长树.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56BC1BE61C1A001E2EB1 /* 成长树.png */; };
+		5D6A56FC1BE61C1A001E2EB1 /* 手机产品.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56BD1BE61C1A001E2EB1 /* 手机产品.png */; };
+		5D6A56FD1BE61C1A001E2EB1 /* 招生信息.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56BE1BE61C1A001E2EB1 /* 招生信息.png */; };
+		5D6A56FE1BE61C1A001E2EB1 /* 教育管理.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56BF1BE61C1A001E2EB1 /* 教育管理.png */; };
+		5D6A56FF1BE61C1A001E2EB1 /* 教育资讯.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56C01BE61C1A001E2EB1 /* 教育资讯.png */; };
+		5D6A57001BE61C1A001E2EB1 /* 节日祝福查看.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56C11BE61C1A001E2EB1 /* 节日祝福查看.png */; };
+		5D6A57011BE61C1A001E2EB1 /* 校园视频.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56C21BE61C1A001E2EB1 /* 校园视频.png */; };
+		5D6A57021BE61C1A001E2EB1 /* 生日祝福提醒.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56C31BE61C1A001E2EB1 /* 生日祝福提醒.png */; };
+		5D6A57031BE61C1A001E2EB1 /* 生日祝福查看.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56C41BE61C1A001E2EB1 /* 生日祝福查看.png */; };
+		5D6A57041BE61C1A001E2EB1 /* 老师当日考勤.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56C51BE61C1A001E2EB1 /* 老师当日考勤.png */; };
+		5D6A57051BE61C1A001E2EB1 /* 老师考勤查询.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56C61BE61C1A001E2EB1 /* 老师考勤查询.png */; };
+		5D6A57061BE61C1A001E2EB1 /* 老师请假列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56C71BE61C1A001E2EB1 /* 老师请假列表.png */; };
+		5D6A57071BE61C1A001E2EB1 /* 老师请假查看.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56C81BE61C1A001E2EB1 /* 老师请假查看.png */; };
+		5D6A57081BE61C1A001E2EB1 /* 老师请假申请.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56C91BE61C1A001E2EB1 /* 老师请假申请.png */; };
+		5D6A57091BE61C1A001E2EB1 /* 考勤列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56CA1BE61C1A001E2EB1 /* 考勤列表.png */; };
+		5D6A570A1BE61C1A001E2EB1 /* 考勤查询.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56CB1BE61C1A001E2EB1 /* 考勤查询.png */; };
+		5D6A570B1BE61C1A001E2EB1 /* 历史考勤统计.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56CC1BE61C1A001E2EB1 /* 历史考勤统计.png */; };
+		5D6A570C1BE61C1A001E2EB1 /* 老师考勤统计.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56CD1BE61C1A001E2EB1 /* 老师考勤统计.png */; };
+		5D6A570D1BE61C1A001E2EB1 /* 聊天.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56CE1BE61C1A001E2EB1 /* 聊天.png */; };
+		5D6A570E1BE61C1A001E2EB1 /* 视频列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56CF1BE61C1A001E2EB1 /* 视频列表.png */; };
+		5D6A570F1BE61C1A001E2EB1 /* 請假例表.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56D01BE61C1A001E2EB1 /* 請假例表.png */; };
+		5D6A57101BE61C1A001E2EB1 /* 请假列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56D11BE61C1A001E2EB1 /* 请假列表.png */; };
+		5D6A57111BE61C1A001E2EB1 /* 请假查看.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56D21BE61C1A001E2EB1 /* 请假查看.png */; };
+		5D6A57121BE61C1A001E2EB1 /* 课程表.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56D31BE61C1A001E2EB1 /* 课程表.png */; };
+		5D6A57131BE61C1A001E2EB1 /* 通知公告.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56D41BE61C1A001E2EB1 /* 通知公告.png */; };
+		5D6A57141BE61C1A001E2EB1 /* 通知列表.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56D51BE61C1A001E2EB1 /* 通知列表.png */; };
+		5D6A57151BE61C1A001E2EB1 /* 当周食谱.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A56D61BE61C1A001E2EB1 /* 当周食谱.png */; };
+		5D6A57171BE625A2001E2EB1 /* 体检分析.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A57161BE625A2001E2EB1 /* 体检分析.png */; };
+		5D6A57191BE64C1D001E2EB1 /* 请假申请.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D6A57181BE64C1C001E2EB1 /* 请假申请.png */; };
 		5D7E19FC1A7BE981005395AC /* icon_home_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E19F81A7BE981005395AC /* icon_home_sel.png */; };
 		5D7E19FD1A7BE981005395AC /* icon_meassage_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E19F91A7BE981005395AC /* icon_meassage_sel.png */; };
 		5D7E19FE1A7BE981005395AC /* icon_selfinfo_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E19FA1A7BE981005395AC /* icon_selfinfo_sel.png */; };
@@ -524,6 +589,71 @@
 		5D624FD71A297C9A00FF395F /* HomeWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWorkViewController.m; sourceTree = "<group>"; };
 		5D624FD91A298D3300FF395F /* InfoPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPublishViewController.h; sourceTree = "<group>"; };
 		5D624FDA1A298D3300FF395F /* InfoPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPublishViewController.m; sourceTree = "<group>"; };
+		5D6A56981BE61C1A001E2EB1 /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
+		5D6A56991BE61C1A001E2EB1 /* 04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 04.png; sourceTree = "<group>"; };
+		5D6A569A1BE61C1A001E2EB1 /* 08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 08.png; sourceTree = "<group>"; };
+		5D6A569B1BE61C1A001E2EB1 /* 09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 09.png; sourceTree = "<group>"; };
+		5D6A569C1BE61C1A001E2EB1 /* 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14.png; sourceTree = "<group>"; };
+		5D6A569D1BE61C1A001E2EB1 /* 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 15.png; sourceTree = "<group>"; };
+		5D6A569E1BE61C1A001E2EB1 /* 任课老师.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "任课老师.png"; sourceTree = "<group>"; };
+		5D6A569F1BE61C1A001E2EB1 /* 体检记录.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "体检记录.png"; sourceTree = "<group>"; };
+		5D6A56A01BE61C1A001E2EB1 /* 体温告警.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "体温告警.png"; sourceTree = "<group>"; };
+		5D6A56A11BE61C1A001E2EB1 /* 体温管理.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "体温管理.png"; sourceTree = "<group>"; };
+		5D6A56A21BE61C1A001E2EB1 /* 体温记录.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "体温记录.png"; sourceTree = "<group>"; };
+		5D6A56A31BE61C1A001E2EB1 /* 体温趋势.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "体温趋势.png"; sourceTree = "<group>"; };
+		5D6A56A41BE61C1A001E2EB1 /* 作业发布.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "作业发布.png"; sourceTree = "<group>"; };
+		5D6A56A51BE61C1A001E2EB1 /* 作业查询.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "作业查询.png"; sourceTree = "<group>"; };
+		5D6A56A61BE61C1A001E2EB1 /* 信息发布.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "信息发布.png"; sourceTree = "<group>"; };
+		5D6A56A71BE61C1A001E2EB1 /* 健康管理.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "健康管理.png"; sourceTree = "<group>"; };
+		5D6A56A81BE61C1A001E2EB1 /* 儿童手机.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "儿童手机.png"; sourceTree = "<group>"; };
+		5D6A56A91BE61C1A001E2EB1 /* 历史轨迹.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "历史轨迹.png"; sourceTree = "<group>"; };
+		5D6A56AA1BE61C1A001E2EB1 /* 反馈列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "反馈列表.png"; sourceTree = "<group>"; };
+		5D6A56AB1BE61C1A001E2EB1 /* 节日祝福发布.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "节日祝福发布.png"; sourceTree = "<group>"; };
+		5D6A56AC1BE61C1A001E2EB1 /* 发布通知.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发布通知.png"; sourceTree = "<group>"; };
+		5D6A56AD1BE61C1A001E2EB1 /* 在籍学生.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "在籍学生.png"; sourceTree = "<group>"; };
+		5D6A56AE1BE61C1A001E2EB1 /* 学校动态.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "学校动态.png"; sourceTree = "<group>"; };
+		5D6A56AF1BE61C1A001E2EB1 /* 学校简介.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "学校简介.png"; sourceTree = "<group>"; };
+		5D6A56B01BE61C1A001E2EB1 /* 学校荣誉.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "学校荣誉.png"; sourceTree = "<group>"; };
+		5D6A56B11BE61C1A001E2EB1 /* 学籍查询.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "学籍查询.png"; sourceTree = "<group>"; };
+		5D6A56B21BE61C1A001E2EB1 /* 学籍管理.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "学籍管理.png"; sourceTree = "<group>"; };
+		5D6A56B31BE61C1A001E2EB1 /* 学籍统计.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "学籍统计.png"; sourceTree = "<group>"; };
+		5D6A56B41BE61C1A001E2EB1 /* 实时视频.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "实时视频.png"; sourceTree = "<group>"; };
+		5D6A56B51BE61C1A001E2EB1 /* 家庭作业.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "家庭作业.png"; sourceTree = "<group>"; };
+		5D6A56B61BE61C1A001E2EB1 /* 师资力量.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "师资力量.png"; sourceTree = "<group>"; };
+		5D6A56B71BE61C1A001E2EB1 /* 当日作业.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "当日作业.png"; sourceTree = "<group>"; };
+		5D6A56B81BE61C1A001E2EB1 /* 当日考勤.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "当日考勤.png"; sourceTree = "<group>"; };
+		5D6A56B91BE61C1A001E2EB1 /* 意见反馈.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "意见反馈.png"; sourceTree = "<group>"; };
+		5D6A56BA1BE61C1A001E2EB1 /* 成绩分析.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "成绩分析.png"; sourceTree = "<group>"; };
+		5D6A56BB1BE61C1A001E2EB1 /* 成绩查询.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "成绩查询.png"; sourceTree = "<group>"; };
+		5D6A56BC1BE61C1A001E2EB1 /* 成长树.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "成长树.png"; sourceTree = "<group>"; };
+		5D6A56BD1BE61C1A001E2EB1 /* 手机产品.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手机产品.png"; sourceTree = "<group>"; };
+		5D6A56BE1BE61C1A001E2EB1 /* 招生信息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "招生信息.png"; sourceTree = "<group>"; };
+		5D6A56BF1BE61C1A001E2EB1 /* 教育管理.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "教育管理.png"; sourceTree = "<group>"; };
+		5D6A56C01BE61C1A001E2EB1 /* 教育资讯.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "教育资讯.png"; sourceTree = "<group>"; };
+		5D6A56C11BE61C1A001E2EB1 /* 节日祝福查看.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "节日祝福查看.png"; sourceTree = "<group>"; };
+		5D6A56C21BE61C1A001E2EB1 /* 校园视频.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "校园视频.png"; sourceTree = "<group>"; };
+		5D6A56C31BE61C1A001E2EB1 /* 生日祝福提醒.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "生日祝福提醒.png"; sourceTree = "<group>"; };
+		5D6A56C41BE61C1A001E2EB1 /* 生日祝福查看.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "生日祝福查看.png"; sourceTree = "<group>"; };
+		5D6A56C51BE61C1A001E2EB1 /* 老师当日考勤.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "老师当日考勤.png"; sourceTree = "<group>"; };
+		5D6A56C61BE61C1A001E2EB1 /* 老师考勤查询.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "老师考勤查询.png"; sourceTree = "<group>"; };
+		5D6A56C71BE61C1A001E2EB1 /* 老师请假列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "老师请假列表.png"; sourceTree = "<group>"; };
+		5D6A56C81BE61C1A001E2EB1 /* 老师请假查看.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "老师请假查看.png"; sourceTree = "<group>"; };
+		5D6A56C91BE61C1A001E2EB1 /* 老师请假申请.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "老师请假申请.png"; sourceTree = "<group>"; };
+		5D6A56CA1BE61C1A001E2EB1 /* 考勤列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "考勤列表.png"; sourceTree = "<group>"; };
+		5D6A56CB1BE61C1A001E2EB1 /* 考勤查询.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "考勤查询.png"; sourceTree = "<group>"; };
+		5D6A56CC1BE61C1A001E2EB1 /* 历史考勤统计.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "历史考勤统计.png"; sourceTree = "<group>"; };
+		5D6A56CD1BE61C1A001E2EB1 /* 老师考勤统计.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "老师考勤统计.png"; sourceTree = "<group>"; };
+		5D6A56CE1BE61C1A001E2EB1 /* 聊天.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "聊天.png"; sourceTree = "<group>"; };
+		5D6A56CF1BE61C1A001E2EB1 /* 视频列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "视频列表.png"; sourceTree = "<group>"; };
+		5D6A56D01BE61C1A001E2EB1 /* 請假例表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "請假例表.png"; sourceTree = "<group>"; };
+		5D6A56D11BE61C1A001E2EB1 /* 请假列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "请假列表.png"; sourceTree = "<group>"; };
+		5D6A56D21BE61C1A001E2EB1 /* 请假查看.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "请假查看.png"; sourceTree = "<group>"; };
+		5D6A56D31BE61C1A001E2EB1 /* 课程表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "课程表.png"; sourceTree = "<group>"; };
+		5D6A56D41BE61C1A001E2EB1 /* 通知公告.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通知公告.png"; sourceTree = "<group>"; };
+		5D6A56D51BE61C1A001E2EB1 /* 通知列表.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "通知列表.png"; sourceTree = "<group>"; };
+		5D6A56D61BE61C1A001E2EB1 /* 当周食谱.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "当周食谱.png"; sourceTree = "<group>"; };
+		5D6A57161BE625A2001E2EB1 /* 体检分析.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "体检分析.png"; sourceTree = "<group>"; };
+		5D6A57181BE64C1C001E2EB1 /* 请假申请.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "请假申请.png"; sourceTree = "<group>"; };
 		5D7E19F81A7BE981005395AC /* icon_home_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_home_sel.png; sourceTree = "<group>"; };
 		5D7E19F91A7BE981005395AC /* icon_meassage_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_meassage_sel.png; sourceTree = "<group>"; };
 		5D7E19FA1A7BE981005395AC /* icon_selfinfo_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_selfinfo_sel.png; sourceTree = "<group>"; };
@@ -1174,6 +1304,78 @@
 			name = Functions;
 			sourceTree = "<group>";
 		};
+		5D6A56971BE61C1A001E2EB1 /* 160 */ = {
+			isa = PBXGroup;
+			children = (
+				5D6A56981BE61C1A001E2EB1 /* 03.png */,
+				5D6A56991BE61C1A001E2EB1 /* 04.png */,
+				5D6A569A1BE61C1A001E2EB1 /* 08.png */,
+				5D6A569B1BE61C1A001E2EB1 /* 09.png */,
+				5D6A569C1BE61C1A001E2EB1 /* 14.png */,
+				5D6A569D1BE61C1A001E2EB1 /* 15.png */,
+				5D6A57161BE625A2001E2EB1 /* 体检分析.png */,
+				5D6A569E1BE61C1A001E2EB1 /* 任课老师.png */,
+				5D6A569F1BE61C1A001E2EB1 /* 体检记录.png */,
+				5D6A56A01BE61C1A001E2EB1 /* 体温告警.png */,
+				5D6A56A11BE61C1A001E2EB1 /* 体温管理.png */,
+				5D6A56A21BE61C1A001E2EB1 /* 体温记录.png */,
+				5D6A56A31BE61C1A001E2EB1 /* 体温趋势.png */,
+				5D6A56A41BE61C1A001E2EB1 /* 作业发布.png */,
+				5D6A57181BE64C1C001E2EB1 /* 请假申请.png */,
+				5D6A56A51BE61C1A001E2EB1 /* 作业查询.png */,
+				5D6A56A61BE61C1A001E2EB1 /* 信息发布.png */,
+				5D6A56A71BE61C1A001E2EB1 /* 健康管理.png */,
+				5D6A56A81BE61C1A001E2EB1 /* 儿童手机.png */,
+				5D6A56A91BE61C1A001E2EB1 /* 历史轨迹.png */,
+				5D6A56AA1BE61C1A001E2EB1 /* 反馈列表.png */,
+				5D6A56AB1BE61C1A001E2EB1 /* 节日祝福发布.png */,
+				5D6A56AC1BE61C1A001E2EB1 /* 发布通知.png */,
+				5D6A56AD1BE61C1A001E2EB1 /* 在籍学生.png */,
+				5D6A56AE1BE61C1A001E2EB1 /* 学校动态.png */,
+				5D6A56AF1BE61C1A001E2EB1 /* 学校简介.png */,
+				5D6A56B01BE61C1A001E2EB1 /* 学校荣誉.png */,
+				5D6A56B11BE61C1A001E2EB1 /* 学籍查询.png */,
+				5D6A56B21BE61C1A001E2EB1 /* 学籍管理.png */,
+				5D6A56B31BE61C1A001E2EB1 /* 学籍统计.png */,
+				5D6A56B41BE61C1A001E2EB1 /* 实时视频.png */,
+				5D6A56B51BE61C1A001E2EB1 /* 家庭作业.png */,
+				5D6A56B61BE61C1A001E2EB1 /* 师资力量.png */,
+				5D6A56B71BE61C1A001E2EB1 /* 当日作业.png */,
+				5D6A56B81BE61C1A001E2EB1 /* 当日考勤.png */,
+				5D6A56B91BE61C1A001E2EB1 /* 意见反馈.png */,
+				5D6A56BA1BE61C1A001E2EB1 /* 成绩分析.png */,
+				5D6A56BB1BE61C1A001E2EB1 /* 成绩查询.png */,
+				5D6A56BC1BE61C1A001E2EB1 /* 成长树.png */,
+				5D6A56BD1BE61C1A001E2EB1 /* 手机产品.png */,
+				5D6A56BE1BE61C1A001E2EB1 /* 招生信息.png */,
+				5D6A56BF1BE61C1A001E2EB1 /* 教育管理.png */,
+				5D6A56C01BE61C1A001E2EB1 /* 教育资讯.png */,
+				5D6A56C11BE61C1A001E2EB1 /* 节日祝福查看.png */,
+				5D6A56C21BE61C1A001E2EB1 /* 校园视频.png */,
+				5D6A56C31BE61C1A001E2EB1 /* 生日祝福提醒.png */,
+				5D6A56C41BE61C1A001E2EB1 /* 生日祝福查看.png */,
+				5D6A56C51BE61C1A001E2EB1 /* 老师当日考勤.png */,
+				5D6A56C61BE61C1A001E2EB1 /* 老师考勤查询.png */,
+				5D6A56C71BE61C1A001E2EB1 /* 老师请假列表.png */,
+				5D6A56C81BE61C1A001E2EB1 /* 老师请假查看.png */,
+				5D6A56C91BE61C1A001E2EB1 /* 老师请假申请.png */,
+				5D6A56CA1BE61C1A001E2EB1 /* 考勤列表.png */,
+				5D6A56CB1BE61C1A001E2EB1 /* 考勤查询.png */,
+				5D6A56CC1BE61C1A001E2EB1 /* 历史考勤统计.png */,
+				5D6A56CD1BE61C1A001E2EB1 /* 老师考勤统计.png */,
+				5D6A56CE1BE61C1A001E2EB1 /* 聊天.png */,
+				5D6A56CF1BE61C1A001E2EB1 /* 视频列表.png */,
+				5D6A56D01BE61C1A001E2EB1 /* 請假例表.png */,
+				5D6A56D11BE61C1A001E2EB1 /* 请假列表.png */,
+				5D6A56D21BE61C1A001E2EB1 /* 请假查看.png */,
+				5D6A56D31BE61C1A001E2EB1 /* 课程表.png */,
+				5D6A56D41BE61C1A001E2EB1 /* 通知公告.png */,
+				5D6A56D51BE61C1A001E2EB1 /* 通知列表.png */,
+				5D6A56D61BE61C1A001E2EB1 /* 当周食谱.png */,
+			);
+			path = 160;
+			sourceTree = "<group>";
+		};
 		5D7EC6501A4D82D10058EA41 /* XHImageViewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1253,6 +1455,7 @@
 		5DCA49BD1A38C50600FA00BF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5D6A56971BE61C1A001E2EB1 /* 160 */,
 				5D93D6941ABEBAB2003A414B /* top_bj.9.jpg */,
 				5D7E1A001A7BFA30005395AC /* tabbar_background_os7@2x.png */,
 				5D7E1A011A7BFA30005395AC /* tabbar_compose_below_button@2x.png */,
@@ -1975,19 +2178,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D6A56DC1BE61C1A001E2EB1 /* 15.png in Resources */,
+				5D6A56E01BE61C1A001E2EB1 /* 体温管理.png in Resources */,
 				5DCA4E2E1A38C50900FA00BF /* icon_home_nor.png in Resources */,
 				5D7E1A051A7BFA30005395AC /* tabbar_compose_below_button@2x.png in Resources */,
 				5DCA4E791A38C50900FA00BF /* mm_title_btn_menu_disable.png in Resources */,
 				5DCA4E311A38C50900FA00BF /* icon_meassage_sel.png in Resources */,
+				5D6A57081BE61C1A001E2EB1 /* 老师请假申请.png in Resources */,
 				5DCA4EB71A38C50900FA00BF /* title_back.png in Resources */,
 				5DCA4DCF1A38C50900FA00BF /* bg_title2.png in Resources */,
 				5DCA4E0B1A38C50900FA00BF /* chatto_bg_pressed.9.png in Resources */,
 				5DCA4E681A38C50900FA00BF /* menu_exit.png in Resources */,
 				5DCA4EC11A38C50900FA00BF /* top_bj2.9.jpg in Resources */,
+				5D6A570C1BE61C1A001E2EB1 /* 老师考勤统计.png in Resources */,
 				5DCA4E8C1A38C50900FA00BF /* png_0150.png in Resources */,
 				5DCA4EC61A38C50900FA00BF /* w01.jpg in Resources */,
 				5DCA4E8E1A38C50900FA00BF /* png_0179.png in Resources */,
 				5D1CEC9A1A698A2A0086CDF9 /* BPushConfig.plist in Resources */,
+				5D6A56D81BE61C1A001E2EB1 /* 04.png in Resources */,
 				5DCA4DE91A38C50900FA00BF /* btn_style_alert_dialog_button_normal.9.png in Resources */,
 				5DD5910B1A262AE4004DFDAD /* easyjs-inject.js in Resources */,
 				5DCA4E4E1A38C50900FA00BF /* main_course_teacher.png in Resources */,
@@ -1995,6 +2203,7 @@
 				5DCA4E121A38C50900FA00BF /* checked_no.png in Resources */,
 				5DCA4DF11A38C50900FA00BF /* btn_style_four_focused.9.png in Resources */,
 				5DCA4EDB1A38C50A00FA00BF /* icon@2x.png in Resources */,
+				5D6A57031BE61C1A001E2EB1 /* 生日祝福查看.png in Resources */,
 				5DCA4E5A1A38C50900FA00BF /* main_school_homepage.png in Resources */,
 				5DCA4DE31A38C50900FA00BF /* btn_cancle_normal.9.png in Resources */,
 				5DCA4E6E1A38C50900FA00BF /* mm_listitem_pressed.9.png in Resources */,
@@ -2007,15 +2216,22 @@
 				5DCA4E631A38C50900FA00BF /* menu_bg_normal2.9.png in Resources */,
 				5DCA4DDC1A38C50900FA00BF /* btn1.png in Resources */,
 				5DCA4DD51A38C50900FA00BF /* bj2.jpg in Resources */,
+				5D6A56E51BE61C1A001E2EB1 /* 信息发布.png in Resources */,
 				5DCA4DC81A38C50900FA00BF /* base_actionbar_bg.9.png in Resources */,
 				5DCA4DF41A38C50900FA00BF /* btn_style_one_disabled.9.png in Resources */,
 				5DCA4E571A38C50900FA00BF /* main_parent_education.png in Resources */,
+				5D6A56DB1BE61C1A001E2EB1 /* 14.png in Resources */,
+				5D6A56FB1BE61C1A001E2EB1 /* 成长树.png in Resources */,
 				5DCA4EC81A38C50900FA00BF /* w_right.png in Resources */,
 				5DCA4E731A38C50900FA00BF /* mm_title_back_normal.9.png in Resources */,
 				5DCA4E7B1A38C50900FA00BF /* mm_title_btn_normal.9.png in Resources */,
 				5DCA4E661A38C50900FA00BF /* menu_donate.png in Resources */,
+				5D6A56E71BE61C1A001E2EB1 /* 儿童手机.png in Resources */,
 				5DCA4DF91A38C50900FA00BF /* btn_style_two_normal.9.png in Resources */,
+				5D6A57041BE61C1A001E2EB1 /* 老师当日考勤.png in Resources */,
+				5D6A56D71BE61C1A001E2EB1 /* 03.png in Resources */,
 				5DCA4E211A38C50900FA00BF /* homepage.png in Resources */,
+				5D6A56FF1BE61C1A001E2EB1 /* 教育资讯.png in Resources */,
 				5DCA4E3A1A38C50900FA00BF /* jiaoxue.png in Resources */,
 				5DCA4DD21A38C50900FA00BF /* biz_widget_left.9.png in Resources */,
 				5DCA4E3B1A38C50900FA00BF /* jiaoxueqingk.png in Resources */,
@@ -2028,19 +2244,26 @@
 				5DCA4E591A38C50900FA00BF /* main_safety_management.png in Resources */,
 				5DCA4ECE1A38C50900FA00BF /* whats_new_start_btn_normal.9.png in Resources */,
 				5DCA4EB41A38C50900FA00BF /* tab_settings_pressed.png in Resources */,
+				5D6A56FE1BE61C1A001E2EB1 /* 教育管理.png in Resources */,
 				5DCA4E831A38C50900FA00BF /* name.png in Resources */,
 				5DCA4E721A38C50900FA00BF /* mm_title_back_focused.9.png in Resources */,
+				5D6A56E11BE61C1A001E2EB1 /* 体温记录.png in Resources */,
 				5DCA4E2C1A38C50900FA00BF /* ic_preference_single_pressed.9.png in Resources */,
+				5D6A57021BE61C1A001E2EB1 /* 生日祝福提醒.png in Resources */,
 				5DCA4DFC1A38C50900FA00BF /* btn_style_zero_normal.9.png in Resources */,
 				5DCA4DD81A38C50900FA00BF /* border_big.xml in Resources */,
+				5D6A56DE1BE61C1A001E2EB1 /* 体检记录.png in Resources */,
 				5DCA4EAD1A38C50900FA00BF /* tab_address_normal.png in Resources */,
 				5DCA4E981A38C50900FA00BF /* search_bar_edit_normal.9.png in Resources */,
 				5DCA4E3F1A38C50900FA00BF /* kaoqzongti.png in Resources */,
 				5D362AF01A890C73002BDDA9 /* Default1.png in Resources */,
 				5DCA4E0F1A38C50900FA00BF /* checkbox_pressed.gif in Resources */,
+				5D6A56D91BE61C1A001E2EB1 /* 08.png in Resources */,
 				5DCA4E241A38C50900FA00BF /* ic_launcher.png in Resources */,
 				5DCA4ED41A38C50A00FA00BF /* icon_meassage_nor.png in Resources */,
+				5D6A56F81BE61C1A001E2EB1 /* 意见反馈.png in Resources */,
 				5D362AEF1A890C73002BDDA9 /* Default-Retina.png in Resources */,
+				5D6A56E61BE61C1A001E2EB1 /* 健康管理.png in Resources */,
 				5DCA4E761A38C50900FA00BF /* mm_title_btn_contact_normal.png in Resources */,
 				5DCA4E1F1A38C50900FA00BF /* guide_dot_white.png in Resources */,
 				5D7E1A061A7BFA30005395AC /* userinfo_navigationbar_background@2x.png in Resources */,
@@ -2050,16 +2273,23 @@
 				5DCA4DDE1A38C50900FA00BF /* btn1_2.png in Resources */,
 				5DCA4E1C1A38C50900FA00BF /* find_more_friend_addfriend_icon.png in Resources */,
 				5DCA4E141A38C50900FA00BF /* chengji.png in Resources */,
+				5D6A56F31BE61C1A001E2EB1 /* 实时视频.png in Resources */,
+				5D6A57061BE61C1A001E2EB1 /* 老师请假列表.png in Resources */,
 				5DCA4E621A38C50900FA00BF /* menu_bg_normal.9.png in Resources */,
 				5DCA4DEB1A38C50900FA00BF /* btn_style_alert_dialog_cancel_normal.9.png in Resources */,
+				5D6A57141BE61C1A001E2EB1 /* 通知列表.png in Resources */,
+				5D6A56F61BE61C1A001E2EB1 /* 当日作业.png in Resources */,
 				5DCA4EA51A38C50900FA00BF /* shake_report_dragger_down_pressed.png in Resources */,
 				5DCA4E931A38C50900FA00BF /* renma.png in Resources */,
 				5DCA4E261A38C50900FA00BF /* ic_preference_first_pressed.9.png in Resources */,
 				5DCA4DE71A38C50900FA00BF /* btn_normal.9.png in Resources */,
+				5D6A56EF1BE61C1A001E2EB1 /* 学校荣誉.png in Resources */,
 				5DCA4DC51A38C50900FA00BF /* arr.png in Resources */,
 				5D7E19FE1A7BE981005395AC /* icon_selfinfo_sel.png in Resources */,
 				5DCA4DCC1A38C50900FA00BF /* bg.png in Resources */,
+				5D6A56E91BE61C1A001E2EB1 /* 反馈列表.png in Resources */,
 				5D7E19FF1A7BE981005395AC /* icon_square_sel.png in Resources */,
+				5D6A570A1BE61C1A001E2EB1 /* 考勤查询.png in Resources */,
 				5DCA4E081A38C50900FA00BF /* chatfrom_bg_pressed.9.png in Resources */,
 				5DCA4DDD1A38C50900FA00BF /* btn11.png in Resources */,
 				5DCA4DC11A38C50900FA00BF /* Localizable.strings in Resources */,
@@ -2079,6 +2309,7 @@
 				5DCA4EBA1A38C50900FA00BF /* title_bg.9.png in Resources */,
 				5DCA4DD91A38C50900FA00BF /* border_click.xml in Resources */,
 				5DCA4ECB1A38C50900FA00BF /* welcome2.jpg in Resources */,
+				5D6A56F11BE61C1A001E2EB1 /* 学籍管理.png in Resources */,
 				5DCA4E581A38C50900FA00BF /* main_parent_meeting.png in Resources */,
 				5DCA4DCB1A38C50900FA00BF /* base_tabpager_indicator_selected2.9.png in Resources */,
 				5DCA4E441A38C50900FA00BF /* loading_bg.9.png in Resources */,
@@ -2102,7 +2333,9 @@
 				5DCA4E421A38C50900FA00BF /* load.png in Resources */,
 				5DCA4EAB1A38C50900FA00BF /* shouji.png in Resources */,
 				5DD590B11A2624AF004DFDAD /* Storyboard.storyboard in Resources */,
+				5D6A57191BE64C1D001E2EB1 /* 请假申请.png in Resources */,
 				5DCA4E111A38C50900FA00BF /* checkbox_select_yes.png in Resources */,
+				5D6A56F41BE61C1A001E2EB1 /* 家庭作业.png in Resources */,
 				5DCA4DE81A38C50900FA00BF /* btn_pressed.9.png in Resources */,
 				5DCA4F861A38C50A00FA00BF /* name.png in Resources */,
 				5DCA4E961A38C50900FA00BF /* school2.png in Resources */,
@@ -2113,8 +2346,11 @@
 				5DCA4E8A1A38C50900FA00BF /* pas.png in Resources */,
 				5DCA4E1A1A38C50900FA00BF /* exit_dialog_bg.9.png in Resources */,
 				5DCA4E741A38C50900FA00BF /* mm_title_back_pressed.9.png in Resources */,
+				5D6A56F21BE61C1A001E2EB1 /* 学籍统计.png in Resources */,
 				5D7E19FC1A7BE981005395AC /* icon_home_sel.png in Resources */,
 				5DCA4E041A38C50900FA00BF /* chat_bg_default.jpg in Resources */,
+				5D6A56FC1BE61C1A001E2EB1 /* 手机产品.png in Resources */,
+				5D6A56DD1BE61C1A001E2EB1 /* 任课老师.png in Resources */,
 				5DCA4E8D1A38C50900FA00BF /* png_0152.png in Resources */,
 				5DCA4DFD1A38C50900FA00BF /* btn_style_zero_pressed.9.png in Resources */,
 				5DCA4DCD1A38C50900FA00BF /* bg1.png in Resources */,
@@ -2122,12 +2358,15 @@
 				5DCA4EA41A38C50900FA00BF /* shake_report_dragger_down_normal.png in Resources */,
 				5DCA4E411A38C50900FA00BF /* left.9.png in Resources */,
 				5DCA4EC41A38C50900FA00BF /* voice_rcd_btn_nor.9.png in Resources */,
+				5D6A56F71BE61C1A001E2EB1 /* 当日考勤.png in Resources */,
 				5DCA4DE51A38C50900FA00BF /* btn_close.png in Resources */,
 				5DCA4DFF1A38C50900FA00BF /* button_login_unpressed.9.png in Resources */,
 				5DCA4E191A38C50900FA00BF /* divider_horizontal_line.png in Resources */,
+				5D6A56ED1BE61C1A001E2EB1 /* 学校动态.png in Resources */,
 				5DCA4E771A38C50900FA00BF /* mm_title_btn_focused.9.png in Resources */,
 				5DCA4E7E1A38C50900FA00BF /* mm_title_btn_receiver_normal.png in Resources */,
 				5DCA4DE01A38C50900FA00BF /* btn22.png in Resources */,
+				5D6A56DA1BE61C1A001E2EB1 /* 09.png in Resources */,
 				5DCA4DF81A38C50900FA00BF /* btn_style_two_focused.9.png in Resources */,
 				5DCA4E711A38C50900FA00BF /* mm_submenu_pressed.png in Resources */,
 				5DD198D71A773FF500EE1F3E /* icon-Small@2x.png in Resources */,
@@ -2139,7 +2378,12 @@
 				5DCA4E3E1A38C50900FA00BF /* kaoq.png in Resources */,
 				5DCA4E431A38C50900FA00BF /* loading.png in Resources */,
 				5DCA4E551A38C50900FA00BF /* main_info_publish.png in Resources */,
+				5D6A57131BE61C1A001E2EB1 /* 通知公告.png in Resources */,
 				5DCA4EBC1A38C50900FA00BF /* title_function_bg.9.png in Resources */,
+				5D6A57011BE61C1A001E2EB1 /* 校园视频.png in Resources */,
+				5D6A56F51BE61C1A001E2EB1 /* 师资力量.png in Resources */,
+				5D6A57121BE61C1A001E2EB1 /* 课程表.png in Resources */,
+				5D6A57111BE61C1A001E2EB1 /* 请假查看.png in Resources */,
 				5DCA4DED1A38C50900FA00BF /* btn_style_alert_dialog_special_pressed.9.png in Resources */,
 				5DCA4DFE1A38C50900FA00BF /* button_login_pressed.9.png in Resources */,
 				5DCA4E9D1A38C50900FA00BF /* second_child_phone.png in Resources */,
@@ -2149,23 +2393,30 @@
 				5DCA4E231A38C50900FA00BF /* ic_action_search.png in Resources */,
 				5DCA4E821A38C50900FA00BF /* my_wx.jpg in Resources */,
 				5DCA4DE21A38C50900FA00BF /* btn_back_bg.png in Resources */,
+				5D6A56EB1BE61C1A001E2EB1 /* 发布通知.png in Resources */,
 				5DCA4E1D1A38C50900FA00BF /* find_more_friend_shake.png in Resources */,
 				5DCA4E7F1A38C50900FA00BF /* msg_center_edit_1.png in Resources */,
 				5DCA4E341A38C50900FA00BF /* icon_selfinfo_nor.png in Resources */,
 				5DCA4E5C1A38C50900FA00BF /* main_student_status_management.png in Resources */,
 				5DCA4E451A38C50900FA00BF /* login_edit_normal.9.png in Resources */,
 				5DCA4E7C1A38C50900FA00BF /* mm_title_btn_pressed.9.png in Resources */,
+				5D6A57171BE625A2001E2EB1 /* 体检分析.png in Resources */,
 				5DCA4E701A38C50900FA00BF /* mm_submenu_normal.png in Resources */,
 				5D7E1A041A7BFA30005395AC /* tabbar_background_os7@2x.png in Resources */,
+				5D6A56FD1BE61C1A001E2EB1 /* 招生信息.png in Resources */,
+				5D6A57051BE61C1A001E2EB1 /* 老师考勤查询.png in Resources */,
 				5D362AF11A890C73002BDDA9 /* Default2x.png in Resources */,
 				5DCA4E6C1A38C50900FA00BF /* mm_listitem_grey_normal.9.png in Resources */,
 				5DCA4E151A38C50900FA00BF /* cjtj.png in Resources */,
 				5DCA4DDB1A38C50900FA00BF /* bottom_bar.9.png in Resources */,
 				5DCA4DD41A38C50900FA00BF /* bj.jpg in Resources */,
 				5DCA4F871A38C50A00FA00BF /* pas.png in Resources */,
+				5D6A57001BE61C1A001E2EB1 /* 节日祝福查看.png in Resources */,
 				5DCA4E871A38C50900FA00BF /* new3.png in Resources */,
+				5D6A570E1BE61C1A001E2EB1 /* 视频列表.png in Resources */,
 				5DCA4E131A38C50900FA00BF /* checked_yes.png in Resources */,
 				5DCA4E491A38C50900FA00BF /* main_advice_feedback.png in Resources */,
+				5D6A56EC1BE61C1A001E2EB1 /* 在籍学生.png in Resources */,
 				5DCA4EB11A38C50900FA00BF /* tab_find_frd_normal.png in Resources */,
 				5DCA4E521A38C50900FA00BF /* main_grow_tree.png in Resources */,
 				5DCA4EC21A38C50900FA00BF /* tx.png in Resources */,
@@ -2179,18 +2430,22 @@
 				5DCA4DF01A38C50900FA00BF /* btn_style_five_pressed.9.png in Resources */,
 				5DCA4E2B1A38C50900FA00BF /* ic_preference_single_normal.9.png in Resources */,
 				5DCA4E881A38C50900FA00BF /* next_button.png in Resources */,
+				5D6A570B1BE61C1A001E2EB1 /* 历史考勤统计.png in Resources */,
 				5DCA4E071A38C50900FA00BF /* chatfrom_bg_normal.9.png in Resources */,
 				5DCA4E481A38C50900FA00BF /* logo.png in Resources */,
 				5DCA4DFA1A38C50900FA00BF /* btn_style_two_pressed.9.png in Resources */,
 				5DCA4E1B1A38C50900FA00BF /* filter.png in Resources */,
 				5DCA4E4B1A38C50900FA00BF /* main_attendance_statistics.png in Resources */,
+				5D6A56FA1BE61C1A001E2EB1 /* 成绩查询.png in Resources */,
 				5DCA4E901A38C50900FA00BF /* png_0225.png in Resources */,
+				5D6A56EA1BE61C1A001E2EB1 /* 节日祝福发布.png in Resources */,
 				5DCA4E051A38C50900FA00BF /* chat_footer_bg.png in Resources */,
 				5DCA4E561A38C50900FA00BF /* main_notice_announcement.png in Resources */,
 				5DCA4E201A38C50900FA00BF /* home_btn_bg.png in Resources */,
 				5DCA4DE41A38C50900FA00BF /* btn_cancle_pressed.9.png in Resources */,
 				5DCA4E501A38C50900FA00BF /* main_familyschool_interaction.png in Resources */,
 				5DCA4E841A38C50900FA00BF /* name1.png in Resources */,
+				5D6A570D1BE61C1A001E2EB1 /* 聊天.png in Resources */,
 				5DCA4ED21A38C50900FA00BF /* icon_home_nor.png in Resources */,
 				5DCA4ECF1A38C50900FA00BF /* whats_new_start_btn_pressed.9.png in Resources */,
 				5DCA4E0E1A38C50900FA00BF /* checkbox_normal.gif in Resources */,
@@ -2199,6 +2454,7 @@
 				5DCA4E5D1A38C50900FA00BF /* main_teach_mamagement.png in Resources */,
 				5DCA4EA31A38C50900FA00BF /* shake_line_up.png in Resources */,
 				5D7E19FD1A7BE981005395AC /* icon_meassage_sel.png in Resources */,
+				5D6A57091BE61C1A001E2EB1 /* 考勤列表.png in Resources */,
 				5DCA4E4A1A38C50900FA00BF /* main_attendance_info.png in Resources */,
 				5DCA4DFB1A38C50900FA00BF /* btn_style_zero_focused.9.png in Resources */,
 				5DCA4E8B1A38C50900FA00BF /* pas1.png in Resources */,
@@ -2206,14 +2462,17 @@
 				5DCA4DD71A38C50900FA00BF /* border.xml in Resources */,
 				5DCA4E091A38C50900FA00BF /* chatto_bg_focused.9.png in Resources */,
 				5DCA4EA91A38C50900FA00BF /* shengtijk.png in Resources */,
+				5D6A56F91BE61C1A001E2EB1 /* 成绩分析.png in Resources */,
 				5DCA4EA11A38C50900FA00BF /* second_school_video.png in Resources */,
 				5DCA4EB31A38C50900FA00BF /* tab_settings_normal.png in Resources */,
 				5DCA4DC61A38C50900FA00BF /* ask.png in Resources */,
+				5D6A56E81BE61C1A001E2EB1 /* 历史轨迹.png in Resources */,
 				5DCA4E6B1A38C50900FA00BF /* mini_avatar_shadow.png in Resources */,
 				5DCA4E751A38C50900FA00BF /* mm_title_btn_compose_normal.png in Resources */,
 				5DCA4E101A38C50900FA00BF /* checkbox_select_no.png in Resources */,
 				5DCA4E6D1A38C50900FA00BF /* mm_listitem_normal.9.png in Resources */,
 				5DCA4EC01A38C50900FA00BF /* top_bj.9.png in Resources */,
+				5D6A56EE1BE61C1A001E2EB1 /* 学校简介.png in Resources */,
 				5DCA4DDF1A38C50900FA00BF /* btn2.png in Resources */,
 				5DCA4E531A38C50900FA00BF /* main_health_mamagement.png in Resources */,
 				5D362AEE1A890C73002BDDA9 /* Defaul-2x.png in Resources */,
@@ -2223,7 +2482,11 @@
 				5DCA4E9B1A38C50900FA00BF /* second_birthday_blessing.png in Resources */,
 				5DCA4DF71A38C50900FA00BF /* btn_style_one_pressed.9.png in Resources */,
 				5DCA4EB21A38C50900FA00BF /* tab_find_frd_pressed.png in Resources */,
+				5D6A570F1BE61C1A001E2EB1 /* 請假例表.png in Resources */,
+				5D6A57101BE61C1A001E2EB1 /* 请假列表.png in Resources */,
 				5DCA4DD61A38C50900FA00BF /* bj3.jpg in Resources */,
+				5D6A57151BE61C1A001E2EB1 /* 当周食谱.png in Resources */,
+				5D6A57071BE61C1A001E2EB1 /* 老师请假查看.png in Resources */,
 				5DCA4E181A38C50900FA00BF /* copyright.png in Resources */,
 				5DCA4EC71A38C50900FA00BF /* w_left.png in Resources */,
 				5DCA4E401A38C50900FA00BF /* laoshi.png in Resources */,
@@ -2236,12 +2499,14 @@
 				5DCA4E781A38C50900FA00BF /* mm_title_btn_keyboard_normal.png in Resources */,
 				5D7E1A071A7BFA30005395AC /* userinfo_vip_background@2x.png in Resources */,
 				5DCA4EBF1A38C50900FA00BF /* top_bg.png in Resources */,
+				5D6A56E31BE61C1A001E2EB1 /* 作业发布.png in Resources */,
 				5DCA4EB51A38C50900FA00BF /* tab_weixin_normal.png in Resources */,
 				5DCA4DE11A38C50900FA00BF /* btn2_2.png in Resources */,
 				5DCA4E671A38C50900FA00BF /* menu_email.png in Resources */,
 				5DCA4E461A38C50900FA00BF /* login_edit_pressed.9.png in Resources */,
 				5DCA4EDA1A38C50A00FA00BF /* icon.png in Resources */,
 				5DCA4EAA1A38C50900FA00BF /* ship.png in Resources */,
+				5D6A56F01BE61C1A001E2EB1 /* 学籍查询.png in Resources */,
 				5DCA4E951A38C50900FA00BF /* school.png in Resources */,
 				5DCA4E361A38C50900FA00BF /* icon_selfinfo_sel.png in Resources */,
 				5DCA4EC31A38C50900FA00BF /* update_bg.jpg in Resources */,
@@ -2268,9 +2533,11 @@
 				5DCA4E271A38C50900FA00BF /* ic_preference_last_normal.9.png in Resources */,
 				5DCA4E391A38C50900FA00BF /* icon_square_sel.png in Resources */,
 				5DCA4E5F1A38C50900FA00BF /* menu_about.png in Resources */,
+				5D6A56DF1BE61C1A001E2EB1 /* 体温告警.png in Resources */,
 				5DCA4E0A1A38C50900FA00BF /* chatto_bg_normal.9.png in Resources */,
 				5DCA4ECC1A38C50900FA00BF /* welcome3.jpg in Resources */,
 				5DCA4E331A38C50900FA00BF /* icon_more_sel.png in Resources */,
+				5D6A56E21BE61C1A001E2EB1 /* 体温趋势.png in Resources */,
 				5DCA4E651A38C50900FA00BF /* menu_config.png in Resources */,
 				5DCA4EAC1A38C50900FA00BF /* tab.png in Resources */,
 				5DCA4EAE1A38C50900FA00BF /* tab_address_pressed.png in Resources */,
@@ -2278,6 +2545,7 @@
 				5DD198E51A7774FD00EE1F3E /* icon-40@2x.png in Resources */,
 				5DCA4E221A38C50900FA00BF /* hudong.png in Resources */,
 				5DCA4E911A38C50900FA00BF /* png_0235.png in Resources */,
+				5D6A56E41BE61C1A001E2EB1 /* 作业查询.png in Resources */,
 				5DCA4EA81A38C50900FA00BF /* shanshi.png in Resources */,
 				5DCA4E2A1A38C50900FA00BF /* ic_preference_pressed.9.png in Resources */,
 				5DCA4ED61A38C50A00FA00BF /* icon_selfinfo_nor.png in Resources */,
