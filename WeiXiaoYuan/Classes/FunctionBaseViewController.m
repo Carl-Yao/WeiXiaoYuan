@@ -35,7 +35,7 @@
         self.view.backgroundColor = [UIColor lightGrayColor];
         
         //换新的顶部背景
-        UIImage *image = [UIImage imageNamed:@"top.png"];
+        UIImage *image = [UIImage imageNamed:@"top_bj.91.png"];
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(-2, -2, 320+2, 48+20+2)];
         imageView.image = image;
         [self.view insertSubview:imageView atIndex:0];
@@ -45,7 +45,9 @@
         //换返回按钮图标和文字
         UIImage *image1 = [UIImage imageNamed:@"biz_pics_main_back_normal.png"];
         [returnButton setImage:image1 forState:UIControlStateNormal];
+        [returnButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self.view insertSubview:returnButton atIndex:1];
+        returnButton.titleLabel.textColor = [UIColor blackColor];
         [returnButton addTarget:self action:@selector(btnClicked:event:) forControlEvents:UIControlEventTouchUpInside];
         
         //返回图标

@@ -30,24 +30,27 @@
 
 - (void)viewDidLoad
 {
-    UIImage *image = [UIImage imageNamed:@"top_bj.9.jpg"];
+    UIImageView* allBg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-50)];
+    [allBg setImage:[UIImage imageNamed:@"新版APP_02"]];
+    [self.view insertSubview:allBg atIndex:0];
+    UIImage *image = [UIImage imageNamed:@"top_bj.91.png"];
     UIImageView *view = [[UIImageView alloc]initWithFrame:CGRectMake(-2, -2, self.view.frame.size.width+4, 64+2)];
     view.image = image;
-    [self.view insertSubview:view atIndex:1];
+    [self.view addSubview:view];
     
     //UIImage *image1 = [UIImage imageNamed:@"logo.png"];
     UIImageView *view1 = [[UIImageView alloc]initWithFrame:CGRectMake(8, 22, 38, 38)];
     view1.image = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).logoImg;
-    [self.view insertSubview:view1 atIndex:2];
+    [self.view addSubview:view1];
     
     UILabel *laber = [[UILabel alloc]initWithFrame:CGRectMake(78, 20, self.view.frame.size.width - 68 , 64)];
     
     laber.text = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).schoolName;
-    laber.textColor = [UIColor whiteColor];
+    laber.textColor = [UIColor blackColor];
     laber.font = [UIFont boldSystemFontOfSize:20];
     laber.lineBreakMode = UILineBreakModeCharacterWrap;
     laber.textAlignment = UITextAlignmentLeft;
-    [self.view insertSubview:laber atIndex:2];
+    [self.view addSubview:laber];
     
     [laber sizeToFit];
     laber.center = CGPointMake((self.view.frame.size.width - 68)/2+34,64/2+10);
@@ -59,7 +62,7 @@
     [button setBackgroundColor:[UIColor redColor]];
     [button addTarget:self action:@selector(btnClicked:event:) forControlEvents:UIControlEventTouchUpInside];
 
-    [self.view insertSubview:button atIndex:1];
+    [self.view addSubview:button];
     self.tasks = @[@[@"个人信息",@"修改密码",@"清除缓存"],@[@"清空消息记录"]];
     [super viewDidLoad];
 	//@ Do any additional setup after loading the view.

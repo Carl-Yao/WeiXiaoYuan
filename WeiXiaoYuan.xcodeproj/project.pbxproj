@@ -151,6 +151,8 @@
 		5D9D0E8D1A472C94003DDECD /* FeedbackNoParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D0E8C1A472C94003DDECD /* FeedbackNoParentViewController.m */; };
 		5D9D0E8F1A4735F3003DDECD /* leave_manager_info.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D9D0E8E1A4735F3003DDECD /* leave_manager_info.png */; };
 		5D9D0E931A47585A003DDECD /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9D0E921A47585A003DDECD /* VPImageCropperViewController.m */; };
+		5DA2EDA01BE902D3006965C2 /* 新版APP_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA2ED9F1BE902D3006965C2 /* 新版APP_02.png */; };
+		5DA2EDA21BE9043D006965C2 /* top_bj.91.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA2EDA11BE9043D006965C2 /* top_bj.91.png */; };
 		5DB8A6C91A374E460047A4D2 /* CheckAttendan.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB8A6C81A374E460047A4D2 /* CheckAttendan.m */; };
 		5DC515BF1B773CF8007ABEC7 /* SecondBaseViewControllerEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC515BE1B773CF8007ABEC7 /* SecondBaseViewControllerEx.m */; };
 		5DC515C21B77410E007ABEC7 /* SecondFunctionBaseViewControllerEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC515C11B77410E007ABEC7 /* SecondFunctionBaseViewControllerEx.m */; };
@@ -725,6 +727,8 @@
 		5D9D0E8E1A4735F3003DDECD /* leave_manager_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leave_manager_info.png; sourceTree = "<group>"; };
 		5D9D0E911A47585A003DDECD /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
 		5D9D0E921A47585A003DDECD /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
+		5DA2ED9F1BE902D3006965C2 /* 新版APP_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新版APP_02.png"; sourceTree = "<group>"; };
+		5DA2EDA11BE9043D006965C2 /* top_bj.91.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_bj.91.png; sourceTree = "<group>"; };
 		5DB8A6C71A374E460047A4D2 /* CheckAttendan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckAttendan.h; sourceTree = "<group>"; };
 		5DB8A6C81A374E460047A4D2 /* CheckAttendan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckAttendan.m; sourceTree = "<group>"; };
 		5DC515BD1B773CF8007ABEC7 /* SecondBaseViewControllerEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondBaseViewControllerEx.h; sourceTree = "<group>"; };
@@ -1455,6 +1459,8 @@
 		5DCA49BD1A38C50600FA00BF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5DA2EDA11BE9043D006965C2 /* top_bj.91.png */,
+				5DA2ED9F1BE902D3006965C2 /* 新版APP_02.png */,
 				5D6A56971BE61C1A001E2EB1 /* 160 */,
 				5D93D6941ABEBAB2003A414B /* top_bj.9.jpg */,
 				5D7E1A001A7BFA30005395AC /* tabbar_background_os7@2x.png */,
@@ -2288,6 +2294,7 @@
 				5D7E19FE1A7BE981005395AC /* icon_selfinfo_sel.png in Resources */,
 				5DCA4DCC1A38C50900FA00BF /* bg.png in Resources */,
 				5D6A56E91BE61C1A001E2EB1 /* 反馈列表.png in Resources */,
+				5DA2EDA21BE9043D006965C2 /* top_bj.91.png in Resources */,
 				5D7E19FF1A7BE981005395AC /* icon_square_sel.png in Resources */,
 				5D6A570A1BE61C1A001E2EB1 /* 考勤查询.png in Resources */,
 				5DCA4E081A38C50900FA00BF /* chatfrom_bg_pressed.9.png in Resources */,
@@ -2338,6 +2345,7 @@
 				5D6A56F41BE61C1A001E2EB1 /* 家庭作业.png in Resources */,
 				5DCA4DE81A38C50900FA00BF /* btn_pressed.9.png in Resources */,
 				5DCA4F861A38C50A00FA00BF /* name.png in Resources */,
+				5DA2EDA01BE902D3006965C2 /* 新版APP_02.png in Resources */,
 				5DCA4E961A38C50900FA00BF /* school2.png in Resources */,
 				5DCA4F851A38C50A00FA00BF /* logo.png in Resources */,
 				5DCA4EAF1A38C50900FA00BF /* tab_bg.9.png in Resources */,

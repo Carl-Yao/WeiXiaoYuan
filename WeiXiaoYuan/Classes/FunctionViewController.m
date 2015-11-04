@@ -328,7 +328,9 @@
 {
     [super viewDidLoad];
     [self CreateData];
-    
+    UIImageView* allBg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-50)];
+    [allBg setImage:[UIImage imageNamed:@"新版APP_02"]];
+    [self.view insertSubview:allBg atIndex:0];
     // Set Stationary Background, so that while the user scroll the background is
     // fixed.
 //    UIImage *bj = [UIImage imageNamed:@"bj.jpg"];
@@ -337,25 +339,25 @@
 //    [self.view insertSubview:bjview atIndex:0];
     [self.view setBackgroundColor:[UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1.0]];
     
-    UIImage *image = [UIImage imageNamed:@"top_bj.9.jpg"];
+    UIImage *image = [UIImage imageNamed:@"top_bj.91.png"];
     UIImageView *view = [[UIImageView alloc]initWithFrame:CGRectMake(-2, -2, self.view.frame.size.width+4, 64+2)];
     
     view.image = image;
-    [self.view insertSubview:view atIndex:0];
+    [self.view addSubview:view];
     
     //UIImage *image1 = [UIImage imageNamed:@"logo.png"];
     UIImageView *view1 = [[UIImageView alloc]initWithFrame:CGRectMake(8, 22, 38, 38)];
     view1.image = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).logoImg;
-    [self.view insertSubview:view1 atIndex:1];
+    [self.view addSubview:view1];
     
     UILabel *laber = [[UILabel alloc]initWithFrame:CGRectMake(78, 20, self.view.frame.size.width - 68 , 64)];
     
     laber.text = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).schoolName;
-    laber.textColor = [UIColor whiteColor];
+    laber.textColor = [UIColor blackColor];
     laber.font = [UIFont boldSystemFontOfSize:20];
     laber.lineBreakMode = UILineBreakModeCharacterWrap;
     laber.textAlignment = UITextAlignmentLeft;
-    [self.view insertSubview:laber atIndex:1];
+    [self.view addSubview:laber];
     
     [laber sizeToFit];
     
@@ -424,6 +426,7 @@
         [secondVC.htmlDirectorys addObject:[dic objectForKey:FUNC_DIRECTORY_KEY]];
     }
     [secondVC.returnButton setTitle:[modelItem objectForKey:MODEL_TITLE_KEY] forState:UIControlStateNormal];
+    [secondVC.returnButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     __weak SecondBaseViewControllerEx* weadSelf = secondVC;
     secondVC.btnClickedBlock = ^(NSInteger index){
         SecondFunctionBaseViewControllerEx* secondFunVC = [[SecondFunctionBaseViewControllerEx alloc] init];

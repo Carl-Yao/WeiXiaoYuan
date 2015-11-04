@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
-            timestampString = "442598494.66897"
+            timestampString = "468253952.398259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "374"
-            endingLineNumber = "374"
+            startingLineNumber = "375"
+            endingLineNumber = "375"
             landmarkName = "-webViewDidStartLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -522,11 +522,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
-            timestampString = "442598494.66897"
+            timestampString = "468253952.398259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "384"
-            endingLineNumber = "384"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
             landmarkName = "-webViewDidStartLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -538,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
-            timestampString = "442598494.66897"
+            timestampString = "468253952.398259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "392"
-            endingLineNumber = "392"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
             landmarkName = "-webViewDidStartLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -570,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
-            timestampString = "442598494.66897"
+            timestampString = "468253952.398259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "365"
-            endingLineNumber = "365"
+            startingLineNumber = "366"
+            endingLineNumber = "366"
             landmarkName = "-webViewDidStartLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -586,11 +586,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
-            timestampString = "442598494.66897"
+            timestampString = "468253952.398259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "366"
-            endingLineNumber = "366"
+            startingLineNumber = "367"
+            endingLineNumber = "367"
             landmarkName = "-webViewDidStartLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -666,11 +666,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
-            timestampString = "442598494.66897"
+            timestampString = "468253952.398259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "379"
-            endingLineNumber = "379"
+            startingLineNumber = "380"
+            endingLineNumber = "380"
             landmarkName = "-webViewDidStartLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1164,11 +1164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442668589.456617"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "-InitFunctionView"
             landmarkType = "5">
          </BreakpointContent>
@@ -1180,11 +1180,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442668589.456617"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-viewWillDisappear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1260,11 +1260,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442668589.456617"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "-InitFunctionView"
             landmarkType = "5">
          </BreakpointContent>
@@ -1276,11 +1276,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442668589.456617"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "-InitFunctionView"
             landmarkType = "5">
          </BreakpointContent>
@@ -1292,11 +1292,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442668589.456617"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "-btnClicked:event:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1308,11 +1308,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442668589.456617"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "-InitFunctionView"
             landmarkType = "5">
          </BreakpointContent>
@@ -1324,11 +1324,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442668589.456617"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "@implementation FunctionBaseViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1452,11 +1452,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442668589.456617"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "-onDateNotify:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1468,11 +1468,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "441048452.739661"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "-actionSheetPickerView:didSelectTitles:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1484,11 +1484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442654030.714218"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-actionSheetPickerView:didSelectTitles:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1808,11 +1808,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442668589.456617"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
             landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1840,11 +1840,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442668589.456617"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
             landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "5">
             <Locations>
@@ -2224,11 +2224,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/SettingViewController.m"
-            timestampString = "448634257.899558"
+            timestampString = "468256087.784195"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2240,11 +2240,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/SettingViewController.m"
-            timestampString = "448634257.899558"
+            timestampString = "468256087.784195"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "-alertView:didDismissWithButtonIndex:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2511,8 +2511,8 @@
                   symbolName = "-[NotifyBaseViewController imagePickerController:didFinishPickingMediaWithInfo:]"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ZhenxingYao/Desktop/WeiXiaoYuan/WeiXiaoYuan/Classes/NotifyBaseViewController.m"
-                  timestampString = "468078125.395447"
+                  urlString = "file:///Users/ZhenxingYao/WeiXiaoYuan/WeiXiaoYuan/Classes/NotifyBaseViewController.m"
+                  timestampString = "468259404.226326"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -2526,8 +2526,8 @@
                   symbolName = "__80-[NotifyBaseViewController imagePickerController:didFinishPickingMediaWithInfo:]_block_invoke"
                   moduleName = "&#x5fae;&#x6821;&#x56ed;"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ZhenxingYao/Desktop/WeiXiaoYuan/WeiXiaoYuan/Classes/NotifyBaseViewController.m"
-                  timestampString = "468078125.396006"
+                  urlString = "file:///Users/ZhenxingYao/WeiXiaoYuan/WeiXiaoYuan/Classes/NotifyBaseViewController.m"
+                  timestampString = "468259404.226551"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -2576,11 +2576,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "442668589.456617"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
             landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2592,11 +2592,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448708002.891413"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2608,11 +2608,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448708002.891413"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2624,11 +2624,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448708002.891413"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2960,11 +2960,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "245"
-            endingLineNumber = "245"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2976,11 +2976,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3024,11 +3024,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3040,11 +3040,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "445549490.068105"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3056,11 +3056,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448708002.891413"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3088,11 +3088,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "450440342.692818"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "-btnClicked:event:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3104,11 +3104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "450440342.692818"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -3120,11 +3120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "445551386.750366"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3184,11 +3184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "-tableView:heightForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3328,11 +3328,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "445457495.45982"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -3344,11 +3344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448708002.891413"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "-updateMessages"
             landmarkType = "5">
          </BreakpointContent>
@@ -3392,11 +3392,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448708002.891413"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -3414,22 +3414,6 @@
             startingLineNumber = "53"
             endingLineNumber = "53"
             landmarkName = "-init"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "445549490.068105"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3788,31 +3772,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiXiaoYuan/Classes/MALTabBarController/MALTabBarViewController.m"
-            timestampString = "444333672.294736"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "-setBadgeNumber:index:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448708002.891413"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -3888,11 +3856,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "347"
-            endingLineNumber = "347">
+            startingLineNumber = "350"
+            endingLineNumber = "350">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3902,11 +3870,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
+            startingLineNumber = "311"
+            endingLineNumber = "311"
             landmarkName = "-recordlist"
             landmarkType = "5">
          </BreakpointContent>
@@ -3918,11 +3886,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "445190771.827452"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3950,11 +3918,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
             landmarkName = "-recordlist"
             landmarkType = "5">
          </BreakpointContent>
@@ -3998,11 +3966,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "345"
-            endingLineNumber = "345"
+            startingLineNumber = "348"
+            endingLineNumber = "348"
             landmarkName = "@implementation InTimeViewController"
             landmarkType = "3">
             <Locations>
@@ -4078,11 +4046,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "312"
-            endingLineNumber = "312"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "-recordlist"
             landmarkType = "5">
          </BreakpointContent>
@@ -4158,11 +4126,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "343"
-            endingLineNumber = "343"
+            startingLineNumber = "346"
+            endingLineNumber = "346"
             landmarkName = "-recordlist"
             landmarkType = "5">
          </BreakpointContent>
@@ -4174,11 +4142,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
             landmarkName = "-recordlist"
             landmarkType = "5">
          </BreakpointContent>
@@ -4190,11 +4158,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "330"
-            endingLineNumber = "330"
+            startingLineNumber = "333"
+            endingLineNumber = "333"
             landmarkName = "-recordlist"
             landmarkType = "5">
          </BreakpointContent>
@@ -4222,11 +4190,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "445549490.068105"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4382,11 +4350,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "445551386.750366"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4398,27 +4366,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "445549490.068105"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "-initWithNibName:bundle:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "446694097.720742"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4430,11 +4382,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "450440342.692818"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4462,11 +4414,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448723387.668999"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4478,11 +4430,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "445549490.068105"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4510,11 +4462,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/InTimeViewController.m"
-            timestampString = "448708002.891413"
+            timestampString = "468256870.342665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4622,11 +4574,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/FunctionBaseViewController.m"
-            timestampString = "445541235.954185"
+            timestampString = "468270810.061395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "-onCloseNotify:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4686,11 +4638,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "446694097.720742"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4702,23 +4654,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "445551386.750366"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "-initWithNibName:bundle:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "445551386.750366"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "125"
@@ -4734,11 +4670,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "445551386.750366"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4750,11 +4686,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "450440342.692818"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-initWithNibName:bundle:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
+            timestampString = "468270732.48603"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "-imageHandle"
             landmarkType = "5">
          </BreakpointContent>
@@ -4766,11 +4718,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/DetailForMessageViewController.m"
-            timestampString = "445551386.750366"
+            timestampString = "468270732.48603"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4862,11 +4814,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Plugins/EasyJSWebView/EasyJSWebViewProxyDelegate.m"
-            timestampString = "447740012.448116"
+            timestampString = "468253952.398259"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "387"
-            endingLineNumber = "387"
+            startingLineNumber = "388"
+            endingLineNumber = "388"
             landmarkName = "-webViewDidStartLoad:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4942,11 +4894,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/SecondFunctionBaseViewControllerEx.m"
-            timestampString = "467832612.990552"
+            timestampString = "468271017.104121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "-initWithNibName:bundle:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4958,11 +4910,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeiXiaoYuan/Classes/SecondFunctionBaseViewControllerEx.m"
-            timestampString = "467834892.015738"
+            timestampString = "468271017.104121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "-ExeJsCode:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4980,6 +4932,22 @@
             startingLineNumber = "90"
             endingLineNumber = "90"
             landmarkName = "-judgeUrlFromCache:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeiXiaoYuan/Classes/SecondFunctionBaseViewControllerEx.m"
+            timestampString = "468271017.104121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-InitFunctionView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

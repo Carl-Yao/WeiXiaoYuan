@@ -350,6 +350,7 @@ return EasyJS.call(obj, method, Array.prototype.slice.call(arguments));\
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[webView superview] animated:YES];
     hud.labelText = @"正在加载，请等待...";
+    hud.labelFont = [UIFont systemFontOfSize:12];
 	[self.realDelegate webViewDidStartLoad:webView];
 	if (! self.javascriptInterfaces){
 		self.javascriptInterfaces = [[NSMutableDictionary alloc] init];

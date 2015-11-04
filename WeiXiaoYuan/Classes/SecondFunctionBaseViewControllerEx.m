@@ -32,16 +32,18 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         //换新的顶部背景
-        UIImage *image = [UIImage imageNamed:@"top.png"];
+        UIImage *image = [UIImage imageNamed:@"top_bj.91"];
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(-2, -2, 320+2, 48+20+2)];
         imageView.image = image;
         [self.view insertSubview:imageView atIndex:0];
         
         returnButton = [[BackButton alloc] initWithFrame:CGRectMake(-2+10, -2+20 + 6, 150, 48-20)];
-        
+        returnButton.titleLabel.textColor = [UIColor blackColor];
         //换返回按钮图标和文字
         UIImage *image1 = [UIImage imageNamed:@"biz_pics_main_back_normal.png"];
         [returnButton setImage:image1 forState:UIControlStateNormal];
+        returnButton.titleLabel.textColor = [UIColor blackColor];
+        [returnButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self.view insertSubview:returnButton atIndex:1];
         [returnButton addTarget:self action:@selector(btnClicked:event:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -68,7 +70,7 @@
     self.viewcontroller.isNoresizeFrameForEasy = YES;
     
     [returnButton setTitle:functionTitle forState:UIControlStateNormal];
-    
+    returnButton.titleLabel.textColor = [UIColor blackColor];
     [self.viewcontroller loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:htmlName ofType:nil inDirectory:htmlDirectory]]]];
     //self.viewcontroller.isRequestedForEasy = YES;
     //[self.view addSubview:viewcontroller];

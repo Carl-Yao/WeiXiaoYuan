@@ -43,24 +43,27 @@
     //[super __init:@"model/SchoolSummary/school.html"];
     //[super __init:@"index.html"];
     //[super __init:@"model/SchoolSummary/teacher.html"];
-    UIImage *image = [UIImage imageNamed:@"top_bj.9.jpg"];
+    UIImageView* allBg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-50)];
+    [allBg setImage:[UIImage imageNamed:@"新版APP_02"]];
+    [self.view insertSubview:allBg atIndex:0];
+    UIImage *image = [UIImage imageNamed:@"top_bj.91.png"];
     UIImageView *view = [[UIImageView alloc]initWithFrame:CGRectMake(-2, -2, self.view.frame.size.width+4, 64+2)];
     view.image = image;
-    [self.view insertSubview:view atIndex:0];
+    [self.view addSubview:view];
     
     //UIImage *image1 = [UIImage imageNamed:@"logo.png"];
     UIImageView *view1 = [[UIImageView alloc]initWithFrame:CGRectMake(8, 22, 38, 38)];
     view1.image = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).logoImg;
-    [self.view insertSubview:view1 atIndex:1];
+    [self.view addSubview:view1];
     
     UILabel *laber = [[UILabel alloc]initWithFrame:CGRectMake(78, 20, self.view.frame.size.width - 68 , 64)];
     
     laber.text = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).schoolName;
-    laber.textColor = [UIColor whiteColor];
+    laber.textColor = [UIColor blackColor];
     laber.font = [UIFont boldSystemFontOfSize:20];
     laber.lineBreakMode = UILineBreakModeCharacterWrap;
     laber.textAlignment = UITextAlignmentLeft;
-    [self.view insertSubview:laber atIndex:1];
+    [self.view addSubview:laber];
     
     [laber sizeToFit];
     laber.center = CGPointMake((self.view.frame.size.width - 68)/2+34,64/2+10);

@@ -39,14 +39,14 @@
         UILabel *laber = [[UILabel alloc]initWithFrame:CGRectMake(100, 10, self.view.frame.size.width - 100, 64)];
         
         laber.text = @"个人设置";
-        laber.textColor = [UIColor whiteColor];
+        laber.textColor = [UIColor blackColor];
         laber.font = [UIFont boldSystemFontOfSize:24];
         laber.lineBreakMode = UILineBreakModeCharacterWrap;
         laber.textAlignment = UITextAlignmentLeft;
         [self.view insertSubview:laber atIndex:1];
         
         //换新的顶部背景
-        UIImage *image = [UIImage imageNamed:@"top.png"];
+        UIImage *image = [UIImage imageNamed:@"top_bj.91.png"];
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(-2, -2, 320+2, 48+20+2)];
         imageView.image = image;
         [self.view insertSubview:imageView atIndex:0];

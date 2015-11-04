@@ -29,21 +29,25 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = @"";
-        
+        UIImageView* allBg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        [allBg setImage:[UIImage imageNamed:@"新版APP_02"]];
+        [self.view insertSubview:allBg atIndex:0];
         self.view.backgroundColor = [UIColor lightGrayColor];
         
         //换新的顶部背景
-        UIImage *image = [UIImage imageNamed:@"top.png"];
+        UIImage *image = [UIImage imageNamed:@"top_bj.91.png"];
         UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(-2, -2, 320+2, 64+2)];
         imageView.image = image;
-        [self.view insertSubview:imageView atIndex:0];
+        [self.view addSubview:imageView];
         
         BackButton *returnButton = [[BackButton alloc] initWithFrame:CGRectMake(-2+10, -2+20 + 6, 150, 48-20)];
         [returnButton setTitle:((AppDelegate *)[[UIApplication sharedApplication] delegate]).titlesDictionary[userMessages.pushType] forState:UIControlStateNormal];
+         [returnButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         //换返回按钮图标和文字
         UIImage *image1 = [UIImage imageNamed:@"biz_pics_main_back_normal.png"];
         [returnButton setImage:image1 forState:UIControlStateNormal];
-        [self.view insertSubview:returnButton atIndex:1];
+        [self.view addSubview:returnButton];
+        returnButton.titleLabel.textColor = [UIColor blackColor];
         [returnButton addTarget:self action:@selector(btnClicked:event:) forControlEvents:UIControlEventTouchUpInside];
         
         //返回图标
@@ -138,7 +142,7 @@
                 label.text = userMessages.pushTitle;
                 label.textAlignment = NSTextAlignmentCenter;
                 label.font = [UIFont boldSystemFontOfSize:18];
-                label.textColor = [UIColor greenColor];
+                label.textColor = [UIColor blackColor];
                 [self.view insertSubview:label atIndex:2];
                 heightLayout = heightLayout + 10 + 30;
             }
